@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coelhitos - Adote seu coelho de estimação com segurança</title>
+    <style>
+        :root {
+            --primary-color: #FFB6C1;
+            --secondary-color: #FFD1DC;
+            --accent-color: #FF69B4;
+            --text-color: #333;
+            --light-text: #fff;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: var(--text-color);
+            padding-top: 80px;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--primary-color);
+            padding: 15px 0;
+            box-shadow: var(--box-shadow);
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-text {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--light-text);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .logo-text::before {
+            content: "🐰";
+            position: absolute;
+            left: 0;
+            font-size: 36px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            color: var(--light-text);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover {
+            background-color: var(--accent-color);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--light-text);
+            font-size: 24px;
+        }
+
+        /* Main Content Styles */
+        .hero {
+            background-color: var(--secondary-color);
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--light-text);
+            padding: 12px 30px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+            color: var(--accent-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 15px auto 0;
+        }
+
+        /* Coelhos Grid */
+        .coelhos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .coelho-card {
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .coelho-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .coelho-image-placeholder {
+            height: 200px;
+            background-color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-color);
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .coelho-info {
+            padding: 20px;
+        }
+
+        .coelho-info h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+
+        .coelho-info p {
+            margin-bottom: 8px;
+            color: #666;
+        }
+
+        .coelho-price {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin: 15px 0;
+        }
+
+        .coelho-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .details-button, .whatsapp-button {
+            padding: 8px 15px;
+            border-radius: var(--border-radius);
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .details-button {
+            background-color: #f0f0f0;
+            color: var(--text-color);
+        }
+
+        .details-button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .whatsapp-button {
+            background-color: #25D366;
+            color: white;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128C7E;
+        }
+
+        /* Filters */
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-group label {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .filter-group select, .filter-group input {
+            padding: 8px 12px;
+            border-radius: var(--border-radius);
+            border: 1px solid #ddd;
+            min-width: 150px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: #fff;
+            padding: 60px 0;
+            margin: 40px 0;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background-color: var(--secondary-color);
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 16px;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: var(--transition);
+            width: 100%;
+        }
+
+        .form-submit:hover {
+            background-color: #e0559c;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 50px 0 20px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: #fff;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+            color: #999;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                margin-top: 15px;
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            nav ul li a {
+                display: block;
+                padding: 10px;
+            }
+
+            .hamburger {
+                display: block;
+                position: absolute;
+                top: 15px;
+                right: 20px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .coelhos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filters {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade {
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1 class="logo-text">Coelhitos</h1>
+            </div>
+            <button class="hamburger">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#coelhos">Coelhos</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero animate-fade">
+            <h1>Encontre seu coelho de estimação perfeito</h1>
+            <p>Na Coelhitos, conectamos você aos coelhos mais fofos e saudáveis disponíveis para adoção responsável.</p>
+            <a href="#coelhos" class="cta-button">Ver Coelhos Disponíveis</a>
+        </section>
+
+        <section id="coelhos" class="container">
+            <h2 class="section-title animate-fade">Nossos Coelhinhos</h2>
+            
+            <div class="filters animate-fade delay-1">
+                <div class="filter-group">
+                    <label for="raca">Raça</label>
+                    <select id="raca">
+                        <option value="all">Todas as raças</option>
+                        <option value="holandes">Holandês</option>
+                        <option value="angora">Angorá</option>
+                        <option value="rex">Rex</option>
+                        <option value="lionhead">Lionhead</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="idade">Idade</label>
+                    <select id="idade">
+                        <option value="all">Todas as idades</option>
+                        <option value="filhote">Filhote (0-6 meses)</option>
+                        <option value="jovem">Jovem (6-12 meses)</option>
+                        <option value="adulto">Adulto (1-5 anos)</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="preco">Preço Máximo</label>
+                    <select id="preco">
+                        <option value="all">Qualquer preço</option>
+                        <option value="500">Até R$ 500</option>
+                        <option value="1000">Até R$ 1000</option>
+                        <option value="1500">Até R$ 1500</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="coelhos-grid">
+                <!-- Coelho 1 -->
+                <div class="coelho-card animate-fade delay-1">
+                    <div class="coelho-image-placeholder">Coelho Holandês</div>
+                    <div class="coelho-info">
+                        <h3>Bolinha</h3>
+                        <p>Raça: Holandês</p>
+                        <p>Idade: 4 meses</p>
+                        <p>Sexo: Macho</p>
+                        <p>Vacinação: Completa</p>
+                        <div class="coelho-price">R$ 850,00</div>
+                        <div class="coelho-actions">
+                            <button class="details-button">Detalhes</button>
+                            <button class="whatsapp-button">WhatsApp</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coelho 2 -->
+                <div class="coelho-card animate-fade delay-2">
+                    <div class="coelho-image-placeholder">Coelho Angorá</div>
+                    <div class="coelho-info">
+                        <h3>Fofura</h3>
+                        <p>Raça: Angorá</p>
+                        <p>Idade: 8 meses</p>
+                        <p>Sexo: Fêmea</p>
+                        <p>Vacinação: Completa</p>
+                        <div class="coelho-price">R$ 1.200,00</div>
+                        <div class="coelho-actions">
+                            <button class="details-button">Detalhes</button>
+                            <button class="whatsapp-button">WhatsApp</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coelho 3 -->
+                <div class="coelho-card animate-fade delay-1">
+                    <div class="coelho-image-placeholder">Coelho Rex</div>
+                    <div class="coelho-info">
+                        <h3>Pérola</h3>
+                        <p>Raça: Rex</p>
+                        <p>Idade: 1 ano</p>
+                        <p>Sexo: Fêmea</p>
+                        <p>Vacinação: Completa</p>
+                        <div class="coelho-price">R$ 950,00</div>
+                        <div class="coelho-actions">
+                            <button class="details-button">Detalhes</button>
+                            <button class="whatsapp-button">WhatsApp</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coelho 4 -->
+                <div class="coelho-card animate-fade delay-2">
+                    <div class="coelho-image-placeholder">Coelho Lionhead</div>
+                    <div class="coelho-info">
+                        <h3>Leãozinho</h3>
+                        <p>Raça: Lionhead</p>
+                        <p>Idade: 5 meses</p>
+                        <p>Sexo: Macho</p>
+                        <p>Vacinação: Em andamento</p>
+                        <div class="coelho-price">R$ 1.100,00</div>
+                        <div class="coelho-actions">
+                            <button class="details-button">Detalhes</button>
+                            <button class="whatsapp-button">WhatsApp</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="faq-section">
+            <div class="container">
+                <h2 class="section-title animate-fade">Perguntas Frequentes</h2>
+                
+                <div class="faq-container">
+                    <div class="faq-item animate-fade delay-1">
+                        <div class="faq-question">
+                            <span>Como cuidar do meu coelho?</span>
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Coelhos precisam de uma dieta balanceada de feno fresco, ração específica e vegetais. Eles também necessitam de espaço para se exercitar, brinquedos para roer e visitas regulares ao veterinário especializado.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item animate-fade delay-2">
+                        <div class="faq-question">
+                            <span>Quais são os documentos necessários para adoção?</span>
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Exigimos comprovante de residência, RG e assinatura de um termo de responsabilidade. Também realizamos uma breve entrevista para garantir que o coelho terá um lar adequado.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item animate-fade delay-1">
+                        <div class="faq-question">
+                            <span>Os coelhos vêm com pedigree?</span>
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Algumas raças específicas vêm com pedigree registrado. Esta informação está detalhada na ficha de cada animal. Coelhos sem pedigree também são saudáveis e ótimos companheiros.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item animate-fade delay-2">
+                        <div class="faq-question">
+                            <span>Qual a expectativa de vida de um coelho?</span>
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Com os cuidados adequados, um coelho doméstico pode viver entre 8 a 12 anos. Raças menores tendem a viver mais que as maiores.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="container">
+            <h2 class="section-title animate-fade">Entre em Contato</h2>
+            
+            <form class="contact-form animate-fade delay-1">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" required>
+                </div>
+                <div class="form-group">
+                    <label for="coelho">Coelho de Interesse</label>
+                    <select id="coelho">
+                        <option value="">Selecione um coelho</option>
+                        <option value="bolinha">Bolinha - Holandês</option>
+                        <option value="fofura">Fofura - Angorá</option>
+                        <option value="perola">Pérola - Rex</option>
+                        <option value="leozinho">Leãozinho - Lionhead</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" required></textarea>
+                </div>
+                <button type="submit" class="form-submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Coelhitos</h3>
+                <p>Especializados em conectar famílias a coelhos de estimação saudáveis e felizes desde 2015.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">f</a>
+                    <a href="#" class="social-link">t</a>
+                    <a href="#" class="social-link">in</a>
+                    <a href="#" class="social-link">ig</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#coelhos">Coelhos Disponíveis</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Informações</h3>
+                <ul>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Adoção</a></li>
+                    <li><a href="#">Dúvidas Frequentes</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contato</h3>
+                <ul>
+                    <li>Rua dos Coelhos, 123</li>
+                    <li>Bairro Feliz, Cidade</li>
+                    <li>CEP: 12345-678</li>
+                    <li>contato@coelhitos.com.br</li>
+                    <li>(11) 98765-4321</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>diretos reservados a rooster company</p>
+            <p>CNPJ: 12.345.678/0001-90 | SSL Secure</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isActive = answer.classList.contains('active');
+                
+                // Close all answers first
+                document.querySelectorAll('.faq-answer').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Toggle current answer if it wasn't active
+                if (!isActive) {
+                    answer.classList.add('active');
+                }
+            });
+        });
+
+        // Form Validation
+        const form = document.querySelector('.contact-form');
+        
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            let isValid = true;
+            const inputs = form.querySelectorAll('input[required], textarea[required], select[required]');
+            
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    input.style.borderColor = 'red';
+                    isValid = false;
+                } else {
+                    input.style.borderColor = '#ddd';
+                }
+            });
+            
+            if (isValid) {
+                alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+                form.reset();
+            } else {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+            }
+        });
+
+        // Filter Functionality
+        const filters = {
+            raca: document.getElementById('raca'),
+            idade: document.getElementById('idade'),
+            preco: document.getElementById('preco')
+        };
+        
+        Object.values(filters).forEach(filter => {
+            filter.addEventListener('change', filterCoelhos);
+        });
+        
+        function filterCoelhos() {
+            const coelhos = document.querySelectorAll('.coelho-card');
+            const racaValue = filters.raca.value;
+            const idadeValue = filters.idade.value;
+            const precoValue = filters.preco.value;
+            
+            coelhos.forEach(coelho => {
+                const raca = coelho.querySelector('p:nth-of-type(1)').textContent.split(': ')[1].toLowerCase();
+                const idade = coelho.querySelector('p:nth-of-type(2)').textContent;
+                const preco = parseFloat(coelho.querySelector('.coelho-price').textContent.replace('R$ ', '').replace('.', '').replace(',', '.'));
+                
+                const racaMatch = racaValue === 'all' || raca.includes(racaValue);
+                const idadeMatch = idadeValue === 'all' || 
+                                 (idadeValue === 'filhote' && idade.includes('meses') && parseInt(idade) <= 6) ||
+                                 (idadeValue === 'jovem' && ((idade.includes('meses') && parseInt(idade) > 6) || idade.includes('1 ano'))) ||
+                                 (idadeValue === 'adulto' && !idade.includes('meses') && !idade.includes('1 ano'));
+                const precoMatch = precoValue === 'all' || preco <= parseInt(precoValue);
+                
+                if (racaMatch && idadeMatch && precoMatch) {
+                    coelho.style.display = 'block';
+                } else {
+                    coelho.style.display = 'none';
+                }
+            });
+        }
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                    }
+                }
+            });
+        });
+
+        // Animation on Scroll
+        const animateElements = document.querySelectorAll('.animate-fade');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        animateElements.forEach(element => {
+            element.style.opacity = 0;
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
