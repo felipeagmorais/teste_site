@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabio Sports CNPJ Plus</title>
+    <style>
+        /* Reset e estilos base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            padding-top: 80px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(180deg, #D81B60 0%, #AD1457 100%);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            -webkit-font-smoothing: antialiased;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        nav ul li a:hover {
+            color: #FF4081;
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(216,27,96,0.3);
+        }
+        
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+        
+        /* Conteúdo principal */
+        main {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #D81B60;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .feature-card h3 {
+            color: #AD1457;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .feature-card ul {
+            list-style-position: inside;
+            margin-left: 10px;
+        }
+        
+        .feature-card ul li {
+            margin-bottom: 8px;
+        }
+        
+        .search-section {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 60px;
+        }
+        
+        .search-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #D81B60;
+        }
+        
+        .search-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .submit-btn {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #D81B60 0%, #AD1457 100%);
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-size: 200% auto;
+        }
+        
+        .submit-btn:hover {
+            background-position: right center;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(216,27,96,0.3);
+        }
+        
+        .target-audience {
+            margin-bottom: 60px;
+        }
+        
+        .target-audience h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #D81B60;
+        }
+        
+        .audience-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .audience-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        
+        .audience-card h3 {
+            color: #AD1457;
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #FF4081;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #FF4081;
+        }
+        
+        .newsletter-form input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .newsletter-btn {
+            background: linear-gradient(135deg, #FF4081 0%, #D81B60 100%);
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            background-size: 200% auto;
+        }
+        
+        .newsletter-btn:hover {
+            background-position: right center;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: rgba(173, 20, 87, 0.95);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.4s ease-in-out;
+                backdrop-filter: blur(5px);
+            }
+            
+            nav ul.active {
+                left: 0;
+            }
+            
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Animações */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Dark mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #f1f1f1;
+            }
+            
+            .feature-card, .search-section, .audience-card {
+                background-color: #1e1e1e;
+                color: #f1f1f1;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            }
+            
+            .form-group input, .form-group select {
+                background-color: #2d2d2d;
+                color: #f1f1f1;
+                border-color: #444;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">Fabio Sports CNPJ Plus</div>
+            <div class="menu-toggle">☰</div>
+            <nav>
+                <ul>
+                    <li><a href="#features">Recursos</a></li>
+                    <li><a href="#search">Busca</a></li>
+                    <li><a href="#audience">Público</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>Encontre Peças para Moto com Tecnologia Inteligente</h1>
+            <p>Solução Automatizada e Personalizada para suas necessidades de manutenção e reparo de motocicletas.</p>
+        </section>
+        
+        <section id="features" class="features">
+            <div class="feature-card">
+                <h3>Recomendação Inteligente</h3>
+                <ul>
+                    <li>Machine Learning analisa modelo via VIN decoder</li>
+                    <li>Padrões de manutenção baseados em histórico</li>
+                    <li>Sugestões climáticas por geolocalização</li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Busca Avançada</h3>
+                <ul>
+                    <li>Filtros combináveis por marca, ano e cilindrada</li>
+                    <li>Auto-complete com debounce de 300ms</li>
+                    <li>Visualização 3D de peças via WebGL</li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Experiência Fluida</h3>
+                <ul>
+                    <li>Layout mobile-first com CSS Grid</li>
+                    <li>Lazy loading para otimização</li>
+                    <li>Animações performáticas</li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Diferenciais Técnicos</h3>
+                <ul>
+                    <li>WebSockets para atualizações em tempo real</li>
+                    <li>API GraphQL para queries otimizadas</li>
+                    <li>PWA com modo offline</li>
+                    <li>WebAssembly para cálculos pesados</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="search" class="search-section">
+            <h2>Busca Personalizada de Peças</h2>
+            <form class="search-form">
+                <div class="form-group">
+                    <label for="marca">Marca</label>
+                    <input type="text" id="marca" placeholder="Ex: Honda, Yamaha">
+                </div>
+                
+                <div class="form-group">
+                    <label for="modelo">Modelo</label>
+                    <input type="text" id="modelo" placeholder="Ex: CB 500, MT-07">
+                </div>
+                
+                <div class="form-group">
+                    <label for="ano">Ano</label>
+                    <select id="ano">
+                        <option value="">Selecione</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cilindrada">Cilindrada</label>
+                    <select id="cilindrada">
+                        <option value="">Selecione</option>
+                        <option value="125">125cc</option>
+                        <option value="250">250cc</option>
+                        <option value="500">500cc</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="submit-btn pulse">Encontrar Peças</button>
+            </form>
+        </section>
+        
+        <section id="audience" class="target-audience">
+            <h2>Ideal para</h2>
+            <div class="audience-cards">
+                <div class="audience-card">
+                    <h3>Personalização</h3>
+                    <p>Theme switcher com dark/light mode para melhor experiência visual</p>
+                </div>
+                
+                <div class="audience-card">
+                    <h3>Integração</h3>
+                    <p>Conexão com ERPs de oficinas via OAuth 2.0</p>
+                </div>
+                
+                <div class="audience-card">
+                    <h3>Notificações</h3>
+                    <p>Alertas push para promoções e novidades</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Sobre Nós</h3>
+                <p>Especialistas em tecnologia para peças de motocicletas com soluções inovadoras e personalizadas.</p>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#features">Recursos</a></li>
+                    <li><a href="#search">Busca Avançada</a></li>
+                    <li><a href="#audience">Para Quem</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Seu e-mail" required>
+                    <button type="submit" class="newsletter-btn">Assinar</button>
+                </form>
+                <p class="helper-text">Receba atualizações e ofertas exclusivas</p>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contato</h3>
+                <ul>
+                    <li>Email: ingridyveigafox@outlook.com</li>
+                    <li>Telefone: (41) 99706-9110</li>
+                    <li>Endereço: RUA XV DE NOVEMBRO, 1234 - Curitiba/PR</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>"Fabio Sports CNPJ Plus" - © <span id="year"></span> Fabio Sports CNPJ Plus. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Menu mobile
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav ul');
+        
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+        });
+        
+        // Fechar menu ao clicar em um link
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+        
+        // Atualizar ano no footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Validação de formulário
+        const searchForm = document.querySelector('.search-form');
+        searchForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const marca = document.getElementById('marca').value;
+            const modelo = document.getElementById('modelo').value;
+            
+            if (!marca || !modelo) {
+                alert('Por favor, preencha pelo menos marca e modelo');
+                return;
+            }
+            
+            // Simular busca
+            alert(`Buscando peças para ${marca} ${modelo}...`);
+        });
+        
+        // Newsletter
+        const newsletterForm = document.querySelector('.newsletter-form');
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = newsletterForm.querySelector('input').value;
+            alert(`Obrigado por assinar nossa newsletter! Enviaremos novidades para ${email}`);
+            newsletterForm.reset();
+        });
+        
+        // Scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
