@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        /* Reset e variáveis CSS */
+        :root {
+            --primary: #00C9FF;
+            --secondary: #92FE9D;
+            --dark: #1a1a1a;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --transition: all 0.3s ease-in-out;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+            --radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            padding-top: 80px;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: var(--dark);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-desktop {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-link {
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            color: var(--dark);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0.5rem;
+            left: 1.5rem;
+            width: calc(100% - 3rem);
+            height: 2px;
+            background-color: var(--primary);
+            animation: underline 0.3s ease-out;
+        }
+
+        @keyframes underline {
+            from { width: 0; }
+            to { width: calc(100% - 3rem); }
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            padding: 1rem;
+        }
+
+        .hamburger {
+            width: 30px;
+            height: 3px;
+            background-color: var(--dark);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .hamburger::before,
+        .hamburger::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: var(--dark);
+            transition: var(--transition);
+        }
+
+        .hamburger::before {
+            top: -8px;
+        }
+
+        .hamburger::after {
+            top: 8px;
+        }
+
+        .menu-toggle.active .hamburger {
+            background-color: transparent;
+        }
+
+        .menu-toggle.active .hamburger::before {
+            transform: rotate(45deg);
+            top: 0;
+        }
+
+        .menu-toggle.active .hamburger::after {
+            transform: rotate(-45deg);
+            top: 0;
+        }
+
+        .nav-mobile {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: var(--shadow);
+            padding: 1rem;
+            flex-direction: column;
+            gap: 1rem;
+            transform: translateY(-150%);
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .nav-mobile.active {
+            transform: translateY(0);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: white;
+            color: var(--primary);
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Serviços Section */
+        .services {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(0, 201, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1001;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .modal {
+            background-color: white;
+            border-radius: var(--radius);
+            padding: 2rem;
+            max-width: 600px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            transform: translateY(20px);
+            transition: var(--transition);
+        }
+
+        .modal-overlay.active .modal {
+            transform: translateY(0);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--gray);
+        }
+
+        /* Tecnologias Section */
+        .technologies {
+            padding: 4rem 2rem;
+            background-color: rgba(0, 201, 255, 0.05);
+            margin-bottom: 3rem;
+        }
+
+        .tech-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .badges-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .badge {
+            background-color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            position: relative;
+            cursor: help;
+        }
+
+        .badge:hover::after {
+            content: attr(aria-label);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--dark);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            font-size: 0.875rem;
+            white-space: nowrap;
+            z-index: 100;
+        }
+
+        .chart-container {
+            height: 300px;
+            background-color: white;
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chart {
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            gap: 1rem;
+        }
+
+        .chart-bar {
+            flex: 1;
+            background-color: var(--primary);
+            border-radius: 4px 4px 0 0;
+            position: relative;
+            min-width: 40px;
+            transition: height 1s ease-out;
+        }
+
+        .chart-label {
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 4rem 2rem 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-column h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .contact-list {
+            list-style: none;
+        }
+
+        .contact-list li {
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-list a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-list a:hover {
+            color: var(--secondary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-link {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--primary);
+            transform: rotate(5deg);
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .newsletter-form input {
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius);
+            border: none;
+        }
+
+        .newsletter-form button {
+            padding: 0.75rem 1rem;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover {
+            background-color: var(--secondary);
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .custom-checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid white;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .custom-checkbox::after {
+            content: '✓';
+            color: white;
+            font-size: 0.75rem;
+            display: none;
+        }
+
+        .checkbox-input:checked + .custom-checkbox::after {
+            display: block;
+        }
+
+        .checkbox-input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 3rem auto 0;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .legal-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .legal-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .legal-links a:hover {
+            color: var(--secondary);
+        }
+
+        .copyright {
+            font-size: 0.875rem;
+            color: var(--gray);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .nav-desktop {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-mobile {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .hero h1 {
+                font-size: 4rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">Finan <span>AI</span></a>
+        
+        <nav class="nav-desktop">
+            <a href="#services" class="nav-link">Serviços</a>
+            <a href="#technologies" class="nav-link">Tecnologias</a>
+            <a href="#contact" class="nav-link">Contato</a>
+            <a href="#" class="nav-link active">Home</a>
+        </nav>
+        
+        <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav">
+            <span class="hamburger"></span>
+        </button>
+        
+        <nav id="mobile-nav" class="nav-mobile">
+            <a href="#services" class="nav-link">Serviços</a>
+            <a href="#technologies" class="nav-link">Tecnologias</a>
+            <a href="#contact" class="nav-link">Contato</a>
+            <a href="#" class="nav-link active">Home</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Transforme suas finanças com inteligência artificial</h1>
+            <p>Nossa plataforma utiliza algoritmos avançados de machine learning para otimizar seus investimentos e proteger seu patrimônio.</p>
+            <a href="#" class="cta-button" id="demo-btn">Agendar demonstração</a>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section class="services" id="services">
+        <h2 class="section-title">Nossos Serviços</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">AI</div>
+                <h3>Análise Preditiva</h3>
+                <p>Previsões de mercado com 95% de precisão usando redes neurais profundas e análise de séries temporais.</p>
+                <button class="modal-trigger" data-modal="modal1">Saiba mais</button>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">RP</div>
+                <h3>Risco Patrimonial</h3>
+                <p>Proteção automatizada contra volatilidade com algoritmos de hedge adaptativos em tempo real.</p>
+                <button class="modal-trigger" data-modal="modal2">Saiba mais</button>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">OT</div>
+                <h3>Otimização Tributária</h3>
+                <p>Redução legal de impostos através de análise de jurisdições e estruturas fiscais inteligentes.</p>
+                <button class="modal-trigger" data-modal="modal3">Saiba mais</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modal1">
+        <div class="modal">
+            <button class="close-modal">&times;</button>
+            <h3>Análise Preditiva</h3>
+            <p>Nossa solução de análise preditiva utiliza modelos de machine learning treinados em petabytes de dados históricos de mercado para identificar padrões e tendências com antecedência.</p>
+            <p>Principais recursos:</p>
+            <ul>
+                <li>Previsão de movimentos de mercado com 30 dias de antecedência</li>
+                <li>Alertas de oportunidades em tempo real</li>
+                <li>Backtesting automatizado de estratégias</li>
+                <li>Dashboard interativo com visualizações avançadas</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal2">
+        <div class="modal">
+            <button class="close-modal">&times;</button>
+            <h3>Risco Patrimonial</h3>
+            <p>Proteja seu patrimônio contra volatilidade e crises de mercado com nosso sistema de gerenciamento de risco baseado em IA.</p>
+            <p>Principais recursos:</p>
+            <ul>
+                <li>Alocação dinâmica de ativos</li>
+                <li>Hedge automático baseado em condições de mercado</li>
+                <li>Limites de perda personalizados</li>
+                <li>Simulações de estresse em diversos cenários</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal3">
+        <div class="modal">
+            <button class="close-modal">&times;</button>
+            <h3>Otimização Tributária</h3>
+            <p>Reduza legalmente sua carga tributária com nossa plataforma de otimização fiscal alimentada por IA.</p>
+            <p>Principais recursos:</p>
+            <ul>
+                <li>Análise de jurisdições fiscais globais</li>
+                <li>Estruturação patrimonial inteligente</li>
+                <li>Conformidade regulatória automatizada</li>
+                <li>Relatórios fiscais personalizados</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Tecnologias Section -->
+    <section class="technologies" id="technologies">
+        <div class="tech-container">
+            <h2 class="section-title">Tecnologias Utilizadas</h2>
+            
+            <div class="badges-container">
+                <div class="badge" aria-label="TensorFlow - Framework de machine learning">TensorFlow</div>
+                <div class="badge" aria-label="PyTorch - Biblioteca para aprendizado profundo">PyTorch</div>
+                <div class="badge" aria-label="Apache Spark - Processamento distribuído">Apache Spark</div>
+                <div class="badge" aria-label="Kubernetes - Orquestração de containers">Kubernetes</div>
+                <div class="badge" aria-label="Docker - Containerização">Docker</div>
+                <div class="badge" aria-label="GraphQL - API query language">GraphQL</div>
+            </div>
+            
+            <div class="chart-container">
+                <h3>Precisão dos Nossos Modelos</h3>
+                <div class="chart" id="accuracy-chart">
+                    <div class="chart-bar" style="height: 0%;" data-value="95"><span class="chart-label">Previsão</span></div>
+                    <div class="chart-bar" style="height: 0%;" data-value="89"><span class="chart-label">Detecção</span></div>
+                    <div class="chart-bar" style="height: 0%;" data-value="92"><span class="chart-label">Otimização</span></div>
+                    <div class="chart-bar" style="height: 0%;" data-value="97"><span class="chart-label">Segurança</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h3>Contatos</h3>
+                <ul class="contact-list">
+                    <li><a href="mailto:whaleyumgaritin6i@hotmail.com" rel="noopener">whaleyumgaritin6i@hotmail.com</a></li>
+                    <li><a href="tel:+5541997068470" rel="noopener">+55 41 99706-8470</a></li>
+                    <li>RUA PADRE CHAGAS, 321<br>Porto Alegre - RS</li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Redes Sociais</h3>
+                <div class="social-links">
+                    <a href="https://linkedin.com/company/finanai" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">LI</a>
+                    <a href="https://twitter.com/finanai" class="social-link" aria-label="Twitter" target="_blank" rel="noopener">TW</a>
+                    <a href="https://instagram.com/finanai" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">IG</a>
+                    <a href="https://youtube.com/finanai" class="social-link" aria-label="YouTube" target="_blank" rel="noopener">YT</a>
+                </div>
+                <p>Siga-nos para atualizações e insights sobre finanças e IA.</p>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Seu melhor e-mail" required>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="consent-checkbox" class="checkbox-input" required>
+                        <label for="consent-checkbox" class="custom-checkbox"></label>
+                        <label for="consent-checkbox">Concordo em receber comunicações</label>
+                    </div>
+                    <button type="submit">Assinar</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <ul class="legal-links">
+                <li><a href="#">Termos de Uso</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Cookies</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+            <p class="copyright">"Finan AI" © 2023 - Todos os direitos reservados. CNPJ: 02.684.758/0001-11</p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu mobile
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mobileNav = document.querySelector('.nav-mobile');
+        
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+        });
+
+        // Modal functionality
+        const modalTriggers = document.querySelectorAll('.modal-trigger');
+        const modals = document.querySelectorAll('.modal-overlay');
+        const closeButtons = document.querySelectorAll('.close-modal');
+        
+        modalTriggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const modalId = trigger.getAttribute('data-modal');
+                const modal = document.getElementById(modalId);
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modal = button.closest('.modal-overlay');
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+        
+        modals.forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                modals.forEach(modal => {
+                    if (modal.classList.contains('active')) {
+                        modal.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+        });
+
+        // Animate chart bars
+        function animateChart() {
+            const chartBars = document.querySelectorAll('.chart-bar');
+            chartBars.forEach(bar => {
+                const value = bar.getAttribute('data-value');
+                bar.style.height = value + '%';
+            });
+        }
+        
+        // Intersection Observer for chart animation
+        const chartObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateChart();
+                    chartObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        const chartContainer = document.querySelector('.chart-container');
+        if (chartContainer) {
+            chartObserver.observe(chartContainer);
+        }
+
+        // Form submission
+        const newsletterForm = document.getElementById('newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const submitButton = newsletterForm.querySelector('button[type="submit"]');
+                const originalText = submitButton.textContent;
+                
+                submitButton.textContent = 'Enviando...';
+                submitButton.disabled = true;
+                
+                // Simulate API call
+                setTimeout(() => {
+                    submitButton.textContent = 'Enviado!';
+                    setTimeout(() => {
+                        submitButton.textContent = originalText;
+                        submitButton.disabled = false;
+                        newsletterForm.reset();
+                    }, 2000);
+                }, 1500);
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    if (mobileNav.classList.contains('active')) {
+                        menuToggle.classList.remove('active');
+                        mobileNav.classList.remove('active');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Demo button animation
+        const demoBtn = document.getElementById('demo-btn');
+        if (demoBtn) {
+            demoBtn.addEventListener('mouseenter', () => {
+                demoBtn.style.transform = 'scale(1.05)';
+            });
+            
+            demoBtn.addEventListener('mouseleave', () => {
+                demoBtn.style.transform = '';
+            });
+        }
+    </script>
+</body>
+</html>
