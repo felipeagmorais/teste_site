@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta name="facebook-domain-verification" content="d6do5xt02d802jt9g5f8bbr3twvo1w" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Tecman CNPJ Mais</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            padding-top: 120px;
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #6A0DAD;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-title {
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #9C27B0;
+        }
+
+        /* Main Section */
+        .main-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #4A148C, #7B1FA2);
+            border-radius: 12px;
+            color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #9C27B0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .card-description {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Vision Section */
+        .vision-section {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 40px 20px;
+            background-color: #E1BEE7;
+            border-radius: 12px;
+        }
+
+        .vision-title {
+            color: #4A148C;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .vision-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .vision-item {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .vision-item:hover {
+            transform: scale(1.03);
+        }
+
+        .vision-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #9C27B0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 32px;
+            color: white;
+        }
+
+        .vision-item-title {
+            color: #4A148C;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .vision-item-description {
+            color: #333;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Technologies Section */
+        .tech-section {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 40px 20px;
+            background-color: white;
+            border-radius: 12px;
+            border: 2px solid #9C27B0;
+        }
+
+        .tech-title {
+            color: #4A148C;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .tech-carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 30px;
+            padding: 20px 0;
+            scrollbar-width: none;
+        }
+
+        .tech-carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .tech-item {
+            min-width: 200px;
+            height: 150px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            scroll-snap-align: start;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tech-item:hover {
+            background-color: #E1BEE7;
+        }
+
+        .tech-logo {
+            width: 80px;
+            height: 80px;
+            background-color: #6A0DAD;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .tech-name {
+            font-weight: 700;
+            color: #4A148C;
+        }
+
+        .tech-tooltip {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4A148C;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            width: 180px;
+            text-align: center;
+        }
+
+        .tech-item:hover .tech-tooltip {
+            opacity: 1;
+            visibility: visible;
+            bottom: -40px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #311B92;
+            color: white;
+            padding: 60px 0 0;
+            margin-top: 60px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #9C27B0;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-icon {
+            width: 30px;
+            height: 30px;
+            background-color: #9C27B0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: #E1BEE7;
+        }
+
+        .social-icon {
+            width: 30px;
+            height: 30px;
+            background-color: #9C27B0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-link:hover .social-icon {
+            background-color: #E1BEE7;
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .newsletter-input {
+            padding: 12px 15px;
+            border-radius: 4px;
+            border: none;
+            font-size: 14px;
+        }
+
+        .newsletter-btn {
+            padding: 12px 20px;
+            background-color: #9C27B0;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .newsletter-btn:hover {
+            background-color: #E1BEE7;
+        }
+
+        .footer-bottom {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        .footer-bottom-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            text-align: center;
+        }
+
+        .copyright {
+            font-size: 14px;
+        }
+
+        .legal-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .legal-link {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            transition: color 0.3s ease;
+        }
+
+        .legal-link:hover {
+            color: #E1BEE7;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 24px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .vision-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            body {
+                padding-top: 100px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-title {
+                font-size: 20px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .nav-links a {
+                padding: 6px 10px;
+                font-size: 14px;
+            }
+
+            .section-title, .vision-title, .tech-title {
+                font-size: 24px;
+            }
+
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="header-title">Thiago Tecman CNPJ Mais</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#main">Seção Principal</a></li>
+                    <li><a href="#info">Informações</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="main" class="main-section">
+            <h2 class="section-title">Nossos Serviços de IA e Automação</h2>
+            <div class="cards-container">
+                <div class="service-card">
+                    <div class="card-icon">AI</div>
+                    <h3 class="card-title">Inteligência Artificial</h3>
+                    <p class="card-description">Soluções personalizadas de IA para otimizar seus processos e tomar decisões mais inteligentes.</p>
+                </div>
+                <div class="service-card">
+                    <div class="card-icon">ML</div>
+                    <h3 class="card-title">Machine Learning</h3>
+                    <p class="card-description">Modelos preditivos que aprendem com seus dados para antecipar tendências e comportamentos.</p>
+                </div>
+                <div class="service-card">
+                    <div class="card-icon">RPA</div>
+                    <h3 class="card-title">Automação Robótica</h3>
+                    <p class="card-description">Automatize tarefas repetitivas e aumente a produtividade da sua equipe com nossas soluções RPA.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="info" class="vision-section">
+            <h2 class="vision-title">Visão e Valores</h2>
+            <div class="vision-grid">
+                <div class="vision-item">
+                    <div class="vision-icon">V</div>
+                    <h3 class="vision-item-title">Visão</h3>
+                    <p class="vision-item-description">Ser referência em soluções tecnológicas inovadoras que transformam negócios e melhoram vidas.</p>
+                </div>
+                <div class="vision-item">
+                    <div class="vision-icon">M</div>
+                    <h3 class="vision-item-title">Missão</h3>
+                    <p class="vision-item-description">Desenvolver tecnologias avançadas que simplificam processos complexos e geram resultados tangíveis.</p>
+                </div>
+                <div class="vision-item">
+                    <div class="vision-icon">V</div>
+                    <h3 class="vision-item-title">Valores</h3>
+                    <p class="vision-item-description">Inovação, integridade, excelência e foco no cliente guiam todas as nossas ações e decisões.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="tech-section">
+            <h2 class="tech-title">Tecnologias que Utilizamos</h2>
+            <div class="tech-carousel">
+                <div class="tech-item">
+                    <div class="tech-logo">P</div>
+                    <span class="tech-name">Python</span>
+                    <div class="tech-tooltip">Linguagem versátil para desenvolvimento de soluções de IA e automação.</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-logo">T</div>
+                    <span class="tech-name">TensorFlow</span>
+                    <div class="tech-tooltip">Framework de machine learning para desenvolvimento de modelos avançados.</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-logo">A</div>
+                    <span class="tech-name">AWS</span>
+                    <div class="tech-tooltip">Infraestrutura em nuvem escalável para hospedar nossas soluções.</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-logo">D</div>
+                    <span class="tech-name">Django</span>
+                    <div class="tech-tooltip">Framework web para desenvolvimento rápido de aplicações robustas.</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-logo">K</div>
+                    <span class="tech-name">Kubernetes</span>
+                    <div class="tech-tooltip">Orquestração de containers para deploy escalável de aplicações.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Informações de Contato</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">@</div>
+                        <span>ingridyveigafox@outlook.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">T</div>
+                        <span>+55 (41) 99706-9110</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">#</div>
+                        <span>RUA PADRE CHAGAS, 321 - PORTO ALEGRE/RS</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Redes Sociais</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <div class="social-icon">W</div>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <div class="social-icon">L</div>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <div class="social-icon">I</div>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Seu melhor e-mail" required>
+                    <button type="submit" class="newsletter-btn">Assinar</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p class="copyright">"© 2023 Thiago Tecman CNPJ Mais. Todos os direitos reservados."</p>
+                <div class="legal-links">
+                    <a href="#" class="legal-link">"Política de Privacidade"</a>
+                    <a href="#" class="legal-link">"Termos de Uso"</a>
+                    <a href="#" class="legal-link">"Cookies"</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Auto-scrolling carousel for technologies
+        const carousel = document.querySelector('.tech-carousel');
+        let scrollAmount = 0;
+        const scrollSpeed = 1;
+        const scrollWidth = carousel.scrollWidth - carousel.clientWidth;
+
+        function autoScroll() {
+            if (scrollAmount < scrollWidth) {
+                scrollAmount += scrollSpeed;
+                carousel.scrollLeft = scrollAmount;
+            } else {
+                scrollAmount = 0;
+                carousel.scrollLeft = 0;
+            }
+            
+            requestAnimationFrame(autoScroll);
+        }
+
+        // Pause auto-scroll on hover
+        carousel.addEventListener('mouseenter', () => {
+            cancelAnimationFrame(autoScroll);
+        });
+
+        carousel.addEventListener('mouseleave', () => {
+            requestAnimationFrame(autoScroll);
+        });
+
+        // Start auto-scroll
+        setTimeout(autoScroll, 3000);
+
+        // Form submission handler
+        const newsletterForm = document.querySelector('.newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const emailInput = this.querySelector('input[type="email"]');
+                if (emailInput.value) {
+                    alert('Obrigado por assinar nossa newsletter!');
+                    emailInput.value = '';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
