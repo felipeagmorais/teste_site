@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --footer-bg: #2c3e50;
+            --text-color: #333;
+            --text-light: #ecf0f1;
+            --shadow: 0 2px 10px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            padding-top: 80px;
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary-color);
+            letter-spacing: 0.5px;
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-size: 16px;
+            font-weight: 500;
+            position: relative;
+            padding-bottom: 5px;
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        nav ul li a:focus {
+            outline: 2px dashed var(--accent-color);
+            outline-offset: 3px;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            width: 30px;
+            height: 20px;
+            position: relative;
+        }
+
+        .hamburger span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: var(--primary-color);
+            border-radius: 3px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+
+        .hamburger span:nth-child(1) {
+            top: 0;
+        }
+
+        .hamburger span:nth-child(2) {
+            top: 10px;
+        }
+
+        .hamburger span:nth-child(3) {
+            top: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+            color: var(--light-color);
+            margin-bottom: 50px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px #000;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Services Section */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        .services {
+            padding: 80px 5%;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: var(--transition);
+            will-change: transform;
+        }
+
+        .service-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 20px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        /* Mission Section */
+        .mission {
+            padding: 80px 5%;
+            background-color: #f1f5f9;
+        }
+
+        .tabs {
+            display: flex;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .tab-btn {
+            padding: 10px 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-color);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .tab-btn.active {
+            color: var(--secondary-color);
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px 0;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Technologies Section */
+        .technologies {
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .tech-slider {
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-slide {
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            margin: 0 15px;
+            transition: var(--transition);
+            filter: grayscale(30%);
+        }
+
+        .tech-slide:hover {
+            filter: grayscale(0);
+            transform: scale(1.05);
+        }
+
+        .tech-slide h3 {
+            margin-top: 15px;
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--text-light);
+            padding: 60px 5% 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+            opacity: 0.8;
+        }
+
+        .footer-col ul li a:hover {
+            opacity: 1;
+            padding-left: 5px;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--secondary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: var(--text-light);
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+            transform: scale(1.2);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px 0;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                transform: translateY(-150%);
+                transition: transform 0.4s ease;
+            }
+
+            nav ul.show {
+                transform: translateY(0);
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 0;
+                text-align: center;
+                padding: 10px 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Glória Ecom Finan Ai</a>
+        <nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#technologies">Tecnologias</a></li>
+                <li><a href="#mission">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Soluções Financeiras Inteligentes para o Futuro</h1>
+            <p>Integramos tecnologia de ponta com expertise financeira para transformar seu negócio digital.</p>
+            <a href="#contact" class="btn">Fale Conosco</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2 class="section-title">Nossos Serviços</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">1</div>
+                <h3>Consultoria Estratégica</h3>
+                <p>Análise de mercado e desenvolvimento de estratégias personalizadas para maximizar seus resultados financeiros.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">2</div>
+                <h3>Automação Financeira</h3>
+                <p>Soluções inteligentes para otimizar processos financeiros e reduzir custos operacionais.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">3</div>
+                <h3>Análise de Dados</h3>
+                <p>Extraia insights valiosos de seus dados financeiros para tomar decisões mais assertivas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="mission" class="mission">
+        <h2 class="section-title">Nossa Missão e Valores</h2>
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="mission-tab">Missão</button>
+            <button class="tab-btn" data-tab="values-tab">Valores</button>
+            <button class="tab-btn" data-tab="vision-tab">Visão</button>
+        </div>
+        <div class="tab-content active" id="mission-tab">
+            <p>Nossa missão é democratizar o acesso a soluções financeiras inteligentes, utilizando tecnologia de ponta para empoderar empresas de todos os portes a alcançarem seu máximo potencial econômico.</p>
+        </div>
+        <div class="tab-content" id="values-tab">
+            <p>Transparência, inovação e excelência são os pilares que guiam nosso trabalho. Acreditamos na ética como fundamento para relações comerciais duradouras e no poder transformador da tecnologia bem aplicada.</p>
+        </div>
+        <div class="tab-content" id="vision-tab">
+            <p>Almejamos ser referência global em soluções financeiras tecnológicas, reconhecidos pela qualidade de nossos serviços e pelo impacto positivo que geramos na vida de nossos clientes e na economia como um todo.</p>
+        </div>
+    </section>
+
+    <section id="technologies" class="technologies">
+        <h2 class="section-title">Tecnologias que Utilizamos</h2>
+        <div class="tech-slider">
+            <div class="tech-slide">
+                <div class="tech-icon">AI</div>
+                <h3>Inteligência Artificial</h3>
+                <p>Algoritmos preditivos para análise de cenários financeiros.</p>
+            </div>
+            <div class="tech-slide">
+                <div class="tech-icon">BL</div>
+                <h3>Blockchain</h3>
+                <p>Segurança e transparência em transações financeiras.</p>
+            </div>
+            <div class="tech-slide">
+                <div class="tech-icon">CL</div>
+                <h3>Cloud Computing</h3>
+                <p>Infraestrutura escalável para processamento de dados.</p>
+            </div>
+            <div class="tech-slide">
+                <div class="tech-icon">BI</div>
+                <h3>Business Intelligence</h3>
+                <p>Visualização de dados para tomada de decisão.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>Glória Ecom Finan Ai</h3>
+                <p>Transformando finanças através da inovação tecnológica.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">F</a>
+                    <a href="#" aria-label="LinkedIn">L</a>
+                    <a href="#" aria-label="Twitter">T</a>
+                    <a href="#" aria-label="Instagram">I</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#technologies">Tecnologias</a></li>
+                    <li><a href="#mission">Sobre Nós</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contato</h3>
+                <div class="contact-info">
+                    <p><i>E</i> whaleyumgaritin6i@hotmail.com</p>
+                    <p><i>T</i> (41) 99706-8470</p>
+                    <p><i>L</i> RUA PADRE CHAGAS, 321 - PORTO ALEGRE/RS</p>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>"© 2023 Glória Ecom Finan Ai. Todos os direitos reservados. CNPJ: 54.616.070/0001-06"</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('nav ul');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('show');
+        });
+
+        // Tab System
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                btn.classList.add('active');
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Simple Tech Slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.tech-slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach(slide => {
+                slide.style.display = 'none';
+            });
+            
+            slides[index].style.display = 'block';
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        // Initialize slider
+        showSlide(0);
+        
+        // Auto slide every 3 seconds
+        setInterval(nextSlide, 3000);
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
