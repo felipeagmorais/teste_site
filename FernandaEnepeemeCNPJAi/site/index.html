@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        /* Reset e estilos globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 2rem;
+            color: #8B0000;
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            color: #8B0000;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #8B0000;
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Seção Serviços */
+        .section {
+            padding: 5rem 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #8B0000;
+            font-size: 2.5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(139, 0, 0, 0.2);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1.5rem;
+            background-color: #FFEEEE;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8B0000;
+            font-size: 1.5rem;
+        }
+
+        .service-title {
+            color: #8B0000;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        /* Seção Tecnologias */
+        .technologies {
+            background-color: #FFEEEE;
+            padding: 5rem 5%;
+        }
+
+        .tech-carousel {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .tech-slide {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .tech-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background-color: #8B0000;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .tech-name {
+            color: #8B0000;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            background: #ccc;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .dot.active {
+            background: #8B0000;
+        }
+
+        /* Seção Sobre */
+        .about-tabs {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tab-buttons {
+            display: flex;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .tab-btn {
+            padding: 1rem 2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            color: #666;
+            position: relative;
+        }
+
+        .tab-btn.active {
+            color: #8B0000;
+            font-weight: 600;
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #8B0000;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 2rem;
+            background: white;
+            border: 1px solid #8B0000;
+            border-radius: 8px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .tab-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1.5rem;
+            background-color: #FFEEEE;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8B0000;
+            font-size: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #450000;
+            color: white;
+            padding: 3rem 5% 1rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 2rem;
+            padding: 0 1rem;
+        }
+
+        .footer-title {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: white;
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-icon {
+            margin-right: 0.8rem;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            transform: scale(1.1);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 1.5rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 2rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .logo {
+                margin-bottom: 1rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 0.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+
+            .footer-column {
+                margin-bottom: 2rem;
+            }
+        }
+
+        /* Efeito de onda no footer */
+        .wave {
+            position: relative;
+            top: -50px;
+            height: 50px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%235C0000" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%235C0000" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%235C0000"/></svg>');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">Fernanda Enepeeme CNPJ Ai</a>
+        <nav>
+            <ul>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#technologies">Tecnologias</a></li>
+                <li><a href="#about">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Serviços -->
+    <section id="services" class="section">
+        <h2 class="section-title">Serviços</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3 class="service-title">Análise de Mercado</h3>
+                <p>Consultoria de CNPJ com IA para redução de burocracia e identificação de oportunidades de negócios com base em dados de mercado.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🧮</div>
+                <h3 class="service-title">Otimização Fiscal</h3>
+                <p>Soluções inteligentes para redução de carga tributária com análise de documentos fiscais usando aprendizado de máquina.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🤖</div>
+                <h3 class="service-title">Automação de Processos</h3>
+                <p>Implementação de sistemas automatizados para gestão de documentos e processos burocráticos relacionados ao CNPJ.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Tecnologias -->
+    <section id="technologies" class="technologies">
+        <h2 class="section-title">Tecnologias</h2>
+        <div class="tech-carousel">
+            <div class="tech-slide">
+                <div class="tech-icon">G4</div>
+                <h3 class="tech-name">GPT-4</h3>
+                <p>GPT-4 para processamento de linguagem natural em documentos fiscais, extraindo informações relevantes e gerando relatórios automatizados.</p>
+            </div>
+            <div class="tech-slide" style="display: none;">
+                <div class="tech-icon">IB</div>
+                <h3 class="tech-name">IBM Watson</h3>
+                <p>IBM Watson para análise preditiva de tendências fiscais e identificação de padrões em grandes volumes de dados.</p>
+            </div>
+            <div class="tech-slide" style="display: none;">
+                <div class="tech-icon">TF</div>
+                <h3 class="tech-name">TensorFlow</h3>
+                <p>TensorFlow para modelos personalizados de classificação de documentos e detecção de anomalias em processos burocráticos.</p>
+            </div>
+            <div class="carousel-dots">
+                <div class="dot active" data-slide="0"></div>
+                <div class="dot" data-slide="1"></div>
+                <div class="dot" data-slide="2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="about" class="section">
+        <h2 class="section-title">Sobre Nós</h2>
+        <div class="about-tabs">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="mission">Missão</button>
+                <button class="tab-btn" data-tab="vision">Visão</button>
+                <button class="tab-btn" data-tab="values">Valores</button>
+            </div>
+            <div class="tab-content active" id="mission">
+                <div class="tab-icon">🎯</div>
+                <p>Missão: Transformar dados fiscais em insights acionáveis, simplificando a vida dos empreendedores através da inteligência artificial aplicada à gestão de CNPJ.</p>
+            </div>
+            <div class="tab-content" id="vision">
+                <div class="tab-icon">👁️</div>
+                <p>Visão: Ser referência nacional em soluções inteligentes para gestão empresarial, eliminando a burocracia através da tecnologia.</p>
+            </div>
+            <div class="tab-content" id="values">
+                <div class="tab-icon">❤️</div>
+                <p>Valores: Inovação, Transparência, Eficiência e Compromisso com o sucesso dos nossos clientes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="wave"></div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3 class="footer-title">Contato</h3>
+                <ul class="contact-info">
+                    <li><span class="contact-icon">✉️</span> londawvjean@hotmail.com</li>
+                    <li><span class="contact-icon">📞</span> (41) 99882-5618</li>
+                    <li><span class="contact-icon">🏢</span> AV. GETÚLIO VARGAS, 456 - BELO HORIZONTE/MG</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Links Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#technologies">Tecnologias</a></li>
+                    <li><a href="#about">Sobre Nós</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Redes Sociais</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link">💬</a>
+                    <a href="#" class="social-link">🔗</a>
+                    <a href="#" class="social-link">📷</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>"© 2023 Fernanda Enepeeme CNPJ Ai. Todos os direitos reservados. CNPJ: 74.594.764/0001-99"</p>
+        </div>
+    </footer>
+
+    <script>
+        // Carrossel de tecnologias
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.tech-slide');
+        const dots = document.querySelectorAll('.dot');
+        
+        function showSlide(index) {
+            slides.forEach(slide => slide.style.display = 'none');
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[index].style.display = 'block';
+            dots[index].classList.add('active');
+            currentSlide = index;
+        }
+        
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const slideIndex = parseInt(dot.getAttribute('data-slide'));
+                showSlide(slideIndex);
+            });
+        });
+        
+        // Autoplay do carrossel
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }, 5000);
+        
+        // Tabs da seção Sobre
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.getAttribute('data-tab');
+                
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                button.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Smooth scrolling para links do menu
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Responsividade do menu
+        function handleMobileMenu() {
+            const header = document.querySelector('header');
+            const nav = document.querySelector('nav ul');
+            
+            if (window.innerWidth < 768) {
+                nav.style.display = 'none';
+                header.classList.add('mobile');
+                
+                const menuToggle = document.createElement('button');
+                menuToggle.innerHTML = '☰';
+                menuToggle.classList.add('menu-toggle');
+                header.appendChild(menuToggle);
+                
+                menuToggle.addEventListener('click', () => {
+                    if (nav.style.display === 'none' || nav.style.display === '') {
+                        nav.style.display = 'flex';
+                    } else {
+                        nav.style.display = 'none';
+                    }
+                });
+            } else {
+                header.classList.remove('mobile');
+                const menuToggle = document.querySelector('.menu-toggle');
+                if (menuToggle) {
+                    menuToggle.remove();
+                }
+                nav.style.display = 'flex';
+            }
+        }
+        
+        window.addEventListener('resize', handleMobileMenu);
+        window.addEventListener('load', handleMobileMenu);
+    </script>
+</body>
+</html>
