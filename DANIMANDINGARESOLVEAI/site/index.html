@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANI MANDINGA RESOLVE AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --secondary: #FF6584;
+            --dark: #2D3748;
+            --light: #F7FAFC;
+            --accent: #48BB78;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            padding-top: 100px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 0.5rem 0;
+        }
+
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(108, 99, 255, 0.1), rgba(255, 101, 132, 0.1));
+            padding: 5rem 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(108, 99, 255, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--secondary);
+            box-shadow: 0 4px 15px rgba(255, 101, 132, 0.3);
+        }
+
+        .btn-secondary:hover {
+            box-shadow: 0 6px 20px rgba(255, 101, 132, 0.4);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .services {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark);
+            font-size: 2.5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--primary);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card ul {
+            list-style-position: inside;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            background-color: rgba(72, 187, 120, 0.1);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .about {
+            background: linear-gradient(135deg, rgba(45, 55, 72, 0.9), rgba(45, 55, 72, 1));
+            color: white;
+            padding: 5rem 0;
+            margin: 4rem 0;
+        }
+
+        .about .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .about h2 {
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .about p {
+            max-width: 800px;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .contact {
+            padding: 4rem 0;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            nav ul {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: var(--dark);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: left 0.3s ease;
+            }
+
+            nav ul.active {
+                left: 0;
+            }
+
+            nav ul li {
+                margin: 1rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate {
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">DANI MANDINGA RESOLVE AI</div>
+        <div class="hamburger">☰</div>
+        <nav>
+            <ul>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#contact">Contato</a></li>
+                <li><a href="#footer">Informações</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="animate">Dani Mandinga Resolve Aí</h1>
+            <p class="animate delay-1">Soluções criativas e estratégicas para transformar seus desafios em resultados mensuráveis.</p>
+            <a href="#contact" class="btn animate delay-2">Fale Conosco</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title animate">Nossos Serviços</h2>
+            <div class="services-grid">
+                <div class="service-card animate delay-1">
+                    <h3>Automação de Processos</h3>
+                    <ul>
+                        <li>Integração de sistemas com <span class="highlight">RPA</span></li>
+                        <li>Automações com <span class="highlight">Zapier</span> e <span class="highlight">Make</span></li>
+                        <li>Fluxos de trabalho otimizados</li>
+                        <li>Redução de tarefas manuais</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary">Saiba Mais</a>
+                </div>
+                <div class="service-card animate delay-2">
+                    <h3>Análise de Dados</h3>
+                    <ul>
+                        <li>Dashboards em <span class="highlight">Power BI</span></li>
+                        <li>Análises com <span class="highlight">Python</span> e <span class="highlight">SQL</span></li>
+                        <li>Relatórios personalizados</li>
+                        <li>Visualização de dados estratégica</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary">Saiba Mais</a>
+                </div>
+                <div class="service-card animate delay-3">
+                    <h3>Estratégias de Crescimento</h3>
+                    <ul>
+                        <li><span class="highlight">Growth Hacking</span> aplicado</li>
+                        <li>Implementação de <span class="highlight">OKRs</span></li>
+                        <li>Consultoria em transformação digital</li>
+                        <li>Metodologias <span class="highlight">Design Thinking</span></li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title animate">Sobre a Dani Mandinga</h2>
+            <p class="animate delay-1">Dani Mandinga oferece soluções criativas e estratégicas para consultores, integrando tecnologia e metodologias inovadoras para impulsionar seus negócios.</p>
+            <p class="animate delay-2">Nossas "mandingas" exclusivas traduzem desafios complexos em resultados mensuráveis, combinando automação, análise de dados e estratégias de crescimento.</p>
+            <a href="#contact" class="btn animate delay-3">Conheça Nossa Metodologia</a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title animate">Entre em Contato</h2>
+            <div class="contact-form animate delay-1">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Serviço de Interesse</label>
+                        <select id="service" name="service">
+                            <option value="">Selecione...</option>
+                            <option value="automation">Automação de Processos</option>
+                            <option value="data">Análise de Dados</option>
+                            <option value="growth">Estratégias de Crescimento</option>
+                            <option value="other">Outro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li>WhatsApp: (41) 9704-1413</li>
+                        <li>Razao Social: DANI MANDINGA RESOLVE AI</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Endereço</h3>
+                    <ul>
+                        <li>Rua Padre Chagas, 321</li>
+                        <li>Moinhos de Vento</li>
+                        <li>Porto Alegre/RS</li>
+                        <li>CEP: 90.430-000</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Funcionamento</h3>
+                    <ul>
+                        <li>Segunda a Sexta</li>
+                        <li>9h às 18h</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">L</a>
+                        <a href="#" class="social-link">I</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>"CNPJ: 47.113.767/0001-90 | DANI MANDINGA RESOLVE AI LTDA"</p>
+                <p>Desenvolvido por Tech Partner - ©2024 Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('nav ul');
+            
+            hamburger.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        if (nav.classList.contains('active')) {
+                            nav.classList.remove('active');
+                        }
+                    }
+                });
+            });
+
+            // Form submission
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form values
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
+                    
+                    // Here you would typically send the form data to a server
+                    console.log('Form submitted:', { name, email, message });
+                    
+                    // Show success message
+                    alert('Obrigado por sua mensagem! Entraremos em contato em breve.');
+                    
+                    // Reset form
+                    contactForm.reset();
+                });
+            }
+
+            // Animation on scroll
+            const animateElements = document.querySelectorAll('.animate');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animateElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
