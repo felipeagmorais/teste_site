@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        /* Reset e estilos base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #4A00E0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #4A00E0;
+            bottom: -4px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            width: 30px;
+            height: 20px;
+            position: relative;
+        }
+
+        .hamburger span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: #333;
+            border-radius: 3px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+
+        .hamburger span:nth-child(1) {
+            top: 0px;
+        }
+
+        .hamburger span:nth-child(2),
+        .hamburger span:nth-child(3) {
+            top: 10px;
+        }
+
+        .hamburger span:nth-child(4) {
+            top: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #4A00E0, #8E2DE2);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #4A00E0;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .service-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #4A00E0, #8E2DE2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+
+        .learn-more {
+            color: #4A00E0;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .learn-more::after {
+            content: '→';
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .learn-more:hover::after {
+            transform: translateX(5px);
+        }
+
+        /* Technologies Section */
+        .technologies {
+            padding: 5rem 5%;
+            background-color: #f9f9f9;
+        }
+
+        .tech-slider {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-slide {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin: 0 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .tech-slide:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .tech-icon {
+            width: 80px;
+            height: 80px;
+            background: #f0f0f0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4A00E0;
+        }
+
+        .tech-tooltip {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            width: 80%;
+            max-width: 300px;
+        }
+
+        .tech-slide:hover .tech-tooltip {
+            opacity: 1;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 5rem 5%;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .feature {
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .feature:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: #4A00E0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .feature h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature p {
+            color: #666;
+            text-align: justify;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #121212;
+            color: white;
+            padding: 4rem 5% 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 4fr 3fr 2fr 3fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .footer-slogan {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #aaa;
+        }
+
+        .footer-title {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 32px;
+            height: 32px;
+            background: #333;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: #4A00E0;
+            transform: scale(1.2);
+        }
+
+        .newsletter input {
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            background: #333;
+            color: white;
+        }
+
+        .newsletter input:focus {
+            outline: 2px solid #4A00E0;
+        }
+
+        .newsletter button {
+            background: linear-gradient(135deg, #4A00E0, #8E2DE2);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(74, 0, 224, 0.3);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        .developer-link {
+            color: #aaa;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .developer-link:hover {
+            color: #8E2DE2;
+        }
+
+        /* Responsividade */
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 2rem;
+                transition: all 0.5s ease;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 1rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .services-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">Rodinei Rondnelas Negócio AI</a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#technologies">Tecnologias</a></li>
+                <li><a href="#about">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero fade-in">
+        <h1>Soluções de IA para Transformar seu Negócio</h1>
+        <p>Desenvolvemos sistemas inteligentes que automatizam processos, aumentam eficiência e geram insights valiosos para sua empresa.</p>
+        <a href="#contact" class="cta-button">Fale Conosco</a>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 class="section-title fade-in">Nossos Serviços</h2>
+        <div class="services-grid">
+            <div class="service-card fade-in delay-1">
+                <div class="service-icon">AI</div>
+                <h3>Consultoria em IA</h3>
+                <p>Análise estratégica para identificar oportunidades de aplicação de inteligência artificial no seu negócio.</p>
+                <a href="#" class="learn-more">Saiba mais</a>
+            </div>
+            <div class="service-card fade-in delay-2">
+                <div class="service-icon">ML</div>
+                <h3>Machine Learning</h3>
+                <p>Desenvolvimento de modelos preditivos e sistemas de aprendizado de máquina personalizados.</p>
+                <a href="#" class="learn-more">Saiba mais</a>
+            </div>
+            <div class="service-card fade-in delay-3">
+                <div class="service-icon">NLP</div>
+                <h3>Processamento de Linguagem</h3>
+                <p>Soluções avançadas de NLP para análise de sentimentos, chatbots inteligentes e muito mais.</p>
+                <a href="#" class="learn-more">Saiba mais</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="technologies">
+        <h2 class="section-title fade-in">Tecnologias que Utilizamos</h2>
+        <div class="tech-slider">
+            <div class="tech-slide fade-in delay-1">
+                <div class="tech-icon">TF</div>
+                <h3>TensorFlow</h3>
+                <div class="tech-tooltip">TensorFlow: framework para ML desenvolvido pelo Google</div>
+            </div>
+            <div class="tech-slide fade-in delay-2">
+                <div class="tech-icon">PT</div>
+                <h3>PyTorch</h3>
+                <div class="tech-tooltip">PyTorch: biblioteca de aprendizado de máquina de código aberto</div>
+            </div>
+            <div class="tech-slide fade-in delay-3">
+                <div class="tech-icon">NL</div>
+                <h3>NLTK</h3>
+                <div class="tech-tooltip">NLTK: plataforma líder para construção de programas Python para trabalhar com dados de linguagem humana</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="about" class="features">
+        <h2 class="section-title fade-in">Por que Escolher Nossa Empresa</h2>
+        <div class="features-grid">
+            <div class="feature fade-in delay-1">
+                <div class="feature-icon">1</div>
+                <h3>Expertise Técnica</h3>
+                <p>Nossa equipe possui mais de 10 anos de experiência no desenvolvimento de soluções de IA para diversos setores, garantindo a melhor abordagem técnica para cada desafio.</p>
+            </div>
+            <div class="feature fade-in delay-2">
+                <div class="feature-icon">2</div>
+                <h3>Resultados Comprovados</h3>
+                <p>Já implementamos soluções que aumentaram em até 300% a eficiência operacional de nossos clientes, com casos de sucesso documentados em diversos segmentos.</p>
+            </div>
+            <div class="feature fade-in delay-3">
+                <div class="feature-icon">3</div>
+                <h3>Suporte Contínuo</h3>
+                <p>Oferecemos suporte técnico especializado e atualizações regulares para garantir que sua solução continue evoluindo junto com as necessidades do seu negócio.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">Rodinei Rondnelas Negócio AI</div>
+                <p class="footer-slogan">"Transformando negócios através da inteligência artificial com soluções inovadoras e personalizadas desde 2015."</p>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-title">Contato</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:londawvjean@hotmail.com">londawvjean@hotmail.com</a></li>
+                    <li><a href="tel:+5511998986234">+55 (41) 99898-6234</a></li>
+                    <li><a href="#">Av. Paulista, 1578 - São Paulo/SP</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-title">Redes Sociais</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link">F</a>
+                    <a href="#" class="social-link">L</a>
+                    <a href="#" class="social-link">T</a>
+                    <a href="#" class="social-link">I</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-title">Newsletter</h3>
+                <form class="newsletter">
+                    <input type="email" placeholder="Seu e-mail" required>
+                    <button type="submit">Assinar</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Rodinei Rondnelas Negócio AI. Todos os direitos reservados. Desenvolvido por <a href="#" class="developer-link">"Equipe Rondnelas Tech Solutions"</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu hamburguer
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Fechar menu ao clicar em um link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Validação do formulário de newsletter
+        const newsletterForm = document.querySelector('.newsletter');
+        const emailInput = newsletterForm.querySelector('input[type="email"]');
+
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const email = emailInput.value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (emailRegex.test(email)) {
+                alert('Obrigado por assinar nossa newsletter!');
+                emailInput.value = '';
+            } else {
+                alert('Por favor, insira um e-mail válido.');
+            }
+        });
+
+        // Scroll suave para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Simulação de slider (já que não podemos usar bibliotecas externas)
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.tech-slide');
+        
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+        
+        // Iniciar slider
+        showSlide(0);
+        setInterval(nextSlide, 3000);
+    </script>
+</body>
+</html>
