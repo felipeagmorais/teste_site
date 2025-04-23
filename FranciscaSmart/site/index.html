@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francisca Smart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>:root {
+    --primary: #2A5BDD;
+    --primary-dark: #1A3FB7;
+    --secondary: #6c757d;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --white: #ffffff;
+    --gray: #6c757d;
+    --gray-light: #e9ecef;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6,
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.navbar-brand::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav-link {
+    color: var(--dark);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.hero-banner {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+    padding: 5rem 0;
+}
+
+.hero-banner h1 {
+    font-weight: 900;
+    font-size: 3.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.hero-banner p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.hero-banner p:hover {
+    opacity: 1;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(42, 91, 221, 0.3);
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+.card {
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.timeline {
+    position: relative;
+    padding-left: 3rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 1.5rem;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary), var(--primary-dark));
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-icon {
+    position: absolute;
+    left: -3rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(42, 91, 221, 0.1);
+    color: var(--primary);
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(42, 91, 221, 0.25);
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 992px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    
+    .hero-banner {
+        padding: 3rem 0;
+    }
+    
+    .hero-banner h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 1.25rem;
+    }
+    
+    .timeline-icon {
+        left: -2.5rem;
+        width: 2rem;
+        height: 2rem;
+    }
+}</style>
+</head>
+<body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Francisca Smart - Soluções inteligentes em tecnologia móvel">
+    <title>Francisca Smart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <span class="fw-bold fs-3">Francisca Smart</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-mobile-screen-button me-2"></i>Dispositivos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-circle-question me-2"></i>Como Funciona</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-eye-low-vision me-2"></i>Visão</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-info-circle me-2"></i>Sobre</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-banner py-5">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold mb-4">Tecnologia Inteligente para Você</h1>
+                        <p class="lead mb-4">Descubra dispositivos recondicionados com qualidade premium e preços acessíveis.</p>
+                        <button class="btn btn-primary btn-lg px-4 py-3">Explore Nossos Modelos <i class="fas fa-arrow-right ms-2"></i></button>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-shapes">
+                            <div class="shape-1"></div>
+                            <div class="shape-2"></div>
+                            <div class="shape-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5">Modelos Disponíveis</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="icon-circle mb-4">
+                                    <i class="fas fa-mobile-alt fa-2x"></i>
+                                </div>
+                                <h3 class="h5">iPhone 13 Pro</h3>
+                                <ul class="list-unstyled text-start mb-4">
+                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>128GB Storage</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>6.1" Super Retina XDR</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>A15 Bionic Chip</li>
+                                </ul>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="fw-bold text-primary">R$ 3.299</span>
+                                    <button class="btn btn-sm btn-outline-primary">Detalhes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="icon-circle mb-4">
+                                    <i class="fas fa-mobile-alt fa-2x"></i>
+                                </div>
+                                <h3 class="h5">Samsung S22 Ultra</h3>
+                                <ul class="list-unstyled text-start mb-4">
+                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>256GB Storage</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>6.8" Dynamic AMOLED</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>S Pen Included</li>
+                                </ul>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="fw-bold text-primary">R$ 4.199</span>
+                                    <button class="btn btn-sm btn-outline-primary">Detalhes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="icon-circle mb-4">
+                                    <i class="fas fa-mobile-alt fa-2x"></i>
+                                </div>
+                                <h3 class="h5">Google Pixel 7 Pro</h3>
+                                <ul class="list-unstyled text-start mb-4">
+                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>128GB Storage</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>6.7" LTPO OLED</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Tensor G2 Chip</li>
+                                </ul>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="fw-bold text-primary">R$ 3.899</span>
+                                    <button class="btn btn-sm btn-outline-primary">Detalhes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="icon-circle mb-4">
+                                    <i class="fas fa-mobile-alt fa-2x"></i>
+                                </div>
+                                <h3 class="h5">OnePlus 10 Pro</h3>
+                                <ul class="list-unstyled text-start mb-4">
+                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>256GB Storage</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>6.7" Fluid AMOLED</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Snapdragon 8 Gen 1</li>
+                                </ul>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="fw-bold text-primary">R$ 3.599</span>
+                                    <button class="btn btn-sm btn-outline-primary">Detalhes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2 class="mb-4">Como Funciona</h2>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-circle-check"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h3>Selecione Seu Dispositivo</h3>
+                                    <p>Escolha entre nossos modelos premium cuidadosamente selecionados e testados.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-screwdriver-wrench"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h3>Processo de Recondicionamento</h3>
+                                    <p>Cada dispositivo passa por rigorosos testes e recebe peças originais quando necessário.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-shield-halved"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h3>Garantia e Entrega</h3>
+                                    <p>Receba seu dispositivo com garantia de 12 meses e entrega rápida em todo o país.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="accordion" id="visionAccordion">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <i class="fas fa-eye me-3"></i> Nossa Visão
+                                    </button>
+                                </h3>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#visionAccordion">
+                                    <div class="accordion-body">
+                                        <p>Transformar o mercado de tecnologia usada através de processos transparentes e produtos de alta qualidade.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <i class="fas fa-bullseye me-3"></i> Nossa Missão
+                                    </button>
+                                </h3>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#visionAccordion">
+                                    <div class="accordion-body">
+                                        <p>Oferecer tecnologia acessível sem comprometer qualidade, desempenho ou experiência do usuário.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <i class="fas fa-heart me-3"></i> Nossos Valores
+                                    </button>
+                                </h3>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#visionAccordion">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>Transparência em todos os processos</li>
+                                            <li>Qualidade acima de tudo</li>
+                                            <li>Sustentabilidade ambiental</li>
+                                            <li>Experiência excepcional do cliente</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white pt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <h3 class="h5 mb-4">Contatos</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><i class="fas fa-phone me-2"></i> (41) 99709-0973</li>
+                        <li class="mb-3"><i class="fas fa-envelope me-2"></i> fransisca_ren@outlook.com</li>
+                        <li class="mb-3"><i class="fas fa-location-dot me-2"></i> Belo Horizonte, MG</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h3 class="h5 mb-4">Links</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white">Dispositivos</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">Como Funciona</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">Visão</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">Sobre</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h3 class="h5 mb-4">Newsletter</h3>
+                    <form>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Seu e-mail">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Assinar</button>
+                    </form>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h3 class="h5 mb-4">Redes Sociais</h3>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-md-0">&copy; 2023 Francisca Smart. Razão Social: 48.148.688 FRANCISCA RESENDE SMART. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#" class="text-white">Política de Privacidade</a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white">Termos de Uso</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('navbar-scrolled');
+        } else {
+            navbar.classList.remove('navbar-scrolled');
+        }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Card hover effect
+    const cards = document.querySelectorAll('.card');
+    
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px)';
+            this.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.15)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+        });
+    });
+
+    // Accordion icon change
+    const accordionButtons = document.querySelectorAll('.accordion-button');
+    
+    accordionButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const icon = this.querySelector('i');
+            if (this.classList.contains('collapsed')) {
+                if (icon.classList.contains('fa-eye')) icon.classList.replace('fa-eye', 'fa-eye-slash');
+                if (icon.classList.contains('fa-bullseye')) icon.classList.replace('fa-bullseye', 'fa-crosshairs');
+                if (icon.classList.contains('fa-heart')) icon.classList.replace('fa-heart', 'fa-heart-broken');
+            } else {
+                if (icon.classList.contains('fa-eye-slash')) icon.classList.replace('fa-eye-slash', 'fa-eye');
+                if (icon.classList.contains('fa-crosshairs')) icon.classList.replace('fa-crosshairs', 'fa-bullseye');
+                if (icon.classList.contains('fa-heart-broken')) icon.classList.replace('fa-heart-broken', 'fa-heart');
+            }
+        });
+    });
+
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.timeline-item, .card').forEach(element => {
+        observer.observe(element);
+    });
+});</script></body>
+</html>
