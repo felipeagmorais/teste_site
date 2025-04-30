@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudando MindSets</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>:root {
+    --primary: #FFD700;
+    --secondary: #000000;
+    --light: #FFFFFF;
+    --dark: #111111;
+    --gray: #222222;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 72px;
+    color: var(--light);
+    background-color: var(--secondary);
+}
+
+/* Header Styles */
+.navbar {
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 15px rgba(255, 215, 0, 0.15);
+}
+
+.navbar.scrolled {
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.nav-link {
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-link:hover {
+    color: var(--primary) !important;
+    transform: scale(1.05);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 70%;
+}
+
+.pulse {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Hero Section */
+.hero-section {
+    background: conic-gradient(from 45deg, var(--secondary), var(--gray));
+    position: relative;
+    overflow: hidden;
+}
+
+.css-art {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 85%, 50% 75%, 0% 85%);
+    background: rgba(255, 215, 0, 0.05);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.gradient-circle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.2;
+}
+
+.icon-animation i {
+    font-size: 3rem;
+    color: var(--primary);
+    position: absolute;
+    opacity: 0.8;
+    animation: float 3s ease-in-out infinite;
+}
+
+.icon-animation i:nth-child(1) {
+    top: 20%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.icon-animation i:nth-child(2) {
+    top: 60%;
+    left: 70%;
+    animation-delay: 0.2s;
+}
+
+.icon-animation i:nth-child(3) {
+    top: 30%;
+    left: 60%;
+    animation-delay: 0.4s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.float-btn {
+    animation: float 3s ease-in-out infinite;
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.float-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+.arrow-icon {
+    transform: translateX(-10px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.float-btn:hover .arrow-icon {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Content Cards */
+.glass-card {
+    background: rgba(17, 17, 17, 0.85);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary);
+    animation: borderPulse 2s infinite;
+}
+
+@keyframes borderPulse {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+
+.glass-card:hover {
+    transform: perspective(500px) rotateY(10deg);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.2);
+}
+
+.icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary), #FFA500);
+    margin-bottom: 1rem;
+    color: var(--secondary);
+    font-size: 1.5rem;
+}
+
+.benefits-list li {
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    transform: translateX(-10px);
+    animation: fadeIn 0.5s forwards;
+}
+
+.benefits-list li:nth-child(1) { animation-delay: 0.1s; }
+.benefits-list li:nth-child(2) { animation-delay: 0.3s; }
+.benefits-list li:nth-child(3) { animation-delay: 0.5s; }
+
+@keyframes fadeIn {
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Vision Section */
+.vision-section {
+    background-image: radial-gradient(var(--primary) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.vision-card {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    height: 100%;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.vision-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.1);
+}
+
+.icon-3d {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    transform-style: preserve-3d;
+    transition: all 0.3s ease;
+}
+
+.vision-card:hover .icon-3d {
+    transform: rotateY(180deg);
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(45deg, var(--secondary), var(--gray), var(--secondary));
+    background-size: 300% 300%;
+    animation: gradientShift 8s ease infinite alternate;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.neomorphic-btn {
+    background: var(--primary);
+    color: var(--secondary);
+    border: none;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2),
+                -5px -5px 10px rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.neomorphic-btn:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2),
+                -2px -2px 5px rgba(255, 255, 255, 0.05);
+    transform: translateY(2px);
+}
+
+.neomorphic-btn:active {
+    transform: scale(0.95);
+}
+
+.shake-trigger:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+    10%, 90% { transform: translateX(-1px); }
+    20%, 80% { transform: translateX(2px); }
+    30%, 50%, 70% { transform: translateX(-4px); }
+    40%, 60% { transform: translateX(4px); }
+}
+
+/* Footer Styles */
+.footer-links .nav-link {
+    padding-left: 0;
+    padding-right: 0;
+    transition: all 0.3s ease;
+}
+
+.footer-links .nav-link:hover {
+    transform: skewX(-10deg);
+    color: var(--primary) !important;
+}
+
+.wave-icon {
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover .wave-icon {
+    transform: translateY(-3px);
+}
+
+.typing-text {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid var(--primary);
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--primary); }
+}
+
+/* Accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary);
+    color: var(--secondary);
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+:focus-visible {
+    outline: 2px dashed var(--primary);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}</style>
+</head>
+<body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transforme sua mentalidade com nosso e-book exclusivo. Aprenda estratégias comprovadas para mudar seu mindset e alcançar seus objetivos.">
+    <title>Mudando MindSets - Transforme sua Mentalidade</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-link visually-hidden-focusable">Pular para conteúdo principal</a>
+    
+    <header class="navbar navbar-expand-lg navbar-dark bg-black fixed-top py-0" id="main-header">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-2" href="#" style="font-family: 'Montserrat', sans-serif; letter-spacing: 1px; background: linear-gradient(to right, #FFD700, #FFFFFF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; padding: 1.5rem 0;">
+                Mudando MindSets
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2" href="#ebook">E-book</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2" href="#conteudo">Conteúdo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2" href="#visao">Visão</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2" href="#comprar">Comprar <i class="fas fa-shopping-cart ms-1 pulse"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero-section py-5" id="ebook">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <h1 class="display-4 fw-bold mb-4" style="font-size: clamp(1.8rem, 4vw, 2.5rem)"; style="color: #fff";>Transforme Seu Mindset e Alcance Seus Objetivos</h1>
+                        <p class="lead mb-4" style="max-width: 65ch; line-height: 1.8;">Descubra as estratégias comprovadas para reprogramar sua mente e alcançar o sucesso em todas as áreas da sua vida. Nosso e-book exclusivo vai te guiar passo a passo nessa jornada de transformação.</p>
+                        <button class="btn btn-primary btn-lg px-4 py-3 float-btn">Baixar E-book Grátis <i class="fas fa-arrow-right ms-2 arrow-icon"></i></button>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="css-art mx-auto" style="height: 400px; position: relative;">
+                            <div class="gradient-circle"></div>
+                            <div class="icon-animation">
+                                <i class="fas fa-brain"></i>
+                                <i class="fas fa-chart-line"></i>
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-dark" id="conteudo">
+            <div class="container py-5">
+                <h2 class="text-center mb-5 fw-bold">O Que Você Vai Aprender</h2>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="col">
+                        <div class="card h-100 glass-card">
+                            <div class="card-body">
+                                <div class="icon-wrapper mb-3">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <h3 class="card-title h5">Reprogramação Mental</h3>
+                                <p class="card-text">Técnicas para identificar e modificar crenças limitantes que estão te impedindo de avançar.</p>
+                                <ul class="benefits-list">
+                                    <li><i class="fas fa-check-circle me-2"></i>Identifique padrões negativos</li>
+                                    <li><i class="fas fa-check-circle me-2"></i>Crie novas conexões neurais</li>
+                                    <li><i class="fas fa-check-circle me-2"></i>Estabeleça hábitos positivos</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 glass-card">
+                            <div class="card-body">
+                                <div class="icon-wrapper mb-3">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <h3 class="card-title h5">Produtividade Máxima</h3>
+                                <p class="card-text">Métodos comprovados para aumentar sua eficiência e alcançar mais em menos tempo.</p>
+                                <ul class="benefits-list">
+                                    <li><i class="fas fa-check-circle me-2"></i>Gestão do tempo inteligente</li>
+                                    <li><i class="fas fa-check-circle me-2"></i>Foco e concentração</li>
+                                    <li><i class="fas fa-check-circle me-2"></i>Eliminação de distrações</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 glass-card">
+                            <div class="card-body">
+                                <div class="icon-wrapper mb-3">
+                                    <i class="fas fa-medal"></i>
+                                </div>
+                                <h3 class="card-title h5">Mentalidade Vencedora</h3>
+                                <p class="card-text">Desenvolva a resiliência e persistência necessárias para superar qualquer desafio.</p>
+                                <ul class="benefits-list">
+                                    <li><i class="fas fa-check-circle me-2"></i>Enfrente medos e inseguranças</li>
+                                    <li><i class="fas fa-check-circle me-2"></i>Aprenda com os fracassos</li>
+                                    <li><i class="fas fa-check-circle me-2"></i>Mantenha-se motivado</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 vision-section" id="visao">
+            <div class="container py-5">
+                <h2 class="text-center mb-5 fw-bold position-relative">Nossa Visão</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="vision-card">
+                            <div class="icon-3d">
+                                <i class="fas fa-globe-americas"></i>
+                            </div>
+                            <h3>Impacto Global</h3>
+                            <p>Queremos ajudar 1 milhão de pessoas a transformarem suas vidas através da mudança de mindset.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="vision-card">
+                            <div class="icon-3d">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>Missão Humanizada</h3>
+                            <p>Acreditamos que todo mundo merece viver uma vida plena e realizada, independente de sua origem.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="vision-card">
+                            <div class="icon-3d">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h3>Crescimento Contínuo</h3>
+                            <p>Nosso compromisso é com a evolução constante, tanto nossa quanto daqueles que acompanhamos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 cta-section" id="comprar">
+            <div class="container py-5 text-center">
+                <h2 class="mb-4 fw-bold">Pronto para Transformar Seu Mindset?</h2>
+                <p class="lead mb-5 mx-auto" style="max-width: 700px;">Adquira agora nosso e-book exclusivo e comece sua jornada de transformação pessoal. Garantia de 7 dias ou seu dinheiro de volta!</p>
+                <button class="btn btn-lg btn-warning neomorphic-btn shake-trigger" data-whatsapp="Olá, gostaria de comprar o e-book Mudando MindSets">
+                    Comprar Agora <i class="fas fa-arrow-right ms-2"></i>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="footer-brand mb-3">
+                        <span class="fw-bold fs-3" style="background: linear-gradient(to right, #FFD700, #FFFFFF); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Mudando MindSets</span>
+                    </div>
+                    <p class="slogan">"Transformando vidas através da mudança de mentalidade."</p>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="h5 mb-3">Links Rápidos</h3>
+                    <ul class="nav flex-column footer-links">
+                        <li class="nav-item">
+                            <a class="nav-link ps-0" href="#ebook"><i class="fas fa-chevron-right me-2"></i> E-book</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ps-0" href="#conteudo"><i class="fas fa-chevron-right me-2"></i> Conteúdo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ps-0" href="#visao"><i class="fas fa-chevron-right me-2"></i> Visão</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ps-0" href="#comprar"><i class="fas fa-chevron-right me-2"></i> Comprar</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="h5 mb-3">Contato</h3>
+                    <ul class="list-unstyled contact-list">
+                        <li class="mb-2">
+                            <a href="#" class="text-white contact-link" aria-describedby="email-tooltip">
+                                <i class="fas fa-envelope me-2 wave-icon"></i> contato@mudandomindsets.com
+                            </a>
+                            <div id="email-tooltip" role="tooltip" class="visually-hidden">Envie um e-mail para nós</div>
+                        </li>
+                    </ul>
+                    <form class="mt-4 newsletter-form">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Seu e-mail" aria-label="Seu e-mail" required>
+                            <button class="btn btn-outline-light" type="submit">Assinar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom mt-5 pt-4 border-top border-secondary">
+                <div class="row">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <p class="mb-0 typing-text">&copy; 2023 Mudando MindSets. "Todos os direitos reservados."</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="#" class="text-white me-3">Política de Privacidade</a>
+                        <a href="#" class="text-white">Termos de Uso</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    // Header scroll effect
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                const headerHeight = document.getElementById('main-header').offsetHeight;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // WhatsApp integration
+    const whatsappButtons = document.querySelectorAll('[data-whatsapp]');
+    whatsappButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const message = encodeURIComponent(this.getAttribute('data-whatsapp'));
+            window.open(`https://wa.me/?text=${message}`, '_blank');
+        });
+    });
+
+    // Newsletter form validation
+    const newsletterForm = document.querySelector('.newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const emailInput = this.querySelector('input[type="email"]');
+            
+            if (emailInput.validity.valid) {
+                // Simulate form submission
+                this.innerHTML = '<div class="alert alert-success">Obrigado por se inscrever!</div>';
+            } else {
+                emailInput.classList.add('is-invalid');
+            }
+        });
+    }
+
+    // Initialize tooltips
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[aria-describedby]'));
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+
+    // Animate elements when they come into view
+    const animateOnScroll = function() {
+        const elements = document.querySelectorAll('.benefits-list li, .vision-card, .glass-card');
+        
+        elements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+            
+            if (elementPosition < screenPosition) {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }
+        });
+    };
+
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll(); // Run once on page load
+});</script></body>
+</html>
