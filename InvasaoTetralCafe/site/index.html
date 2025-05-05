@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invasao Tetral Cafe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>:root {
+    --primary-dark: #3E2723;
+    --primary-medium: #5D4037;
+    --primary-light: #8D6E63;
+    --secondary: #D7CCC8;
+    --accent: #BCAAA4;
+    --text-dark: #3E2723;
+    --text-light: #FFF8E1;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    scroll-behavior: smooth;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+    padding: 1rem 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    color: var(--text-light) !important;
+}
+
+.navbar-brand i {
+    animation: pulse 2s infinite;
+}
+
+.nav-link {
+    color: var(--secondary) !important;
+    font-weight: 500;
+    margin: 0 0.6rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover {
+    color: var(--text-light) !important;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.nav-link:focus-visible {
+    outline: 2px dashed var(--text-light);
+}
+
+section {
+    padding: 5rem 0;
+    scroll-margin-top: 80px;
+}
+
+.card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    background-color: var(--primary-medium);
+    color: var(--text-light);
+    padding: 1rem;
+    font-family: var(--font-body);
+    font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+    position: relative;
+}
+
+.card-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+.card-body i {
+    font-size: 2rem;
+    color: var(--primary-medium);
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-body i {
+    transform: rotate(360deg);
+}
+
+.price::before {
+    content: 'R$ ';
+    font-weight: bold;
+    color: var(--primary-medium);
+}
+
+.nav-tabs .nav-link {
+    color: var(--primary-dark) !important;
+    border: none;
+    position: relative;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--primary-medium) !important;
+    background: transparent;
+}
+
+.nav-tabs .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-medium);
+    transform-origin: left;
+    animation: tabIndicator 0.3s forwards;
+}
+
+.map-container {
+    height: 300px;
+    background: linear-gradient(135deg, #D7CCC8, #BCAAA4, #D7CCC8);
+    border-radius: 8px;
+    position: relative;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+}
+
+.map-container i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: var(--primary-dark);
+    animation: bounce 2s infinite;
+}
+
+footer {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+}
+
+footer a {
+    color: var(--secondary);
+    text-decoration: none;
+    position: relative;
+}
+
+footer a:hover {
+    color: var(--text-light);
+}
+
+footer a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--text-light);
+    transition: width 0.3s ease;
+}
+
+footer a:hover::after {
+    width: 100%;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,248,225,0.1);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translate(-50%, -50%); }
+    50% { transform: translate(-50%, -60%); }
+}
+
+@keyframes tabIndicator {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+@media (max-width: 992px) {
+    header {
+        padding: 1rem 3%;
+    }
+    .navbar-collapse {
+        background-color: var(--primary-medium);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 2%;
+    }
+    section {
+        padding: 3rem 0;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .navbar-brand i, 
+    .card-body i,
+    .map-container i,
+    .social-icons a,
+    .nav-tabs .nav-link.active::after {
+        animation: none;
+    }
+}</style>
+</head>
+<body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Invasão Teatral Café - A experiência mais autêntica em café especial com atmosfera cultural">
+    <title>Invasão Teatral Café</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <i class="fas fa-mug-hot me-2"></i>
+                    <span>Invasão Teatral Café</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#localizacao">Localização</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="menu" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Nossos Cafés Especiais</h2>
+                <div class="row row-cols-2 row-cols-lg-3 g-4">
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <h3>Expresso Clássico</h3>
+                            </div>
+                            <div class="card-body">
+                                <i class="fas fa-coffee mb-3"></i>
+                                <p>Intenso e encorpado, com notas de chocolate amargo e nozes.</p>
+                                <span class="badge bg-primary">Tradicional</span>
+                            </div>
+                            <div class="card-footer">
+                                <span class="price">R$ 8,90</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <h3>Capuccino Artístico</h3>
+                            </div>
+                            <div class="card-body">
+                                <i class="fas fa-coffee mb-3"></i>
+                                <p>Harmonia perfeita entre espresso, leite vaporizado e espuma.</p>
+                                <span class="badge bg-success">Cremoso</span>
+                            </div>
+                            <div class="card-footer">
+                                <span class="price">R$ 12,50</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <h3>Cold Brew Tropical</h3>
+                            </div>
+                            <div class="card-body">
+                                <i class="fas fa-coffee mb-3"></i>
+                                <p>Infusão a frio com notas frutadas e final refrescante.</p>
+                                <span class="badge bg-info">Gelado</span>
+                            </div>
+                            <div class="card-footer">
+                                <span class="price">R$ 14,90</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Nossa Essência</h2>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="missao-tab" data-bs-toggle="tab" data-bs-target="#missao">Missão</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="visao-tab" data-bs-toggle="tab" data-bs-target="#visao">Visão</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="valores-tab" data-bs-toggle="tab" data-bs-target="#valores">Valores</button>
+                    </li>
+                </ul>
+                <div class="tab-content py-4">
+                    <div class="tab-pane fade show active" id="missao">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <i class="fas fa-bullseye"></i>
+                                <p>Proporcionar experiências sensoriais únicas através da combinação perfeita entre cafés especiais e atmosfera cultural.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="visao">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <i class="fas fa-eye"></i>
+                                <p>Ser referência nacional na fusão entre cultura e café de qualidade, expandindo para 10 unidades até 2030.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="valores">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <i class="fas fa-heart"></i>
+                                <h4>Paixão</h4>
+                                <p>Pelo café e pelas artes</p>
+                            </div>
+                            <div class="col-md-4">
+                                <i class="fas fa-award"></i>
+                                <h4>Excelência</h4>
+                                <p>Em cada xícara servida</p>
+                            </div>
+                            <div class="col-md-4">
+                                <i class="fas fa-hands-helping"></i>
+                                <h4>Comunidade</h4>
+                                <p>Fortalecendo laços culturais</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="localizacao" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2 class="mb-4">Onde Estamos</h2>
+                        <div class="map-container mb-4">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <address>
+                            <strong>Invasão Teatral Café</strong><br>
+                            R XV DE NOVEMBRO, 1037<br>
+                            CENTRO - Curitiba/PR<br>
+                            CEP:  80.060-000
+                        </address>
+                        <table class="table mt-4">
+                            <thead>
+                                <tr>
+                                    <th>Dia</th>
+                                    <th>Horário</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Segunda a Sexta</td>
+                                    <td>8h - 20h</td>
+                                </tr>
+                                <tr>
+                                    <td>Sábado</td>
+                                    <td>9h - 22h</td>
+                                </tr>
+                                <tr>
+                                    <td>Domingo</td>
+                                    <td>10h - 18h</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#directionsModal">
+                            <i class="fas fa-route me-2"></i>Como chegar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h3>MALU COMERCIO DE ALIMENTOS LTDA</h3>
+                    <p class="small">"CNPJ: 46.971.437/0001-73"</p>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h4>Contato</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-phone me-2"></i>  (41) 99676-3385</li>
+                        <li><i class="fas fa-envelope me-2"></i> pedrosilvatb@outlook.com</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h4>Newsletter</h4>
+                    <form class="newsletter-form">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Seu e-mail" required>
+                            <button class="btn btn-secondary" type="submit">OK</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom mt-4 pt-4">
+                <div class="d-flex flex-wrap justify-content-between">
+                    <p class="mb-0">"© 2023 Invasão Teatral Café. Todos os direitos reservados."</p>
+                    <div>
+                        <a href="#" class="me-3">Política de Privacidade</a>
+                        <a href="#">Termos de Uso</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="directionsModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Como chegar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Estamos localizados no coração do bairro cultural, próximo ao Teatro Municipal.</p>
+                    <p>Estações de metrô próximas: Artes (500m) e Cultura (700m).</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    // Ativar tooltips do Bootstrap
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+
+    // Contador dinâmico para filtros
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    if (filterButtons.length > 0) {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const countElement = this.querySelector('.filter-count');
+                if (countElement) {
+                    let count = parseInt(countElement.textContent);
+                    countElement.textContent = this.classList.contains('active') ? count - 1 : count + 1;
+                }
+            });
+        });
+    }
+
+    // Intersection Observer para animações
+    const animateOnScroll = function(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(animateOnScroll, {
+        threshold: 0.1
+    });
+
+    document.querySelectorAll('.card, .map-container, .social-icons').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Validação do formulário de newsletter
+    const newsletterForm = document.querySelector('.newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const emailInput = this.querySelector('input[type="email"]');
+            if (emailInput.checkValidity()) {
+                const submitButton = this.querySelector('button[type="submit"]');
+                submitButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando...';
+                
+                // Simulação de envio
+                setTimeout(() => {
+                    submitButton.textContent = 'Enviado!';
+                    submitButton.disabled = true;
+                    emailInput.value = '';
+                    
+                    setTimeout(() => {
+                        submitButton.innerHTML = 'OK';
+                        submitButton.disabled = false;
+                    }, 2000);
+                }, 1500);
+            }
+        });
+    }
+});</script></body>
+</html>
