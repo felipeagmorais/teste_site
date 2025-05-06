@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>di2win</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>:root {
+    --bs-primary: #0d6efd;
+    --bs-primary-rgb: 13, 110, 253;
+    --bs-dark: #212529;
+    --bs-dark-rgb: 33, 37, 41;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: var(--bs-dark);
+}
+
+.display-4, .display-5 {
+    line-height: 1.2;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, rgba(var(--bs-primary-rgb), 0.03) 0%, rgba(var(--bs-primary-rgb), 0.01) 100%);
+}
+
+.navbar-brand i {
+    color: var(--bs-primary);
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-primary {
+    --bs-btn-hover-bg: #0b5ed7;
+    --bs-btn-active-bg: #0a58ca;
+    --bs-btn-hover-border-color: #0a58ca;
+    --bs-btn-active-border-color: #0a53be;
+}
+
+.btn-outline-primary {
+    --bs-btn-hover-bg: var(--bs-primary);
+    --bs-btn-active-bg: var(--bs-primary);
+    --bs-btn-hover-border-color: var(--bs-primary);
+    --bs-btn-active-border-color: var(--bs-primary);
+}
+
+.badge {
+    letter-spacing: 0.05em;
+}
+
+@media (max-width: 767.98px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .display-5 {
+        font-size: 2rem;
+    }
+    
+    .hero-section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-nav .nav-link {
+        position: relative;
+    }
+    
+    .navbar-nav .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--bs-primary);
+        transition: width 0.3s ease;
+    }
+    
+    .navbar-nav .nav-link:hover::after {
+        width: 100%;
+    }
+}
+
+/* Acessibilidade */
+:focus-visible {
+    outline: 2px solid var(--bs-primary);
+    outline-offset: 2px;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+section:nth-child(odd) {
+    animation-delay: 0.1s;
+}
+
+section:nth-child(even) {
+    animation-delay: 0.2s;
+}</style>
+</head>
+<body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>di2win | Transformação Digital</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="sticky-top bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light py-3">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-3 text-primary" href="#">
+                    <i class="fas fa-rocket me-2"></i>di2win
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link fw-medium" href="#solucoes">"Soluções"</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link fw-medium" href="#tecnologia">"Tecnologia"</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link fw-medium" href="#cases">"Cases"</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link fw-medium" href="#sobre">"Sobre"</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link fw-medium" href="#contato">"Contato"</a>
+                        </li>
+                    </ul>
+                    <div class="ms-lg-4 mt-3 mt-lg-0">
+                        <a href="#demo" class="btn btn-primary px-4 py-2 fw-medium">Solicitar Demonstração</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section bg-light py-5 py-lg-7">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <h1 class="display-4 fw-bold mb-4">Transformação Digital com Soluções Inteligentes</h1>
+                        <p class="lead mb-4">Impulsione seu negócio com nossas plataformas de automação e inteligência artificial.</p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#solucoes" class="btn btn-primary px-4 py-3 fw-medium">Conheça nossas soluções</a>
+                            <a href="#contato" class="btn btn-outline-primary px-4 py-3 fw-medium">Fale com nossos especialistas</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="bg-primary bg-opacity-10 p-5 rounded-3">
+                            <div class="d-flex flex-column gap-4">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="bg-primary text-white rounded-circle p-3">
+                                        <i class="fas fa-bolt fs-4"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="h5 fw-bold mb-1">Automação Inteligente</h3>
+                                        <p class="mb-0">Processos otimizados com IA</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="bg-primary text-white rounded-circle p-3">
+                                        <i class="fas fa-chart-line fs-4"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="h5 fw-bold mb-1">Análise de Dados</h3>
+                                        <p class="mb-0">Insights para decisões estratégicas</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="bg-primary text-white rounded-circle p-3">
+                                        <i class="fas fa-cloud fs-4"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="h5 fw-bold mb-1">Plataforma Cloud</h3>
+                                        <p class="mb-0">Escalável e segura</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solucoes" class="py-5 py-lg-7">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="badge bg-primary bg-opacity-10 text-primary py-2 px-3 mb-3">Nossas Soluções</span>
+                    <h2 class="display-5 fw-bold mb-3">"Soluções" para Transformação Digital</h2>
+                    <p class="lead mx-auto" style="max-width: 700px;">Oferecemos plataformas completas para impulsionar sua jornada digital</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-3 mb-4" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-robot fs-4"></i>
+                                </div>
+                                <h3 class="h4 fw-bold mb-3">Automação de Processos</h3>
+                                <p class="mb-4">RPA avançado para otimizar operações e reduzir custos operacionais.</p>
+                                <a href="#" class="text-primary fw-medium">Saiba mais <i class="fas fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-3 mb-4" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-brain fs-4"></i>
+                                </div>
+                                <h3 class="h4 fw-bold mb-3">Inteligência Artificial</h3>
+                                <p class="mb-4">Machine Learning e modelos preditivos para tomada de decisão estratégica.</p>
+                                <a href="#" class="text-primary fw-medium">Saiba mais <i class="fas fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-3 mb-4" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-database fs-4"></i>
+                                </div>
+                                <h3 class="h4 fw-bold mb-3">Gestão de Dados</h3>
+                                <p class="mb-4">Integração, governança e análise de dados para insights valiosos.</p>
+                                <a href="#" class="text-primary fw-medium">Saiba mais <i class="fas fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tecnologia" class="bg-light py-5 py-lg-7">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <span class="badge bg-primary bg-opacity-10 text-primary py-2 px-3 mb-3">Nossa Tecnologia</span>
+                        <h2 class="display-5 fw-bold mb-3">"Tecnologia" de Ponta</h2>
+                        <p class="lead mb-4">Plataforma integrada com as mais avançadas tecnologias do mercado.</p>
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="bg-primary text-white rounded-circle p-2 mt-1">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div>
+                                    <h3 class="h5 fw-bold mb-1">Arquitetura Modular</h3>
+                                    <p class="mb-0">Componentes independentes que se integram perfeitamente.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="bg-primary text-white rounded-circle p-2 mt-1">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div>
+                                    <h3 class="h5 fw-bold mb-1">API First</h3>
+                                    <p class="mb-0">Integração simplificada com sistemas existentes.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="bg-primary text-white rounded-circle p-2 mt-1">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div>
+                                    <h3 class="h5 fw-bold mb-1">Segurança Avançada</h3>
+                                    <p class="mb-0">Proteção de dados em todos os níveis da plataforma.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="bg-white p-4 p-lg-5 rounded-3 shadow-sm">
+                            <div class="position-relative">
+                                <div class="p-4 border-bottom">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-2">
+                                            <i class="fas fa-cog"></i>
+                                        </div>
+                                        <h3 class="h5 fw-bold mb-0">Tecnologias Utilizadas</h3>
+                                    </div>
+                                </div>
+                                <div class="row g-3 mt-4">
+                                    <div class="col-6">
+                                        <div class="d-flex align-items-center gap-3 p-3 bg-light rounded">
+                                            <i class="fab fa-microsoft text-primary fs-4"></i>
+                                            <span class="fw-medium">Azure</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="d-flex align-items-center gap-3 p-3 bg-light rounded">
+                                            <i class="fab fa-aws text-primary fs-4"></i>
+                                            <span class="fw-medium">AWS</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="d-flex align-items-center gap-3 p-3 bg-light rounded">
+                                            <i class="fab fa-python text-primary fs-4"></i>
+                                            <span class="fw-medium">Python</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="d-flex align-items-center gap-3 p-3 bg-light rounded">
+                                            <i class="fas fa-database text-primary fs-4"></i>
+                                            <span class="fw-medium">SQL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cases" class="py-5 py-lg-7">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="badge bg-primary bg-opacity-10 text-primary py-2 px-3 mb-3">Resultados Comprovados</span>
+                    <h2 class="display-5 fw-bold mb-3">"Cases" de Sucesso</h2>
+                    <p class="lead mx-auto" style="max-width: 700px;">Veja como transformamos os negócios de nossos clientes</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="bg-primary bg-opacity-10 text-primary rounded p-2 me-3">
+                                        <i class="fas fa-building fs-4"></i>
+                                    </div>
+                                    <h3 class="h5 fw-bold mb-0">Varejo</h3>
+                                </div>
+                                <p class="mb-4">Redução de 40% nos custos operacionais com automação de processos em rede varejista.</p>
+                                <div class="d-flex align-items-center">
+                                    <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-2 me-3">
+                                        <i class="fas fa-arrow-up"></i>
+                                    </div>
+                                    <div>
+                                        <p class="fw-bold mb-0">+35%</p>
+                                        <p class="small text-muted mb-0">Eficiência operacional</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="bg-primary bg-opacity-10 text-primary rounded p-2 me-3">
+                                        <i class="fas fa-university fs-4"></i>
+                                    </div>
+                                    <h3 class="h5 fw-bold mb-0">Bancário</h3>
+                                </div>
+                                <p class="mb-4">Sistema de análise de crédito com IA aumentou aprovações em 25% reduzindo inadimplência.</p>
+                                <div class="d-flex align-items-center">
+                                    <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-2 me-3">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div>
+                                        <p class="fw-bold mb-0">+25%</p>
+                                        <p class="small text-muted mb-0">Aprovações de crédito</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="bg-primary bg-opacity-10 text-primary rounded p-2 me-3">
+                                        <i class="fas fa-truck fs-4"></i>
+                                    </div>
+                                    <h3 class="h5 fw-bold mb-0">Logística</h3>
+                                </div>
+                                <p class="mb-4">Otimização de rotas reduziu custos de combustível em 18% e aumentou entregas/dia.</p>
+                                <div class="d-flex align-items-center">
+                                    <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-2 me-3">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div>
+                                        <p class="fw-bold mb-0">-30%</p>
+                                        <p class="small text-muted mb-0">Tempo de entrega</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="bg-light py-5 py-lg-7">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <span class="badge bg-primary bg-opacity-10 text-primary py-2 px-3 mb-3">Sobre Nós</span>
+                        <h2 class="display-5 fw-bold mb-3">"Sobre" a di2win</h2>
+                        <p class="lead mb-4">Pioneiros em transformação digital com mais de 15 anos de experiência.</p>
+                        <p class="mb-4">Fundada em 2008, a di2win surgiu com a missão de ajudar empresas a aproveitar todo o potencial da tecnologia para transformar seus negócios. Ao longo dos anos, desenvolvemos soluções inovadoras que combinam automação, inteligência artificial e análise de dados para criar valor real para nossos clientes.</p>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="bg-white p-3 rounded-3 shadow-sm">
+                                    <h3 class="h2 fw-bold text-primary mb-0">15+</h3>
+                                    <p class="mb-0">Anos de experiência</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="bg-white p-3 rounded-3 shadow-sm">
+                                    <h3 class="h2 fw-bold text-primary mb-0">200+</h3>
+                                    <p class="mb-0">Clientes atendidos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="bg-white p-4 p-lg-5 rounded-3 shadow-sm">
+                            <h3 class="h4 fw-bold mb-4">Nossos Valores</h3>
+                            <div class="d-flex flex-column gap-4">
+                                <div class="d-flex align-items-start gap-3">
+                                    <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-2 mt-1">
+                                        <i class="fas fa-lightbulb"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h5 fw-bold mb-1">Inovação</h4>
+                                        <p class="mb-0">Buscamos constantemente novas formas de resolver problemas complexos.</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-start gap-3">
+                                    <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-2 mt-1">
+                                        <i class="fas fa-handshake"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h5 fw-bold mb-1">Parceria</h4>
+                                        <p class="mb-0">Nosso sucesso é medido pelo sucesso de nossos clientes.</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-start gap-3">
+                                    <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-2 mt-1">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h5 fw-bold mb-1">Integridade</h4>
+                                        <p class="mb-0">Agimos com transparência e ética em todos os relacionamentos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-5 py-lg-7">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center mb-5">
+                        <span class="badge bg-primary bg-opacity-10 text-primary py-2 px-3 mb-3">Entre em Contato</span>
+                        <h2 class="display-5 fw-bold mb-3">"Contato"</h2>
+                        <p class="lead mx-auto" style="max-width: 700px;">Pronto para transformar seu negócio? Fale com nossos especialistas.</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-4 p-lg-5">
+                                <form>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="nome" class="form-label">Nome completo</label>
+                                            <input type="text" class="form-control" id="nome" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="empresa" class="form-label">Empresa</label>
+                                            <input type="text" class="form-control" id="empresa" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="email" class="form-label">E-mail</label>
+                                            <input type="email" class="form-control" id="email" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="telefone" class="form-label">Telefone</label>
+                                            <input type="tel" class="form-control" id="telefone">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="mensagem" class="form-label">Como podemos ajudar?</label>
+                                            <textarea class="form-control" id="mensagem" rows="4" required></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-primary px-4 py-3 fw-medium w-100">Enviar Mensagem</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-5 py-lg-7">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a class="d-inline-block mb-4 text-white text-decoration-none fw-bold fs-3" href="#">
+                        <i class="fas fa-rocket me-2"></i>di2win
+                    </a>
+                    <p class="mb-4">Transformação digital com soluções inteligentes para impulsionar seu negócio.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white fs-5"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h3 class="h5 fw-bold mb-4">DI2WIN TECNOLOGIA LTDA</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Automação</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Inteligência Artificial</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Gestão de Dados</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Cloud Computing</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h3 class="h5 fw-bold mb-4">CNPJ: 30.340.866/0001-02</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Sobre Nós</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Equipe</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Carreiras</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h3 class="h5 fw-bold mb-4">"Contato"</h3>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-3 d-flex align-items-start gap-2">
+                            <i class="fas fa-map-marker-alt mt-1"></i>
+                            <span>"Av. Paulista, 1000 - São Paulo/SP"</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start gap-2">
+                            <i class="fas fa-phone-alt mt-1"></i>
+                            <span>"+55 11 9999-9999"</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start gap-2">
+                            <i class="fas fa-envelope mt-1"></i>
+                            <span>"contato@di2win.com"</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-5 border-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-0 small text-white-50">"© 2023 di2win. Todos os direitos reservados."</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#" class="text-white-50 text-decoration-none small">"Política de Privacidade"</a></li>
+                        <li class="list-inline-item"><span class="text-white-50 mx-2">•</span></li>
+                        <li class="list-inline-item"><a href="#" class="text-white-50 text-decoration-none small">"Termos de Uso"</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // Update URL without page reload
+                if (history.pushState) {
+                    history.pushState(null, null, targetId);
+                } else {
+                    window.location.hash = targetId;
+                }
+            }
+        });
+    });
+    
+    // Form validation
+    const contactForm = document.querySelector('form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let isValid = true;
+            const requiredFields = this.querySelectorAll('[required]');
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    field.classList.remove('is-invalid');
+                }
+            });
+            
+            if (isValid) {
+                // Simulate form submission
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Enviando...';
+                
+                setTimeout(() => {
+                    submitBtn.textContent = 'Mensagem Enviada!';
+                    submitBtn.classList.remove('btn-primary');
+                    submitBtn.classList.add('btn-success');
+                    
+                    setTimeout(() => {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalText;
+                        submitBtn.classList.remove('btn-success');
+                        submitBtn.classList.add('btn-primary');
+                        this.reset();
+                    }, 2000);
+                }, 1500);
+            }
+        });
+    }
+    
+    // Scroll spy for navbar
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        
+        document.querySelectorAll('section[id]').forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${sectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    });
+    
+    // Initialize tooltips
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(function(tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+});</script></body>
+</html>
