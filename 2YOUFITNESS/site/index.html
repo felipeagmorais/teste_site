@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2YOU FITNESS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>:root {
+  --primary-dark: #2B2D42;
+  --primary-light: #8D99AE;
+  --accent: #EF233C;
+  --light-bg: #f8f9fa;
+  --dark-bg: #212529;
+  --transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--primary-dark);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #FF6B6B, #4ECDC4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.navbar {
+  transition: var(--transition);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar.scrolled {
+  background-color: rgba(248, 249, 250, 0.9) !important;
+  backdrop-filter: blur(5px);
+}
+
+.nav-link {
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #4ECDC4;
+  transition: var(--transition);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.search-input {
+  width: 0;
+  padding: 0;
+  border: none;
+  transition: var(--transition);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.search-container.active .search-input {
+  width: 200px;
+  padding: 8px 15px;
+  opacity: 1;
+  visibility: visible;
+  border-radius: 50px;
+  border: 1px solid #dee2e6;
+}
+
+.product-card {
+  transition: var(--transition);
+  border: none;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.product-image {
+  height: 200px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  position: relative;
+}
+
+.product-image::before {
+  content: '2YOU';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgba(0,0,0,0.1);
+}
+
+.badge.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  color: white;
+  border-radius: 50px;
+  padding: 10px 20px;
+  border: none;
+  transition: var(--transition);
+}
+
+.btn-accent:hover {
+  background-color: #d90429;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-accent:active {
+  transform: scale(0.98);
+}
+
+.modal-image {
+  height: 300px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  position: relative;
+  border-radius: 4px;
+}
+
+.modal-image::before {
+  content: '2YOU';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgba(0,0,0,0.1);
+}
+
+.page-link {
+  transition: var(--transition);
+}
+
+.page-link:hover {
+  background-color: var(--primary-light);
+  color: white;
+}
+
+.page-item.active .page-link {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.1);
+  transition: var(--transition);
+}
+
+.social-icons a:hover {
+  background-color: var(--accent);
+  transform: scale(1.1);
+}
+
+@media (max-width: 767.98px) {
+  .navbar-collapse {
+    padding-top: 15px;
+  }
+  
+  .search-container {
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .search-container.active .search-input {
+    width: 100%;
+  }
+}</style>
+</head>
+<body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="2YOU FITNESS - Sua loja premium de artigos fitness e suplementos de alta performance">
+  <title>2YOU FITNESS | Loja Premium Fitness</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          <span class="gradient-text">2 You Fitness</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Produtos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Suplementos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Acessórios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contato</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center">
+            <div class="search-container me-3">
+              <button class="search-btn">
+                <i class="fas fa-search"></i>
+              </button>
+              <input type="text" class="search-input" placeholder="Pesquisar...">
+            </div>
+            <div class="position-relative me-3">
+              <i class="fas fa-shopping-cart fs-5"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+            </div>
+            <div class="dropdown">
+              <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                <i class="fas fa-user-circle fs-4"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Login</a></li>
+                <li><a class="dropdown-item" href="#">Cadastre-se</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Minha conta</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container my-5">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Início</a></li>
+        <li class="breadcrumb-item"><a href="#">Produtos</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Suplementos</li>
+      </ol>
+    </nav>
+
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="accordion" id="filtersAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCategories">
+                <i class="fas fa-tags me-2"></i>Categorias
+              </button>
+            </h2>
+            <div id="collapseCategories" class="accordion-collapse collapse show">
+              <div class="accordion-body">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="category1">
+                  <label class="form-check-label" for="category1">Whey Protein</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="category2">
+                  <label class="form-check-label" for="category2">Creatina</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="category3">
+                  <label class="form-check-label" for="category3">Pré-treino</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePrice">
+                <i class="fas fa-dollar-sign me-2"></i>Preço
+              </button>
+            </h2>
+            <div id="collapsePrice" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <input type="range" class="form-range" min="0" max="500" step="10" id="priceRange">
+                <div class="d-flex justify-content-between">
+                  <span>R$ 0</span>
+                  <span>R$ 500</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-9">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2 class="mb-0">Suplementos</h2>
+          <div class="sorting">
+            <select class="form-select">
+              <option>Ordenar por</option>
+              <option>Menor preço</option>
+              <option>Maior preço</option>
+              <option>Mais vendidos</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card product-card h-100">
+              <div class="badge bg-danger position-absolute pulse">-20%</div>
+              <div class="product-image"></div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title">Whey Protein 2YOU</h5>
+                  <i class="far fa-heart"></i>
+                </div>
+                <div class="mb-2">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="far fa-star text-warning"></i>
+                </div>
+                <p class="card-text text-muted">Proteína isolada de alta qualidade</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <span class="text-decoration-line-through text-muted me-2">R$ 199,90</span>
+                    <span class="fw-bold">R$ 159,90</span>
+                  </div>
+                  <i class="fas fa-weight-hanging"></i>
+                </div>
+              </div>
+              <div class="card-footer bg-transparent">
+                <button class="btn btn-accent w-100" data-bs-toggle="modal" data-bs-target="#productModal">
+                  Comprar
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- More product cards would go here -->
+        </div>
+
+        <nav aria-label="Page navigation" class="mt-5">
+          <ul class="pagination justify-content-center">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </main>
+
+  <!-- Product Modal -->
+  <div class="modal fade" id="productModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Whey Protein 2YOU</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="modal-image"></div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3">
+                <div class="d-flex">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="far fa-star text-warning"></i>
+                  <span class="ms-2">(42 avaliações)</span>
+                </div>
+              </div>
+              <p class="text-muted">Proteína isolada de alta qualidade para construção muscular e recuperação pós-treino.</p>
+              <div class="mb-3">
+                <span class="text-decoration-line-through text-muted me-2">R$ 199,90</span>
+                <span class="fw-bold fs-4">R$ 159,90</span>
+                <span class="badge bg-danger ms-2">-20%</span>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Quantidade</label>
+                <div class="input-group w-50">
+                  <button class="btn btn-outline-secondary">-</button>
+                  <input type="text" class="form-control text-center" value="1">
+                  <button class="btn btn-outline-secondary">+</button>
+                </div>
+              </div>
+              <button class="btn btn-accent w-100 mb-3">
+                <i class="fas fa-shopping-cart me-2"></i>Adicionar ao carrinho
+              </button>
+              <div class="d-flex">
+                <i class="fas fa-truck me-2"></i>
+                <small class="text-muted">Frete grátis para todo o Brasil</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h5 class="mb-3">Informações</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <i class="fas fa-file-invoice me-2"></i>
+              <strong>CNPJ 33.132.272/0001-02</strong>
+            </li>
+            <li class="mb-2">
+              <i class="fas fa-building me-2"></i>
+              Razão 2YOU FITNESS LTDA
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="mb-3">Contato</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <i class="fas fa-phone me-2"></i>
+              <a href="tel:+554196206146" class="text-white">"Telefone +554196206146"</a>
+            </li>
+            <li class="mb-2">
+              <i class="fab fa-whatsapp me-2"></i>
+              WhatsApp Business
+            </li>
+            <li class="mb-2">
+              <i class="fas fa-envelope me-2"></i>
+              contato@2youfitness.com.br
+            </li>
+            <li class="mb-2">
+              <i class="fas fa-clock me-2"></i>
+              Seg-Sex: 9h-18h
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="mb-3">Newsletter</h5>
+          <form class="mb-3">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Seu e-mail">
+              <button class="btn btn-accent" type="submit">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </form>
+          <div class="social-icons">
+            <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="row">
+        <div class="col-md-6">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="#" class="text-white">Política de Privacidade</a></li>
+            <li class="list-inline-item"><a href="#" class="text-white">Termos de Uso</a></li>
+            <li class="list-inline-item"><a href="#" class="text-white">Trocas e Devoluções</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="mb-0">© 2023 2 You Fitness LTDA. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+  // Sticky navbar with opacity change
+  const navbar = document.querySelector('.navbar');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  // Search toggle
+  const searchBtn = document.querySelector('.search-btn');
+  const searchInput = document.querySelector('.search-input');
+  const searchContainer = document.querySelector('.search-container');
+  
+  searchBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    searchContainer.classList.toggle('active');
+    if (searchContainer.classList.contains('active')) {
+      searchInput.focus();
+    }
+  });
+
+  // Product modal zoom effect
+  const modalImage = document.querySelector('.modal-image');
+  if (modalImage) {
+    modalImage.addEventListener('mousemove', function(e) {
+      const x = e.clientX - e.target.getBoundingClientRect().left;
+      const y = e.clientY - e.target.getBoundingClientRect().top;
+      
+      modalImage.style.transformOrigin = `${x}px ${y}px`;
+      modalImage.style.transform = 'scale(1.5)';
+    });
+    
+    modalImage.addEventListener('mouseleave', function() {
+      modalImage.style.transform = 'scale(1)';
+    });
+  }
+
+  // Quantity buttons
+  const minusBtn = document.querySelector('.input-group button:first-child');
+  const plusBtn = document.querySelector('.input-group button:last-child');
+  const quantityInput = document.querySelector('.input-group input');
+  
+  if (minusBtn && plusBtn && quantityInput) {
+    minusBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      let value = parseInt(quantityInput.value);
+      if (value > 1) {
+        quantityInput.value = value - 1;
+      }
+    });
+    
+    plusBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      let value = parseInt(quantityInput.value);
+      quantityInput.value = value + 1;
+    });
+  }
+
+  // Ripple effect for pagination
+  const paginationLinks = document.querySelectorAll('.page-link');
+  paginationLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const x = e.clientX - e.target.getBoundingClientRect().left;
+      const y = e.clientY - e.target.getBoundingClientRect().top;
+      
+      const ripple = document.createElement('span');
+      ripple.classList.add('ripple');
+      ripple.style.left = `${x}px`;
+      ripple.style.top = `${y}px`;
+      
+      this.appendChild(ripple);
+      
+      setTimeout(() => {
+        ripple.remove();
+      }, 1000);
+    });
+  });
+
+  // Tooltip for CNPJ copy
+  const cnpjElement = document.querySelector('footer strong');
+  if (cnpjElement) {
+    cnpjElement.addEventListener('click', function() {
+      const text = this.innerText.replace(/"/g, '');
+      navigator.clipboard.writeText(text);
+      
+      const tooltip = document.createElement('div');
+      tooltip.classList.add('tooltip');
+      tooltip.innerText = 'Copiado!';
+      this.appendChild(tooltip);
+      
+      setTimeout(() => {
+        tooltip.remove();
+      }, 2000);
+    });
+  }
+});</script></body>
+</html>
