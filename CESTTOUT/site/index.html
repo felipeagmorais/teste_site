@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C' EST TOUT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>:root {
+    --primary-font: 'Playfair Display', serif;
+    --secondary-font: 'Roboto', sans-serif;
+    --primary-color: #000;
+    --secondary-color: #333;
+    --light-color: #f8f9fa;
+    --accent-color: #e0e0e0;
+}
+
+body {
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    padding-top: 80px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--primary-font);
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+.nav-link {
+    position: relative;
+    padding: 0.5rem 0;
+    margin: 0 0.5rem;
+    color: var(--primary-color);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+}
+
+.btn-outline-dark:hover {
+    transform: scale(1.05);
+}
+
+.price {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.hero-section {
+    background-color: #f9f9f9;
+}
+
+footer a {
+    transition: opacity 0.3s ease;
+}
+
+footer a:hover {
+    opacity: 0.8;
+    color: var(--light-color);
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    body {
+        padding-top: 70px;
+    }
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+}</style>
+</head>
+<body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="C'EST TOUT - Moda sofisticada e minimalista para o estilo contemporâneo">
+    <title>C'EST TOUT | Moda Minimalista</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="fixed-top bg-white shadow-sm">
+        <div class="container-fluid px-lg-5">
+            <nav class="navbar navbar-expand-lg py-3">
+                <div class="container-fluid">
+                    <a class="navbar-brand fs-2 fw-bold" href="#" style="font-family: 'Playfair Display', serif; letter-spacing: 0.1em;">C'EST TOUT</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                                <li class="nav-item mx-2">
+                                    <a class="nav-link position-relative" href="#">Home</a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a class="nav-link position-relative" href="#">Coleções</a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a class="nav-link position-relative" href="#">Sobre</a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a class="nav-link position-relative" href="#">Contato</a>
+                                </li>
+                            </ul>
+                            <div class="d-flex align-items-center">
+                                <a href="#" class="position-relative me-3">
+                                    <i class="fas fa-shopping-bag fs-5"></i>
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">0</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-5 mt-5">
+        <section class="hero-section py-5">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center py-5" style="background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); border-radius: 12px;">
+                        <h1 class="display-4 fw-bold mb-4" style="font-family: 'Playfair Display', serif;">Bem-vindo à C'EST TOUT</h1>
+                        <p class="lead mb-5">Descubra nossa coleção minimalista de peças atemporais</p>
+                        <a href="#" class="btn btn-dark btn-lg px-4 py-2">Explorar Coleção</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5" style="font-family: 'Playfair Display', serif;">Nossas Coleções</h2>
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="position-absolute end-0 m-2">
+                                <button class="btn btn-sm btn-outline-danger rounded-circle"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="card-body text-center">
+                                <h3 class="h5 mb-3">Blazer Minimalista</h3>
+                                <span class="price d-block mb-3">R$ 599,90</span>
+                                <button class="btn btn-outline-dark w-100">Ver detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="position-absolute end-0 m-2">
+                                <button class="btn btn-sm btn-outline-danger rounded-circle"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="card-body text-center">
+                                <h3 class="h5 mb-3">Vestido Elegante</h3>
+                                <span class="price d-block mb-3">R$ 459,90</span>
+                                <button class="btn btn-outline-dark w-100">Ver detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="position-absolute end-0 m-2">
+                                <button class="btn btn-sm btn-outline-danger rounded-circle"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="card-body text-center">
+                                <h3 class="h5 mb-3">Camisa Básica</h3>
+                                <span class="price d-block mb-3">R$ 199,90</span>
+                                <button class="btn btn-outline-dark w-100">Ver detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="position-absolute end-0 m-2">
+                                <button class="btn btn-sm btn-outline-danger rounded-circle"><i class="far fa-heart"></i></button>
+                            </div>
+                            <div class="card-body text-center">
+                                <h3 class="h5 mb-3">Calça Alfaiataria</h3>
+                                <span class="price d-block mb-3">R$ 349,90</span>
+                                <button class="btn btn-outline-dark w-100">Ver detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h2 class="mb-4" style="font-family: 'Playfair Display', serif;">Sobre Nós</h2>
+                        <p class="lead">C'EST TOUT nasceu da paixão por designs limpos e peças atemporais que transcendem tendências passageiras.</p>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-tshirt me-3 fs-4"></i>
+                            <p>Peças cuidadosamente selecionadas para qualidade e conforto</p>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-tag me-3 fs-4"></i>
+                            <p>Preços justos para um guarda-roupa sofisticado</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-store me-3 fs-4"></i>
+                            <p>Experiência de compra premium em nossas lojas físicas</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="bg-light p-5 rounded">
+                            <h3 class="mb-4">Assine nossa newsletter</h3>
+                            <p class="mb-4">Receba novidades e ofertas exclusivas diretamente em seu e-mail.</p>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="Seu melhor e-mail" aria-label="Seu melhor e-mail">
+                                <button class="btn btn-dark" type="button">Assinar</button>
+                            </div>
+                            <small class="text-muted">Respeitamos sua privacidade. Nunca compartilhamos seus dados.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-3">Informações Legais</h5>
+                    <p><small>CNPJ: 30.110.681/0001-01</small></p>
+                    <p><strong>Razão Social: C' EST TOUT COMERCIO LTDA</strong></p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-3">Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"><i class="fas fa-home me-2"></i> Home</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"><i class="fas fa-tshirt me-2"></i> Coleções</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"><i class="fas fa-info-circle me-2"></i> Sobre</a></li>
+                        <li><a href="#" class="text-white text-decoration-none"><i class="fas fa-envelope me-2"></i> Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">Contato</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="mailto:contato@cesttout.com.br" class="text-white text-decoration-none"><i class="fas fa-envelope me-2"></i> contato@cesttout.com.br</a></li>
+                        <li><a href="tel:+5511999999999" class="text-white text-decoration-none"><i class="fas fa-phone me-2"></i> (11) 99999-9999</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: rgba(255,255,255,0.1);">
+            <div class="text-center">
+                <p class="mb-0 small">© 2023 C'EST TOUT - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    // Favorite button functionality
+    const favoriteButtons = document.querySelectorAll('.btn-outline-danger');
+    favoriteButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('far')) {
+                icon.classList.remove('far');
+                icon.classList.add('fas');
+                this.classList.remove('btn-outline-danger');
+                this.classList.add('btn-danger');
+            } else {
+                icon.classList.remove('fas');
+                icon.classList.add('far');
+                this.classList.remove('btn-danger');
+                this.classList.add('btn-outline-danger');
+            }
+        });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Cart counter functionality
+    const cartBadge = document.querySelector('.badge');
+    const addToCartButtons = document.querySelectorAll('.btn-outline-dark');
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            let currentCount = parseInt(cartBadge.textContent);
+            cartBadge.textContent = currentCount + 1;
+        });
+    });
+});</script></body>
+</html>
