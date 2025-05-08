@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARBARA DE OLIVEIRA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>:root {
+    --primary-color: #ff6b6b;
+    --secondary-color: #d63031;
+    --dark-color: #434343;
+    --light-color: #fff5f5;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+.nav-link {
+    transition: all 0.3s ease;
+    padding-bottom: 5px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.btn-outline-danger:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.hover-red:hover {
+    color: var(--primary-color) !important;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.btn-danger {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-danger::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255,255,255,0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.btn-danger:focus:not(:active)::after {
+    animation: pulse 1s ease-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(20, 20);
+        opacity: 0;
+    }
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+.social-icon {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    background-color: rgba(255,255,255,0.2) !important;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem !important;
+    }
+    
+    .hero-section p {
+        font-size: 1rem !important;
+    }
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(255, 107, 107, 0.25);
+}
+
+.was-validated .form-control:invalid {
+    border-color: #dc3545;
+}
+
+.was-validated .form-control:valid {
+    border-color: #198754;
+}</style>
+</head>
+<body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Confeitaria artesanal BARBARA DE OLIVEIRA - Doces premium feitos com ingredientes selecionados e muito amor">
+    <title>BARBARA DE OLIVEIRA - Confeitaria Artesanal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #ff6b6b, #ff8e8e);">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#" style="font-family: 'Montserrat', sans-serif; font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">BARBARA DE OLIVEIRA</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link position-relative" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link position-relative" href="#">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link position-relative" href="#">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link position-relative" href="#">Contato</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                        <div class="input-group me-3" style="max-width: 200px;">
+                            <input type="text" class="form-control form-control-sm" placeholder="Pesquisar...">
+                            <button class="btn btn-outline-light btn-sm" type="button"><i class="fas fa-search"></i></button>
+                        </div>
+                        <button class="btn btn-danger me-3 position-relative">
+                            <i class="fas fa-tag me-1"></i> Promoções
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light text-danger">3</span>
+                        </button>
+                        <a href="#" class="text-white position-relative me-2">
+                            <i class="fas fa-shopping-cart fa-lg"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">5</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section py-5" style="background: radial-gradient(circle, #fff5f5, #ffebeb); margin-top: 56px;">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h1 class="display-4 fw-black mb-3" style="font-family: 'Playfair Display', serif; font-weight: 900; font-size: 2.5rem;">Confeitaria Artesanal BARBARA DE OLIVEIRA</h1>
+                        <p class="lead mb-5" style="font-family: 'Montserrat', sans-serif; font-weight: 300; font-style: italic;">Doces que encantam os olhos e deliciam o paladar</p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <button class="btn btn-danger px-4 py-2">Ver Produtos</button>
+                            <button class="btn btn-outline-danger px-4 py-2">Fazer Encomenda</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5 fw-bold" style="font-family: 'Playfair Display', serif;">Nossos Produtos</h2>
+                <div class="row g-4">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center py-4">
+                                <div class="mb-3" style="font-size: 2.5rem; color: #ff6b6b;">
+                                    <i class="fas fa-birthday-cake"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-3">Bolos Personalizados</h3>
+                                <p class="text-muted mb-4">Bolos artesanais decorados sob medida para seu evento especial.</p>
+                                <p class="h4 text-danger fw-bold mb-4">R$ 120,00</p>
+                                <button class="btn btn-outline-danger px-4">Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center py-4">
+                                <div class="mb-3" style="font-size: 2.5rem; color: #ff6b6b;">
+                                    <i class="fas fa-cookie"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-3">Cookies Premium</h3>
+                                <p class="text-muted mb-4">Cookies artesanais com ingredientes selecionados e sabores exclusivos.</p>
+                                <p class="h4 text-danger fw-bold mb-4">R$ 45,00</p>
+                                <button class="btn btn-outline-danger px-4">Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center py-4">
+                                <div class="mb-3" style="font-size: 2.5rem; color: #ff6b6b;">
+                                    <i class="fas fa-cupcake"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-3">Cupcakes Gourmet</h3>
+                                <p class="text-muted mb-4">Deliciosos cupcakes com coberturas criativas e sabores surpreendentes.</p>
+                                <p class="h4 text-danger fw-bold mb-4">R$ 35,00</p>
+                                <button class="btn btn-outline-danger px-4">Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center py-4">
+                                <div class="mb-3" style="font-size: 2.5rem; color: #ff6b6b;">
+                                    <i class="fas fa-pie"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-3">Tortas Doces</h3>
+                                <p class="text-muted mb-4">Tortas doces com massa crocante e recheios cremosos e saborosos.</p>
+                                <p class="h4 text-danger fw-bold mb-4">R$ 85,00</p>
+                                <button class="btn btn-outline-danger px-4">Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center py-4">
+                                <div class="mb-3" style="font-size: 2.5rem; color: #ff6b6b;">
+                                    <i class="fas fa-ice-cream"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-3">Docinhos Finos</h3>
+                                <p class="text-muted mb-4">Docinhos sofisticados perfeitos para festas e eventos especiais.</p>
+                                <p class="h4 text-danger fw-bold mb-4">R$ 60,00</p>
+                                <button class="btn btn-outline-danger px-4">Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center py-4">
+                                <div class="mb-3" style="font-size: 2.5rem; color: #ff6b6b;">
+                                    <i class="fas fa-bread-slice"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-3">Pães de Mel</h3>
+                                <p class="text-muted mb-4">Pães de mel artesanais com cobertura de chocolate e recheios especiais.</p>
+                                <p class="h4 text-danger fw-bold mb-4">R$ 55,00</p>
+                                <button class="btn btn-outline-danger px-4">Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5 fw-bold" style="font-family: 'Playfair Display', serif;">Nossos Diferenciais</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 bg-white rounded-3 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="mb-3" style="font-size: 2rem; color: #d63031;">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3 class="h5 text-uppercase fw-bold mb-3">Qualidade Premium</h3>
+                                <p class="text-muted">Ingredientes selecionados e técnicas artesanais para produtos de excelência.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 bg-white rounded-3 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="mb-3" style="font-size: 2rem; color: #d63031;">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <h3 class="h5 text-uppercase fw-bold mb-3">Feito com Amor</h3>
+                                <p class="text-muted">Cada doce é preparado com cuidado e dedicação para proporcionar momentos especiais.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 bg-white rounded-3 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="mb-3" style="font-size: 2rem; color: #d63031;">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h3 class="h5 text-uppercase fw-bold mb-3">Reconhecimento</h3>
+                                <p class="text-muted">Premiada como melhor confeitaria artesanal da região por 3 anos consecutivos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow">
+                            <div class="card-body p-4">
+                                <h2 class="text-center mb-4 fw-bold" style="font-family: 'Playfair Display', serif;">Receba Nossas Novidades</h2>
+                                <form id="newsletterForm" class="needs-validation" novalidate>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                        <input type="email" class="form-control" placeholder="Seu melhor e-mail" required>
+                                        <button class="btn btn-danger" type="submit">Assinar</button>
+                                    </div>
+                                    <div class="form-text text-muted">Prometemos não enviar spam. Você pode cancelar a qualquer momento.</div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-white" style="background: linear-gradient(to right, #434343, #000000);">
+        <div class="container py-5">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="h5 mb-3">Informações Legais</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="far fa-file-alt me-2"></i> CNPJ: 29.948.596/0001-38</li>
+                        <li class="mb-2"><i class="far fa-file-alt me-2"></i> RAZÃO SOCIAL: BARBARA DE OLIVEIRA DIETRICH</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="h5 mb-3">Links Rápidos</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none hover-red">Home</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none hover-red">Produtos</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none hover-red">Sobre Nós</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none hover-red">Contato</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none hover-red">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="h5 mb-3">Contato</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-phone-alt me-2"></i> (11) 98765-4321</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> contato@barbaradeoliveira.com</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> São Paulo - SP</li>
+                        <li class="mb-2">
+                            <a href="https://wa.me/5511987654321" class="text-white text-decoration-none hover-red">
+                                <i class="fab fa-whatsapp me-2"></i> WhatsApp
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="h5 mb-3">Redes Sociais</h3>
+                    <div class="d-flex gap-3 mb-3">
+                        <a href="#" class="text-white d-flex align-items-center justify-content-center rounded-circle" style="width: 40px; height: 40px; background-color: rgba(255,255,255,0.1);">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-white d-flex align-items-center justify-content-center rounded-circle" style="width: 40px; height: 40px; background-color: rgba(255,255,255,0.1);">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white d-flex align-items-center justify-content-center rounded-circle" style="width: 40px; height: 40px; background-color: rgba(255,255,255,0.1);">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </div>
+                    <p class="small">Siga-nos para ver nossas últimas criações e promoções especiais!</p>
+                </div>
+            </div>
+        </div>
+        <div class="py-3 border-top border-secondary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="small mb-0">Copyright © 2023 BARBARA DE OLIVEIRA. Todos os direitos reservados.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <p class="small mb-0">
+                            Feito com <i class="fas fa-heart text-danger"></i> por BARBARA DE OLIVEIRA | 
+                            <a href="#" class="text-white text-decoration-none hover-red">Termos de Uso</a> | 
+                            <a href="#" class="text-white text-decoration-none hover-red">Política de Privacidade</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    // Newsletter form validation
+    const newsletterForm = document.getElementById('newsletterForm');
+    
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(event) {
+            if (!newsletterForm.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            
+            newsletterForm.classList.add('was-validated');
+        }, false);
+    }
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Add fade-in animation to elements
+    const animateElements = document.querySelectorAll('.card, .hero-section, footer');
+    animateElements.forEach(element => {
+        element.classList.add('fade-in');
+    });
+
+    // Shopping cart counter animation
+    const cartBadge = document.querySelector('.fa-shopping-cart').nextElementSibling;
+    if (cartBadge) {
+        cartBadge.addEventListener('animationend', function() {
+            this.classList.remove('animate__bounce');
+        });
+        
+        // Simulate adding to cart
+        document.querySelectorAll('.btn-outline-danger').forEach(button => {
+            button.addEventListener('click', function(e) {
+                if (e.target.tagName === 'BUTTON' && e.target.textContent.trim() === 'Detalhes') {
+                    e.preventDefault();
+                    
+                    let count = parseInt(cartBadge.textContent);
+                    cartBadge.textContent = count + 1;
+                    cartBadge.classList.add('animate__animated', 'animate__bounce');
+                    
+                    // Show added to cart notification
+                    const toast = document.createElement('div');
+                    toast.className = 'position-fixed bottom-0 end-0 p-3';
+                    toast.style.zIndex = '11';
+                    toast.innerHTML = `
+                        <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header bg-danger text-white">
+                                <strong class="me-auto">Sucesso</strong>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">
+                                Produto adicionado ao carrinho!
+                            </div>
+                        </div>
+                    `;
+                    
+                    document.body.appendChild(toast);
+                    
+                    setTimeout(() => {
+                        toast.remove();
+                    }, 3000);
+                }
+            });
+        });
+    }
+});</script></body>
+</html>
