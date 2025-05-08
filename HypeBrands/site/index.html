@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hype Brands</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>:root {
+    --bs-primary: #0d6efd;
+    --bs-primary-rgb: 13, 110, 253;
+    --bs-dark: #212529;
+    --bs-dark-rgb: 33, 37, 41;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.navbar-brand {
+    font-size: 1.75rem;
+    letter-spacing: 1px;
+}
+
+.hero-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.icon-box {
+    transition: transform 0.3s ease;
+}
+
+.card:hover .icon-box {
+    transform: scale(1.1);
+}
+
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    color: white;
+}
+
+.nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--bs-primary);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 70%;
+}
+
+@media (max-width: 991.98px) {
+    .nav-link::after {
+        display: none;
+    }
+}
+
+.form-control:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+footer a:hover {
+    color: var(--bs-primary) !important;
+}
+
+.fab, .fas {
+    transition: transform 0.3s ease;
+}
+
+.fab:hover, .fas:hover {
+    transform: translateY(-3px);
+}
+
+.bg-primary {
+    background-color: var(--bs-primary) !important;
+}
+
+.text-primary {
+    color: var(--bs-primary) !important;
+}
+
+.border-primary {
+    border-color: var(--bs-primary) !important;
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-outline-primary {
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}</style>
+</head>
+<body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hype Brands - Marketing Digital de Alta Performance</title>
+    <meta name="description" content="Agência especializada em marketing digital e crescimento de marcas. Soluções personalizadas para alavancar seu negócio.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">
+                    <span class="text-primary">HYPE</span> BRANDS
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">"Home"</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicos">"Serviços"</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre">"Sobre"</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio">"Portfólio"</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">"Contato"</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section py-5 bg-light">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold mb-4">Transforme sua marca em uma <span class="text-primary">referência</span></h1>
+                        <p class="lead mb-4">Nós criamos estratégias de marketing digital que realmente funcionam para alavancar seu negócio e gerar resultados consistentes.</p>
+                        <div class="d-flex gap-3">
+                            <a href="#contato" class="btn btn-primary btn-lg px-4">Fale conosco</a>
+                            <a href="#servicos" class="btn btn-outline-primary btn-lg px-4">Nossos serviços</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-graphic p-4">
+                            <div class="d-flex justify-content-center align-items-center bg-primary bg-opacity-10 rounded-3 p-5" style="height: 300px;">
+                                <i class="fas fa-chart-line text-primary" style="font-size: 5rem;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">"Serviços"</h2>
+                    <p class="text-muted">Soluções completas para o crescimento da sua marca</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-bullseye fa-2x"></i>
+                                </div>
+                                <h5 class="fw-bold">Tráfego Pago</h5>
+                                <p class="text-muted">Gestão estratégica de campanhas no Google Ads e Meta Ads para maximizar seu ROI.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-hashtag fa-2x"></i>
+                                </div>
+                                <h5 class="fw-bold">Social Media</h5>
+                                <p class="text-muted">Gestão completa de redes sociais com conteúdo estratégico para engajar seu público.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-globe fa-2x"></i>
+                                </div>
+                                <h5 class="fw-bold">Criação de Sites</h5>
+                                <p class="text-muted">Desenvolvimento de websites otimizados para conversão e experiência do usuário.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="py-5 bg-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="pe-lg-5">
+                            <h2 class="fw-bold mb-4">"Sobre" a Hype Brands</h2>
+                            <p>Somos uma agência de marketing digital especializada em criar estratégias personalizadas para alavancar marcas e negócios.</p>
+                            <p>Com anos de experiência no mercado, nossa equipe multidisciplinar combina criatividade, dados e tecnologia para entregar resultados excepcionais para nossos clientes.</p>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Equipe especializada em performance</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Metodologia baseada em dados</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Transparência em todos os processos</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="d-flex justify-content-center mt-4 mt-lg-0">
+                            <div class="bg-primary bg-opacity-10 rounded-3 p-5 w-100" style="max-width: 500px;">
+                                <div class="d-flex flex-column align-items-center">
+                                    <div class="mb-4">
+                                        <i class="fas fa-trophy text-primary" style="font-size: 3rem;"></i>
+                                    </div>
+                                    <h4 class="fw-bold text-center">+150 clientes satisfeitos</h4>
+                                    <p class="text-center text-muted">Nossa taxa de satisfação fala por nós</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">"Portfólio"</h2>
+                    <p class="text-muted">Alguns dos nossos cases de sucesso</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <div class="bg-primary bg-opacity-10 rounded-3 mb-3" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-store text-primary" style="font-size: 3rem;"></i>
+                                </div>
+                                <h5 class="fw-bold">E-commerce de Moda</h5>
+                                <p class="text-muted">Aumento de 320% nas vendas em 6 meses com estratégia de tráfego pago.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <div class="bg-primary bg-opacity-10 rounded-3 mb-3" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-utensils text-primary" style="font-size: 3rem;"></i>
+                                </div>
+                                <h5 class="fw-bold">Rede de Restaurantes</h5>
+                                <p class="text-muted">Gestão de redes sociais que aumentou o engajamento em 450%.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <div class="bg-primary bg-opacity-10 rounded-3 mb-3" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-graduation-cap text-primary" style="font-size: 3rem;"></i>
+                                </div>
+                                <h5 class="fw-bold">Plataforma de Cursos</h5>
+                                <p class="text-muted">Redução de 40% no CPA com otimização de campanhas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-5 bg-light">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="text-center mb-5">
+                            <h2 class="fw-bold">"Contato"</h2>
+                            <p class="text-muted">Pronto para transformar sua marca? Entre em contato conosco.</p>
+                        </div>
+                        <form class="needs-validation" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="nome" class="form-label">Nome</label>
+                                    <input type="text" class="form-control" id="nome" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, insira seu nome.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">E-mail</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, insira um e-mail válido.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="telefone" class="form-label">Telefone</label>
+                                    <input type="tel" class="form-control" id="telefone">
+                                </div>
+                                <div class="col-12">
+                                    <label for="mensagem" class="form-label">Mensagem</label>
+                                    <textarea class="form-control" id="mensagem" rows="4" required></textarea>
+                                    <div class="invalid-feedback">
+                                        Por favor, escreva sua mensagem.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary px-4 py-2" type="submit">Enviar mensagem</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="fw-bold mb-3"><span class="text-primary">HYPE</span> BRANDS</h5>
+                    <p>Agência especializada em marketing digital e crescimento de marcas.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h6 class="fw-bold mb-3">"Links Rápidos"</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#servicos" class="text-white text-decoration-none">Serviços</a></li>
+                        <li class="mb-2"><a href="#sobre" class="text-white text-decoration-none">Sobre</a></li>
+                        <li class="mb-2"><a href="#portfolio" class="text-white text-decoration-none">Portfólio</a></li>
+                        <li><a href="#contato" class="text-white text-decoration-none">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h6 class="fw-bold mb-3">"Serviços"</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Tráfego Pago</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Social Media</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Criação de Sites</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Branding</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h6 class="fw-bold mb-3">"Contato"</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-envelope me-2 text-primary"></i> HYPEBRANDS LTDA</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2 text-primary"></i>CNPJ: 25.182.598/0001-08</li>
+                        <li><i class="fas fa-map-marker-alt me-2 text-primary"></i> São Paulo - SP</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">"© 2023 Hype Brands. Todos os direitos reservados."</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">"Política de Privacidade"</a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">"Termos de Uso"</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>// Form validation
+(function() {
+    'use strict';
+    window.addEventListener('load', function() {
+        var forms = document.getElementsByClassName('needs-validation');
+        var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    }, false);
+})();
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Navbar background change on scroll
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('bg-dark', 'shadow');
+    } else {
+        navbar.classList.remove('bg-dark', 'shadow');
+    }
+});
+
+// Initialize tooltips
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
+});
+
+// Animate elements when they come into view
+const animateOnScroll = function() {
+    const elements = document.querySelectorAll('.card, .icon-box');
+    
+    elements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+        
+        if (elementPosition < screenPosition) {
+            element.classList.add('animate__animated', 'animate__fadeInUp');
+        }
+    });
+};
+
+window.addEventListener('scroll', animateOnScroll);
+window.addEventListener('load', animateOnScroll);</script></body>
+</html>
