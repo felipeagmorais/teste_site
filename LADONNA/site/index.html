@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA DONNA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>:root {
+    --primary-color: #ff6b6b;
+    --secondary-color: #ff8e8e;
+    --light-color: #fff1f1;
+    --dark-color: #333;
+    --text-color: #555;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.navbar {
+    transition: all 0.3s ease;
+}
+
+.nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-link.active {
+    font-weight: 500;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    right: 1rem;
+    height: 2px;
+    background-color: white;
+}
+
+.btn-search {
+    background: transparent;
+    border: none;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.btn-search:hover {
+    transform: scale(1.1);
+}
+
+.search-input {
+    width: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+    visibility: hidden;
+    position: absolute;
+    right: 50px;
+}
+
+.search-container:hover .search-input {
+    width: 200px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn-cart {
+    color: white;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-cart:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+}
+
+.category-card {
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: var(--primary-color);
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-indicators button.active {
+    opacity: 1;
+}
+
+.newsletter-form .form-control {
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.newsletter-form .btn {
+    border-radius: 0 4px 4px 0;
+}
+
+.social-icons a {
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+@media (max-width: 767.98px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    
+    .hero-section {
+        padding: 3rem 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .category-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .about-content::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        width: 100px;
+        height: 100px;
+        border: 5px solid var(--light-color);
+        border-radius: 8px;
+        z-index: -1;
+    }
+    
+    .about-content::after {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        right: -20px;
+        width: 80px;
+        height: 80px;
+        background-color: var(--light-color);
+        border-radius: 50%;
+        z-index: -1;
+    }
+}</style>
+</head>
+<body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LA DONNA - Moda feminina premium com elegância e sofisticação">
+    <title>LA DONNA - Moda Feminina</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(135deg, #ff6b6b, #ff8e8e); box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            <div class="container">
+                <a class="navbar-brand" href="#" style="font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; letter-spacing: 2px;">LA DONNA</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Coleções</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Novidades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Promoções</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sobre Nós</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                        <div class="search-container me-3">
+                            <button class="btn btn-search" type="button"><i class="fas fa-search"></i></button>
+                            <input type="text" class="form-control search-input" placeholder="Pesquisar...">
+                        </div>
+                        <a href="#" class="btn btn-cart position-relative">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section py-5" style="background: radial-gradient(circle, #fff1f1, #ffd6d6);">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h1 class="display-4 fw-bold mb-4" style="font-family: 'Montserrat', sans-serif;">Coleção Outono/Inverno 2023</h1>
+                        <p class="lead mb-5">Descubra peças exclusivas que combinam conforto e elegância</p>
+                        <a href="#" class="btn btn-primary btn-lg px-4 py-3" style="background: linear-gradient(135deg, #ff6b6b, #ff8e8e); border: none; box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);">Ver Coleção</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories py-5">
+            <div class="container">
+                <h2 class="text-center mb-5 fw-bold">Nossas Categorias</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="category-card p-4 text-center rounded-3 shadow-sm">
+                            <div class="icon-container mb-3 p-3 rounded-circle d-inline-block" style="background-color: #fff1f1;">
+                                <i class="fas fa-tshirt fa-3x" style="color: #ff6b6b;"></i>
+                            </div>
+                            <h3>Blusas</h3>
+                            <p class="text-muted">Modelos exclusivos para todos os momentos</p>
+                            <a href="#" class="btn btn-outline-primary">Explorar</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="category-card p-4 text-center rounded-3 shadow-sm">
+                            <div class="icon-container mb-3 p-3 rounded-circle d-inline-block" style="background-color: #fff1f1;">
+                                <i class="fas fa-vest fa-3x" style="color: #ff6b6b;"></i>
+                            </div>
+                            <h3>Vestidos</h3>
+                            <p class="text-muted">Elegância e conforto em cada modelo</p>
+                            <a href="#" class="btn btn-outline-primary">Explorar</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="category-card p-4 text-center rounded-3 shadow-sm">
+                            <div class="icon-container mb-3 p-3 rounded-circle d-inline-block" style="background-color: #fff1f1;">
+                                <i class="fas fa-jeans fa-3x" style="color: #ff6b6b;"></i>
+                            </div>
+                            <h3>Calças</h3>
+                            <p class="text-muted">Conforto e estilo para o dia a dia</p>
+                            <a href="#" class="btn btn-outline-primary">Explorar</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="category-card p-4 text-center rounded-3 shadow-sm">
+                            <div class="icon-container mb-3 p-3 rounded-circle d-inline-block" style="background-color: #fff1f1;">
+                                <i class="fas fa-ribbon fa-3x" style="color: #ff6b6b;"></i>
+                            </div>
+                            <h3>Acessórios</h3>
+                            <p class="text-muted">Complementos para completar seu look</p>
+                            <a href="#" class="btn btn-outline-primary">Explorar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5 fw-bold">Destaques</h2>
+                <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <div class="featured-content p-4">
+                                        <h3>Vestido Primavera</h3>
+                                        <p class="text-muted">Feito com tecidos leves e respiráveis para maior conforto</p>
+                                        <div class="price mb-3">
+                                            <span class="h4">R$ 249,90</span>
+                                            <small class="text-muted ms-2"><del>R$ 299,90</del></small>
+                                        </div>
+                                        <a href="#" class="btn btn-primary">Ver detalhes</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="featured-visual p-4 text-center" style="height: 300px; background-color: #fff1f1; border-radius: 8px;">
+                                        <i class="fas fa-vest fa-5x" style="color: #ff8e8e;"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <div class="featured-content p-4">
+                                        <h3>Blusa de Seda</h3>
+                                        <p class="text-muted">Tecido premium com caimento impecável</p>
+                                        <div class="price mb-3">
+                                            <span class="h4">R$ 179,90</span>
+                                            <small class="text-muted ms-2"><del>R$ 219,90</del></small>
+                                        </div>
+                                        <a href="#" class="btn btn-primary">Ver detalhes</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="featured-visual p-4 text-center" style="height: 300px; background-color: #fff1f1; border-radius: 8px;">
+                                        <i class="fas fa-tshirt fa-5x" style="color: #ff8e8e;"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <div class="featured-content p-4">
+                                        <h3>Calça Alfaiataria</h3>
+                                        <p class="text-muted">Corte perfeito para um visual profissional</p>
+                                        <div class="price mb-3">
+                                            <span class="h4">R$ 199,90</span>
+                                        </div>
+                                        <a href="#" class="btn btn-primary">Ver detalhes</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="featured-visual p-4 text-center" style="height: 300px; background-color: #fff1f1; border-radius: 8px;">
+                                        <i class="fas fa-jeans fa-5x" style="color: #ff8e8e;"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="newsletter-container p-4 rounded-3" style="background: linear-gradient(135deg, #ff6b6b, #ff8e8e);">
+                            <div class="row align-items-center">
+                                <div class="col-md-6 mb-3 mb-md-0">
+                                    <h3 class="text-white">Assine nossa newsletter</h3>
+                                    <p class="text-white mb-0">Receba novidades e promoções exclusivas</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <form class="newsletter-form">
+                                        <div class="input-group">
+                                            <input type="email" class="form-control" placeholder="Seu e-mail" required>
+                                            <button class="btn btn-dark" type="submit">Assinar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 position-relative">
+                        <div class="about-content pe-lg-4">
+                            <h2 class="mb-4 fw-bold">Sobre a LA DONNA</h2>
+                            <p>Fundada em 2010, a LA DONNA nasceu da paixão por moda feminina que valoriza a beleza e a autenticidade de cada mulher.</p>
+                            <p>Nossa missão é oferecer peças que combinam qualidade, conforto e estilo, criadas para mulheres reais que buscam se expressar através da moda.</p>
+                            <p>Todos os nossos produtos são desenvolvidos com atenção aos detalhes e respeito ao meio ambiente, utilizando materiais sustentáveis sempre que possível.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-visual p-4" style="background-color: #fff1f1; border-radius: 8px; min-height: 300px;">
+                            <div class="d-flex justify-content-around align-items-center h-100">
+                                <div class="text-center">
+                                    <div class="mb-2">
+                                        <i class="fas fa-award fa-3x" style="color: #ff6b6b;"></i>
+                                    </div>
+                                    <h5>Qualidade</h5>
+                                </div>
+                                <div class="text-center">
+                                    <div class="mb-2">
+                                        <i class="fas fa-leaf fa-3x" style="color: #ff6b6b;"></i>
+                                    </div>
+                                    <h5>Sustentabilidade</h5>
+                                </div>
+                                <div class="text-center">
+                                    <div class="mb-2">
+                                        <i class="fas fa-heart fa-3x" style="color: #ff6b6b;"></i>
+                                    </div>
+                                    <h5>Paixão</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer py-5" style="background: linear-gradient(135deg, #ff8e8e, #ff6b6b); border-top: 4px solid #fff1f1;">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="text-white mb-4">Informações Legais</h5>
+                    <p class="text-white" style="font-family: monospace; font-size: 0.9rem;">
+                        CNPJ: 25.040.933/0001-33<br>
+                        Razão Social: LA DONNA FITNESS LTDA
+                    </p>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="text-white mb-4">Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"><i class="fas fa-chevron-right me-2"></i>Política de Privacidade</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"><i class="fas fa-chevron-right me-2"></i>Termos de Uso</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"><i class="fas fa-chevron-right me-2"></i>Trocas e Devoluções</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none"><i class="fas fa-chevron-right me-2"></i>Dúvidas Frequentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="text-white mb-4">Contato</h5>
+                    <form class="contact-form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Seu nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Seu e-mail" required>
+                        </div>
+                        <button type="submit" class="btn btn-outline-light">Enviar</button>
+                    </form>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="text-white mb-4">Redes Sociais</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3" data-bs-toggle="tooltip" title="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" class="text-white me-3" data-bs-toggle="tooltip" title="Facebook"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#" class="text-white me-3" data-bs-toggle="tooltip" title="Pinterest"><i class="fab fa-pinterest fa-2x"></i></a>
+                        <a href="#" class="text-white" data-bs-toggle="tooltip" title="Twitter"><i class="fab fa-twitter fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5 pt-3">
+                <p class="text-white mb-0">&copy; <span id="currentYear"></span> LA DONNA. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    // Atualizar ano no footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    
+    // Tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+    
+    // Validação do formulário de newsletter
+    const newsletterForm = document.querySelector('.newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const emailInput = this.querySelector('input[type="email"]');
+            if (emailInput.checkValidity()) {
+                this.querySelector('button').textContent = 'Obrigado!';
+                setTimeout(() => {
+                    this.reset();
+                    this.querySelector('button').textContent = 'Assinar';
+                }, 2000);
+            }
+        });
+    }
+    
+    // Validação do formulário de contato
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nameInput = this.querySelector('input[type="text"]');
+            const emailInput = this.querySelector('input[type="email"]');
+            
+            if (nameInput.checkValidity() && emailInput.checkValidity()) {
+                this.querySelector('button').textContent = 'Enviado!';
+                setTimeout(() => {
+                    this.reset();
+                    this.querySelector('button').textContent = 'Enviar';
+                }, 2000);
+            }
+        });
+    }
+    
+    // Efeito hover nos cards de categoria
+    const categoryCards = document.querySelectorAll('.category-card');
+    categoryCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05)';
+        });
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+    });
+    
+    // Mostrar/ocultar search input no mobile
+    const searchBtn = document.querySelector('.btn-search');
+    const searchInput = document.querySelector('.search-input');
+    
+    if (window.innerWidth < 992) {
+        searchBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            searchInput.style.width = searchInput.style.width === '200px' ? '0' : '200px';
+            searchInput.style.opacity = searchInput.style.opacity === '1' ? '0' : '1';
+            searchInput.style.visibility = searchInput.style.visibility === 'visible' ? 'hidden' : 'visible';
+        });
+    }
+});</script></body>
+</html>
