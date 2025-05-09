@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ip Destino Certo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>:root {
+    --bs-primary: #0d6efd;
+    --bs-primary-rgb: 13, 110, 253;
+    --bs-secondary: #6c757d;
+    --bs-secondary-rgb: 108, 117, 125;
+    --bs-dark: #212529;
+    --bs-dark-rgb: 33, 37, 41;
+    --bs-light: #f8f9fa;
+    --bs-light-rgb: 248, 249, 250;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: var(--bs-primary);
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+.btn-outline-primary {
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--bs-primary);
+    color: white;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.bg-primary {
+    background-color: var(--bs-primary) !important;
+}
+
+.text-primary {
+    color: var(--bs-primary) !important;
+}
+
+.border-primary {
+    border-color: var(--bs-primary) !important;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 3rem 0;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}
+
+.form-control:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+footer a:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--bs-primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 99;
+}
+
+#back-to-top:hover {
+    background-color: #0b5ed7;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, rgba(var(--bs-primary-rgb), 0.1) 0%, rgba(var(--bs-light-rgb), 1) 100%);
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+}</style>
+</head>
+<body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ip Destino Certo - Soluções em Peças Automotivas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="sticky-top bg-white shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold text-primary" href="#">
+                        <span class="fs-3">Ip Destino Certo</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold" href="#inicio">"Início"</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold" href="#empresa">"Empresa"</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold" href="#produtos">"Produtos"</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold" href="#servicos">"Serviços"</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold" href="#contato">"Contato"</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="py-5 bg-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold mb-4">Soluções completas em peças automotivas</h1>
+                        <p class="lead mb-4">Oferecemos as melhores peças e serviços para seu veículo com qualidade e garantia.</p>
+                        <a href="#contato" class="btn btn-primary btn-lg px-4">Fale Conosco</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="bg-primary p-5 rounded-3 text-white text-center">
+                            <i class="fas fa-car fa-5x mb-4"></i>
+                            <h3 class="fw-bold">Peças originais e compatíveis</h3>
+                            <p>Trabalhamos com as melhores marcas do mercado</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="empresa" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="fw-bold">"Empresa"</h2>
+                        <div class="border-bottom border-primary mx-auto" style="width: 100px;"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h3 class="fw-bold mb-4">Quem somos</h3>
+                        <p>A Ip Destino Certo é especializada na comercialização de peças automotivas, oferecendo produtos de qualidade e um atendimento diferenciado.</p>
+                        <p>Nossa missão é fornecer soluções completas para seu veículo, com peças originais e compatíveis das melhores marcas do mercado.</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Atendimento personalizado</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Qualidade garantida</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Preços competitivos</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Entrega rápida</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <h4 class="fw-bold mb-4">Nossos valores</h4>
+                                <div class="d-flex mb-4">
+                                    <div class="me-4">
+                                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                            <i class="fas fa-handshake fa-2x"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold">Honestidade</h5>
+                                        <p>Transparência em todas as nossas relações com clientes e fornecedores.</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-4">
+                                    <div class="me-4">
+                                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                            <i class="fas fa-medal fa-2x"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold">Qualidade</h5>
+                                        <p>Produtos testados e aprovados pelos melhores fabricantes.</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="me-4">
+                                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                            <i class="fas fa-headset fa-2x"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold">Atendimento</h5>
+                                        <p>Equipe especializada pronta para te atender da melhor forma.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="produtos" class="py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="fw-bold">"Produtos"</h2>
+                        <div class="border-bottom border-primary mx-auto" style="width: 100px;"></div>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-oil-can fa-2x"></i>
+                                </div>
+                                <h5 class="fw-bold">Filtros e Lubrificantes</h5>
+                                <p>Filtros de óleo, ar, combustível e cabine, além dos melhores lubrificantes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-bolt fa-2x"></i>
+                                </div>
+                                <h5 class="fw-bold">Sistema Elétrico</h5>
+                                <p>Baterias, alternadores, velas de ignição e componentes elétricos em geral.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-tools fa-2x"></i>
+                                </div>
+                                <h5 class="fw-bold">Suspensão e Freios</h5>
+                                <p>Amortecedores, molas, pastilhas de freio, discos e todo sistema de frenagem.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-car-battery fa-2x"></i>
+                                </div>
+                                <h5 class="fw-bold">Motor e Transmissão</h5>
+                                <p>Correias, juntas, bombas e todos os componentes essenciais do motor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="fw-bold">"Serviços"</h2>
+                        <div class="border-bottom border-primary mx-auto" style="width: 100px;"></div>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <h4 class="fw-bold mb-3">Atendimento Especializado</h4>
+                                <p>Nossa equipe técnica está preparada para indicar as melhores peças para seu veículo, garantindo a compatibilidade e qualidade dos produtos.</p>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Diagnóstico preciso</li>
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Orientação técnica</li>
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Garantia dos produtos</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <h4 class="fw-bold mb-3">Entrega Rápida</h4>
+                                <p>Entregamos em toda a região com agilidade e segurança, garantindo que você receba suas peças no menor tempo possível.</p>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Pedidos acima de R$ 200 sem frete</li>
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Rastreamento online</li>
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Atendimento emergencial</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <h4 class="fw-bold mb-3">Parcerias com Oficinas</h4>
+                                <p>Trabalhamos em parceria com as melhores oficinas da região, oferecendo condições especiais para instalação das peças adquiridas.</p>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Rede credenciada</li>
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Descontos na mão de obra</li>
+                                    <li class="mb-2"><i class="fas fa-check text-primary me-2"></i> Garantia estendida</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="fw-bold">"Contato"</h2>
+                        <div class="border-bottom border-primary mx-auto" style="width: 100px;"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <h3 class="fw-bold mb-4">Entre em contato</h3>
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="nome" class="form-label">Nome</label>
+                                        <input type="text" class="form-control" id="nome" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">E-mail</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="telefone" class="form-label">Telefone</label>
+                                        <input type="tel" class="form-control" id="telefone">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="mensagem" class="form-label">Mensagem</label>
+                                        <textarea class="form-control" id="mensagem" rows="4" required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <h3 class="fw-bold mb-4">Nossos canais</h3>
+                                <div class="d-flex align-items-start mb-4">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-map-marker-alt fa-2x"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold">Endereço</h5>
+                                        <p>Rua Exemplo, 123 - Centro<br>Cidade - Estado<br>CEP: 12345-678</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-start mb-4">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-phone-alt fa-2x"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold">Telefone</h5>
+                                        <p>(00) 1234-5678<br>(00) 98765-4321 (WhatsApp)</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-start mb-4">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-envelope fa-2x"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold">E-mail</h5>
+                                        <p>contato@ipdestinocerto.com.br</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-start">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-clock fa-2x"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold">Horário de Funcionamento</h5>
+                                        <p>Segunda a Sexta: 08:00 - 18:00<br>Sábado: 08:00 - 12:00</p>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <h5 class="fw-bold mb-3">Redes Sociais</h5>
+                                    <div class="d-flex">
+                                        <a href="#" class="btn btn-outline-primary me-2"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#" class="btn btn-outline-primary me-2"><i class="fab fa-instagram"></i></a>
+                                        <a href="#" class="btn btn-outline-primary me-2"><i class="fab fa-whatsapp"></i></a>
+                                        <a href="#" class="btn btn-outline-primary"><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="fw-bold mb-4">Ip Destino Certo</h4>
+                    <p>Soluções completas em peças automotivas com qualidade e garantia.</p>
+                    <div class="d-flex mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-4">"Links Rápidos"</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#inicio" class="text-white text-decoration-none">"Início"</a></li>
+                        <li class="mb-2"><a href="#empresa" class="text-white text-decoration-none">"Empresa"</a></li>
+                        <li class="mb-2"><a href="#produtos" class="text-white text-decoration-none">"Produtos"</a></li>
+                        <li class="mb-2"><a href="#servicos" class="text-white text-decoration-none">"Serviços"</a></li>
+                        <li><a href="#contato" class="text-white text-decoration-none">"Contato"</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-4">"IP DESTINO CERTO LTDA"</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Filtros e Lubrificantes</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Sistema Elétrico</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Suspensão e Freios</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Motor e Transmissão</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="fw-bold mb-4">"CNPJ: 80.866.379/0001-56
+"</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Rua Exemplo, 123 - Centro</li>
+                        <li class="mb-2"><i class="fas fa-phone-alt me-2"></i> (00) 1234-5678</li>
+                        <li class="mb-2"><i class="fas fa-mobile-alt me-2"></i> (00) 98765-4321</li>
+                        <li><i class="fas fa-envelope me-2"></i> contato@ipdestinocerto.com.br</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">"© 2023 Ip Destino Certo. Todos os direitos reservados."</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">"Desenvolvido com paixão por soluções automotivas"</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                const navbarToggler = document.querySelector('.navbar-toggler');
+                const navbarNav = document.querySelector('.navbar-collapse');
+                if (navbarToggler && !navbarToggler.classList.contains('collapsed')) {
+                    navbarToggler.click();
+                }
+            }
+        });
+    });
+    
+    // Back to top button
+    const backToTopButton = document.createElement('button');
+    backToTopButton.id = 'back-to-top';
+    backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    backToTopButton.setAttribute('aria-label', 'Voltar ao topo');
+    document.body.appendChild(backToTopButton);
+    
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopButton.style.display = 'flex';
+            backToTopButton.style.alignItems = 'center';
+            backToTopButton.style.justifyContent = 'center';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    });
+    
+    backToTopButton.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+    // Form validation
+    const contactForm = document.querySelector('form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nameInput = document.getElementById('nome');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('mensagem');
+            let isValid = true;
+            
+            // Reset validation
+            [nameInput, emailInput, messageInput].forEach(input => {
+                input.classList.remove('is-invalid');
+            });
+            
+            // Validate name
+            if (nameInput.value.trim() === '') {
+                nameInput.classList.add('is-invalid');
+                isValid = false;
+            }
+            
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value.trim())) {
+                emailInput.classList.add('is-invalid');
+                isValid = false;
+            }
+            
+            // Validate message
+            if (messageInput.value.trim() === '') {
+                messageInput.classList.add('is-invalid');
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // Simulate form submission
+                alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+                contactForm.reset();
+            }
+        });
+    }
+    
+    // Animate elements on scroll
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+    
+    animateElements.forEach(element => {
+        observer.observe(element);
+    });
+    
+    // Add animation class to hero section elements
+    const heroContent = document.querySelector('#inicio .row.align-items-center > div:first-child');
+    const heroVisual = document.querySelector('#inicio .row.align-items-center > div:last-child');
+    
+    if (heroContent) heroContent.classList.add('animate-on-scroll');
+    if (heroVisual) heroVisual.classList.add('animate-on-scroll');
+    
+    // Add animation delay to cards
+    document.querySelectorAll('.card').forEach((card, index) => {
+        card.style.transitionDelay = `${index * 0.1}s`;
+    });
+});</script></body>
+</html>
