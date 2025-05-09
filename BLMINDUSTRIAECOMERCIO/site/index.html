@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLM INDUSTRIA E COMERCIO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>:root {
+    --primary-color: #3498DB;
+    --secondary-color: #2C3E50;
+    --accent-color: #E74C3C;
+    --light-color: #F8F9FA;
+    --dark-color: #34495E;
+    --success-color: #2ECC71;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #F8F9FA, #E9ECEF);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    color: var(--secondary-color) !important;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--secondary-color);
+    position: relative;
+    margin: 0 0.5rem;
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover:after,
+.nav-link.active:after {
+    width: 100%;
+}
+
+.nav-link.active {
+    font-weight: 600;
+}
+
+.btn-danger {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #C0392B;
+    border-color: #C0392B;
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #3498DB, #2980B9);
+    color: white;
+}
+
+.hero-section h1 {
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Cards */
+.card {
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.card i {
+    color: var(--success-color);
+}
+
+/* Process Section */
+.badge {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Accordion */
+.accordion-button:not(.collapsed) {
+    background-color: rgba(52, 152, 219, 0.1);
+    color: var(--primary-color);
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0,0,0,0.125);
+}
+
+/* Form */
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    position: relative;
+    overflow: hidden;
+}
+
+footer:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.05) 50%, transparent 100%);
+    z-index: 0;
+}
+
+.footer-link {
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.footer-link:hover {
+    color: white !important;
+}
+
+.footer-link:hover:after {
+    width: 100%;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    background-color: var(--primary-color);
+    color: white !important;
+}
+
+/* Accessibility */
+.accessibility-toolbar {
+    z-index: 999;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+.copyright {
+    animation: pulse 3s infinite;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+}</style>
+</head>
+<body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BLM Indústria e Comércio - Excelência em confecção industrial com tecnologia de ponta e qualidade garantida">
+    <title>BLM Indústria e Comércio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <i class="fas fa-industry me-2"></i>
+                    <span class="fw-bold">BLM INDÚSTRIA E COMÉRCIO</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Qualidade</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contato</a>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-danger rounded-pill px-3" href="#">Orçamento</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section py-5">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h1 class="display-4 fw-semibold mb-4">Excelência em Confecção Industrial</h1>
+                        <p class="lead mb-5">Tecnologia, qualidade e eficiência para atender as demandas do mercado têxtil</p>
+                        <a href="#contact" class="btn btn-primary btn-lg px-4 py-2">Fale Conosco</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5">Nossas Especialidades</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <i class="fas fa-tshirt fa-3x mb-4"></i>
+                                <h3 class="h4 mb-3">Confecção de Peças de Vestuário</h3>
+                                <p class="text-muted">Produção em larga escala com padrões internacionais de qualidade</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <i class="fas fa-cut fa-3x mb-4"></i>
+                                <h3 class="h4 mb-3">Tecnologia de Corte</h3>
+                                <p class="text-muted">Sistemas automatizados de corte com precisão milimétrica</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <i class="fas fa-award fa-3x mb-4"></i>
+                                <h3 class="h4 mb-3">Controle de Qualidade</h3>
+                                <p class="text-muted">Rigoroso processo de inspeção em todas as etapas produtivas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Processo Produtivo</h2>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="list-group">
+                            <div class="list-group-item border-0 py-3">
+                                <div class="d-flex align-items-center">
+                                    <span class="badge bg-primary rounded-circle me-3 p-3"><i class="fas fa-ruler-combined"></i></span>
+                                    <div>
+                                        <h5 class="mb-1">Projeto e Modelagem</h5>
+                                        <p class="mb-0">Desenvolvimento técnico de peças com modelagem digital</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item border-0 py-3">
+                                <div class="d-flex align-items-center">
+                                    <span class="badge bg-success rounded-circle me-3 p-3"><i class="fas fa-cut"></i></span>
+                                    <div>
+                                        <h5 class="mb-1">Corte Automatizado</h5>
+                                        <p class="mb-0">Precisão no corte com tecnologia CAD/CAM</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item border-0 py-3">
+                                <div class="d-flex align-items-center">
+                                    <span class="badge bg-info rounded-circle me-3 p-3"><i class="fas fa-tshirt"></i></span>
+                                    <div>
+                                        <h5 class="mb-1">Costura Industrial</h5>
+                                        <p class="mb-0">Linhas de produção com máquinas de última geração</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item border-0 py-3">
+                                <div class="d-flex align-items-center">
+                                    <span class="badge bg-warning rounded-circle me-3 p-3"><i class="fas fa-search"></i></span>
+                                    <div>
+                                        <h5 class="mb-1">Inspeção de Qualidade</h5>
+                                        <p class="mb-0">Controle rigoroso em todas as etapas</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item border-0 py-3">
+                                <div class="d-flex align-items-center">
+                                    <span class="badge bg-danger rounded-circle me-3 p-3"><i class="fas fa-box-open"></i></span>
+                                    <div>
+                                        <h5 class="mb-1">Embalagem e Expedição</h5>
+                                        <p class="mb-0">Preparação para distribuição com rastreabilidade</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5">Nossos Diferenciais</h2>
+                <div class="accordion" id="diferenciaisAccordion">
+                    <div class="accordion-item border-0 mb-3 shadow-sm">
+                        <h3 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <i class="fas fa-chart-line me-3"></i> Capacidade Produtiva
+                            </button>
+                        </h3>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#diferenciaisAccordion">
+                            <div class="accordion-body">
+                                <p>Infraestrutura com mais de 5.000m² dedicados à produção, permitindo atender grandes demandas com agilidade e eficiência. Linhas de produção contínua com capacidade para 50.000 peças/mês.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0 mb-3 shadow-sm">
+                        <h3 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <i class="fas fa-warehouse me-3"></i> Matérias-primas Selecionadas
+                            </button>
+                        </h3>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#diferenciaisAccordion">
+                            <div class="accordion-body">
+                                <p>Parcerias com os melhores fornecedores nacionais e internacionais de tecidos e aviamentos. Seleção rigorosa de matérias-primas com certificação de origem e qualidade.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0 shadow-sm">
+                        <h3 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <i class="fas fa-cogs me-3"></i> Equipamentos Modernos
+                            </button>
+                        </h3>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#diferenciaisAccordion">
+                            <div class="accordion-body">
+                                <p>Parque tecnológico com máquinas de última geração, incluindo sistemas automatizados de corte CAD/CAM, máquinas de costura programáveis e equipamentos de acabamento de alta precisão.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mx-auto">
+                        <h2 class="text-center mb-5">Entre em Contato</h2>
+                        <form id="contactForm" class="needs-validation" novalidate>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="name" required>
+                                <div class="invalid-feedback">Por favor, informe seu nome.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input type="email" class="form-control" id="email" required>
+                                <div class="invalid-feedback">Por favor, informe um e-mail válido.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Telefone</label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Mensagem</label>
+                                <textarea class="form-control" id="message" rows="4" required></textarea>
+                                <div class="invalid-feedback">Por favor, escreva sua mensagem.</div>
+                            </div>
+                            <div class="d-grid">
+                                <button class="btn btn-primary btn-lg" type="submit">
+                                    <span id="submitText">Enviar Mensagem</span>
+                                    <span id="submitSpinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h5 class="mb-3">Informações Legais</h5>
+                    <p class="small">CNPJ 10.381.784/0001-07</p>
+                    <p class="small">Razão Social BLM INDÚSTRIA E COMÉRCIO DO VESTUÁRIO LTDA</p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h5 class="mb-3">Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 footer-link">Políticas</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 footer-link">Termos</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 footer-link"><i class="fas fa-envelope me-2"></i>contato@blmindustria.com.br</a></li>
+                        <li><a href="#" class="text-white-50 footer-link"><i class="fas fa-phone me-2"></i>(11) 1234-5678</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-top border-secondary pt-3 mt-3">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <p class="mb-0 small">&copy; <span id="currentYear"></span> BLM Indústria e Comércio. Todos os direitos reservados.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <a href="#" class="text-white me-3 social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3 social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="accessibility-toolbar fixed-bottom end-0 mb-3 me-3">
+        <button id="fontIncrease" class="btn btn-sm btn-secondary rounded-circle p-2" title="Aumentar fonte">
+            <i class="fas fa-font"></i>
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    // Set current year in footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    
+    // Form validation
+    const form = document.getElementById('contactForm');
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            } else {
+                const submitText = document.getElementById('submitText');
+                const spinner = document.getElementById('submitSpinner');
+                
+                submitText.textContent = 'Enviando...';
+                spinner.classList.remove('d-none');
+                
+                // Simulate form submission
+                setTimeout(function() {
+                    submitText.textContent = 'Mensagem Enviada!';
+                    spinner.classList.add('d-none');
+                    
+                    // Reset form after 2 seconds
+                    setTimeout(function() {
+                        form.reset();
+                        submitText.textContent = 'Enviar Mensagem';
+                        form.classList.remove('was-validated');
+                    }, 2000);
+                }, 1500);
+            }
+            
+            form.classList.add('was-validated');
+        }, false);
+    }
+    
+    // Font size increase for accessibility
+    const fontIncreaseBtn = document.getElementById('fontIncrease');
+    if (fontIncreaseBtn) {
+        fontIncreaseBtn.addEventListener('click', function() {
+            const html = document.documentElement;
+            const currentSize = parseFloat(window.getComputedStyle(html, null).getPropertyValue('font-size'));
+            html.style.fontSize = (currentSize + 1) + 'px';
+        });
+    }
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Card hover effects
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = '';
+        });
+    });
+    
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('header');
+        if (window.scrollY > 50) {
+            navbar.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+        } else {
+            navbar.style.boxShadow = '0 2px 15px rgba(0,0,0,0.1)';
+        }
+    });
+});</script></body>
+</html>
