@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOU GRINGA BOUTIQUE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>:root {
+  --primary: #8B4513;
+  --primary-light: #A0522D;
+  --secondary: #D2B48C;
+  --light: #F5F5F5;
+  --dark: #333;
+  --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+.navbar-brand {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.navbar {
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  transition: var(--transition);
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  transform: scale(1.05);
+  color: var(--primary);
+}
+
+.input-group input:focus {
+  box-shadow: 0 0 0 2px rgba(139,69,19,0.3);
+  border-color: var(--primary);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-light);
+  border-color: var(--primary-light);
+  transform: translateY(-3px);
+}
+
+.hero-section {
+  background-color: var(--light);
+}
+
+.hero-decorative {
+  position: relative;
+  height: 300px;
+  background-color: var(--secondary);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.hero-decorative::before,
+.hero-decorative::after {
+  content: '';
+  position: absolute;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 50%;
+}
+
+.hero-decorative::before {
+  width: 150px;
+  height: 150px;
+  top: -50px;
+  right: -50px;
+}
+
+.hero-decorative::after {
+  width: 100px;
+  height: 100px;
+  bottom: -30px;
+  left: -30px;
+}
+
+.category-card {
+  background-color: white;
+  border-radius: 10px;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.category-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.icon-wrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: var(--transition);
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.product-img-placeholder {
+  height: 200px;
+  background-color: var(--light);
+  position: relative;
+}
+
+.stars {
+  color: var(--secondary);
+}
+
+.price {
+  color: var(--primary);
+}
+
+.pulse {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  color: var(--primary);
+}
+
+footer a {
+  transition: var(--transition);
+}
+
+footer a:hover {
+  color: white !important;
+  text-decoration: none;
+  transform: translateX(5px);
+}
+
+.social-links a {
+  display: inline-block;
+  transition: var(--transition);
+}
+
+.social-links a:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 992px) {
+  .navbar-brand {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .hero-section .row {
+    flex-direction: column-reverse;
+  }
+  
+  .hero-decorative {
+    height: 200px;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+  
+  .category-card {
+    padding: 1.5rem;
+  }
+}</style>
+</head>
+<body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="YOU GRINGA BOUTIQUE - Moda com identidade e estilo único. Encontre as peças perfeitas para seu guarda-roupa.">
+  <title>YOU GRINGA BOUTIQUE | Moda com Identidade</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">YOU GRINGA BOUTIQUE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-tshirt me-1"></i> Roupas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-shopping-bag me-1"></i> Acessórios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-user-circle me-1"></i> Minha Conta</a>
+            </li>
+          </ul>
+          <form class="d-flex me-3">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Pesquisar...">
+              <button class="btn btn-outline-secondary" type="submit"><i class="fas fa-search"></i></button>
+            </div>
+          </form>
+          <div class="position-relative">
+            <a href="#" class="btn btn-link position-relative">
+              <i class="fas fa-shopping-cart fa-lg"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger pulse">3</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-section py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <h1 class="display-4 fw-bold mb-4">Moda com Identidade</h1>
+            <p class="lead mb-4">Descubra peças exclusivas que refletem sua personalidade. Coleções cuidadosamente selecionadas para mulheres que valorizam estilo e conforto.</p>
+            <button class="btn btn-primary btn-lg px-4 py-2">Explore a Coleção</button>
+            <div class="d-flex mt-4">
+              <div class="me-4 d-flex align-items-center">
+                <i class="fas fa-truck me-2"></i>
+                <span>Frete Grátis</span>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-exchange-alt me-2"></i>
+                <span>Troca Fácil</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-decorative"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories-section py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Nossas Categorias</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="category-card p-4 text-center">
+              <div class="icon-wrapper mb-3">
+                <i class="fas fa-tshirt fa-3x"></i>
+                <span class="badge bg-primary rounded-circle position-absolute top-0 end-0 translate-middle">42</span>
+              </div>
+              <h3>Vestidos</h3>
+              <p class="text-muted">Estilos para todas as ocasiões</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="category-card p-4 text-center">
+              <div class="icon-wrapper mb-3">
+                <i class="fas fa-vest fa-3x"></i>
+                <span class="badge bg-primary rounded-circle position-absolute top-0 end-0 translate-middle">28</span>
+              </div>
+              <h3>Blusas</h3>
+              <p class="text-muted">Conforto e estilo</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="category-card p-4 text-center">
+              <div class="icon-wrapper mb-3">
+                <i class="fas fa-shopping-bag fa-3x"></i>
+                <span class="badge bg-primary rounded-circle position-absolute top-0 end-0 translate-middle">35</span>
+              </div>
+              <h3>Bolsas</h3>
+              <p class="text-muted">Acessórios exclusivos</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="category-card p-4 text-center">
+              <div class="icon-wrapper mb-3">
+                <i class="fas fa-ring fa-3x"></i>
+                <span class="badge bg-primary rounded-circle position-absolute top-0 end-0 translate-middle">19</span>
+              </div>
+              <h3>Joias</h3>
+              <p class="text-muted">Pequenos luxos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-section py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Destaques</h2>
+        <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row g-4">
+                <div class="col-md-4">
+                  <div class="product-card">
+                    <div class="badge bg-success position-absolute top-0 start-0 m-2">Novidade</div>
+                    <div class="product-img-placeholder"></div>
+                    <div class="p-3">
+                      <h3>Vestido Floral</h3>
+                      <div class="stars mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                      </div>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="price fw-bold">R$ 189,90</span>
+                        <button class="btn btn-sm btn-outline-primary">Comprar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="product-card">
+                    <div class="product-img-placeholder"></div>
+                    <div class="p-3">
+                      <h3>Bolsa de Couro</h3>
+                      <div class="stars mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="price fw-bold">R$ 249,90</span>
+                        <button class="btn btn-sm btn-outline-primary">Comprar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="product-card">
+                    <div class="badge bg-success position-absolute top-0 start-0 m-2">Novidade</div>
+                    <div class="product-img-placeholder"></div>
+                    <div class="p-3">
+                      <h3>Blusa de Seda</h3>
+                      <div class="stars mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="price fw-bold">R$ 159,90</span>
+                        <button class="btn btn-sm btn-outline-primary">Comprar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row g-4">
+                <div class="col-md-4">
+                  <div class="product-card">
+                    <div class="product-img-placeholder"></div>
+                    <div class="p-3">
+                      <h3>Colar Dourado</h3>
+                      <div class="stars mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="price fw-bold">R$ 89,90</span>
+                        <button class="btn btn-sm btn-outline-primary">Comprar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="product-card">
+                    <div class="badge bg-success position-absolute top-0 start-0 m-2">Novidade</div>
+                    <div class="product-img-placeholder"></div>
+                    <div class="p-3">
+                      <h3>Saia Midi</h3>
+                      <div class="stars mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="price fw-bold">R$ 129,90</span>
+                        <button class="btn btn-sm btn-outline-primary">Comprar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="product-card">
+                    <div class="product-img-placeholder"></div>
+                    <div class="p-3">
+                      <h3>Pulseira Prata</h3>
+                      <div class="stars mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="price fw-bold">R$ 69,90</span>
+                        <button class="btn btn-sm btn-outline-primary">Comprar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <h3 class="h5 mb-3">YOU GRINGA BOUTIQUE</h3>
+          <p class="small">CNPJ: 12.345.678/0001-99</p>
+          <p class="small">RAZAO SOCIAL Moda com Identidade LTDA</p>
+          <p class="small">Desde 2015</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h3 class="h5 mb-3">Institucional</h3>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-white-50"><i class="fas fa-chevron-right me-2"></i> Sobre Nós</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50"><i class="fas fa-chevron-right me-2"></i> Trocas e Devoluções</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50"><i class="fas fa-chevron-right me-2"></i> Política de Privacidade</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h3 class="h5 mb-3">Contato</h3>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-white-50"><i class="fab fa-whatsapp me-2"></i> (11) 98765-4321</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50"><i class="fas fa-envelope me-2"></i> contato@yougringa.com</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h3 class="h5 mb-3">Newsletter</h3>
+          <form class="mb-3">
+            <div class="input-group mb-3">
+              <input type="email" class="form-control" placeholder="Seu e-mail" required>
+              <button class="btn btn-primary" type="submit"><i class="fas fa-paper-plane"></i></button>
+            </div>
+          </form>
+          <div class="social-links">
+            <a href="#" class="text-white me-2"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="text-white me-2"><i class="fab fa-facebook fa-lg"></i></a>
+            <a href="#" class="text-white me-2"><i class="fab fa-pinterest fa-lg"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="small mb-0">© 2023 YOU GRINGA BOUTIQUE. Todos os direitos reservados.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <div class="payment-methods">
+            <i class="fab fa-cc-visa me-2"></i>
+            <i class="fab fa-cc-mastercard me-2"></i>
+            <i class="fab fa-cc-paypal me-2"></i>
+            <i class="fab fa-cc-amazon-pay"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+  // Mobile menu animation
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  navbarToggler.addEventListener('click', function() {
+    this.classList.toggle('active');
+  });
+
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  // Form validation for newsletter
+  const newsletterForm = document.querySelector('footer form');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function(e) {
+      const emailInput = this.querySelector('input[type="email"]');
+      if (!emailInput.value || !emailInput.checkValidity()) {
+        e.preventDefault();
+        emailInput.classList.add('is-invalid');
+        emailInput.focus();
+      }
+    });
+  }
+
+  // Product card hover effect enhancement
+  const productCards = document.querySelectorAll('.product-card');
+  productCards.forEach(card => {
+    card.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-5px)';
+    });
+    card.addEventListener('mouseleave', function() {
+      this.style.transform = '';
+    });
+  });
+
+  // Initialize tooltips
+  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  tooltipTriggerList.map(function(tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
+  });
+});</script></body>
+</html>
