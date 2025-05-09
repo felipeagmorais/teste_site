@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M A EMPREENDIMENTOS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>:root {
+    --primary: #3498db;
+    --primary-dark: #2980b9;
+    --secondary: #2c3e50;
+    --dark: #1a252f;
+    --light: #ecf0f1;
+    --success: #27ae60;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 80px;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(44, 62, 80, 0.95);
+}
+
+.navbar-brand {
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.nav-link {
+    position: relative;
+    padding-bottom: 5px;
+    margin: 0 10px;
+    color: var(--light);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(236, 240, 241, 0.8) 100%);
+}
+
+.graphic-element {
+    height: 300px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(52, 152, 219, 0.2);
+}
+
+.card {
+    transition: all 0.2s ease;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.icon-wrapper {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(52, 152, 219, 0.1);
+    border-radius: 50%;
+}
+
+.stats-wrapper {
+    background: white;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: scale(1.02);
+}
+
+.bg-dark {
+    background: linear-gradient(to right, var(--secondary), var(--dark));
+}
+
+footer a {
+    color: var(--light);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+footer a:hover {
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.social-icon:hover {
+    background: var(--primary);
+    transform: scale(1.1);
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .graphic-element {
+        height: 200px;
+        margin-top: 30px;
+    }
+}</style>
+</head>
+<body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="M A Empreendimentos - Soluções em marketing direto para transformar seu negócio">
+    <title>M A Empreendimentos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark py-3">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-2" href="#">M A EMPREENDIMENTOS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#inicio">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicos">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projetos">Projetos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero-section py-5">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold mb-4">Marketing Direto que Transforma Negócios</h1>
+                        <p class="lead mb-4">Soluções personalizadas para alavancar sua marca e aumentar suas vendas com estratégias comprovadas de marketing direto.</p>
+                        <a href="#contato" class="btn btn-primary btn-lg px-4 py-2">Fale Conosco</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="graphic-element"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="py-5 bg-light">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Nossos Serviços</h2>
+                    <p class="text-muted">Soluções completas para seu negócio</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="icon-wrapper mb-4">
+                                    <i class="fas fa-chart-line fa-3x text-primary"></i>
+                                </div>
+                                <h4 class="fw-bold mb-3">Análise de Mercado</h4>
+                                <p class="text-muted">Pesquisas detalhadas para identificar oportunidades e ameaças no seu segmento.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="icon-wrapper mb-4">
+                                    <i class="fas fa-users fa-3x text-primary"></i>
+                                </div>
+                                <h4 class="fw-bold mb-3">Segmentação</h4>
+                                <p class="text-muted">Identificação precisa do seu público-alvo para campanhas mais eficientes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="icon-wrapper mb-4">
+                                    <i class="fas fa-bullseye fa-3x text-primary"></i>
+                                </div>
+                                <h4 class="fw-bold mb-3">Campanhas Diretas</h4>
+                                <p class="text-muted">Ações personalizadas com alto potencial de conversão e retorno mensurável.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="diferenciais" class="py-5">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2 class="fw-bold mb-4">Nossos Diferenciais</h2>
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="fas fa-check-circle text-success me-3 mt-1"></i>
+                                <span>Metodologia exclusiva com resultados comprovados</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="fas fa-check-circle text-success me-3 mt-1"></i>
+                                <span>Equipe especializada com mais de 15 anos de experiência</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="fas fa-check-circle text-success me-3 mt-1"></i>
+                                <span>Relatórios detalhados de desempenho</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="fas fa-check-circle text-success me-3 mt-1"></i>
+                                <span>Atendimento personalizado para cada cliente</span>
+                            </li>
+                            <li class="d-flex align-items-start">
+                                <i class="fas fa-check-circle text-success me-3 mt-1"></i>
+                                <span>Tecnologia de ponta para análise de dados</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="stats-wrapper p-4 rounded shadow-sm">
+                            <div class="row text-center">
+                                <div class="col-6 mb-4">
+                                    <div class="display-4 fw-bold text-primary">+150</div>
+                                    <p class="text-muted mb-0">Clientes Atendidos</p>
+                                </div>
+                                <div class="col-6 mb-4">
+                                    <div class="display-4 fw-bold text-primary">+95%</div>
+                                    <p class="text-muted mb-0">Satisfação</p>
+                                </div>
+                                <div class="col-6">
+                                    <div class="display-4 fw-bold text-primary">+300</div>
+                                    <p class="text-muted mb-0">Projetos</p>
+                                </div>
+                                <div class="col-6">
+                                    <div class="display-4 fw-bold text-primary">15+</div>
+                                    <p class="text-muted mb-0">Anos no Mercado</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-5 bg-light">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card border-0 shadow">
+                            <div class="card-body p-5">
+                                <h2 class="fw-bold text-center mb-4">Entre em Contato</h2>
+                                <form id="contactForm" novalidate>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="name" class="form-label">Nome Completo</label>
+                                            <input type="text" class="form-control" id="name" required>
+                                            <div class="invalid-feedback">Por favor, insira seu nome.</div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="email" class="form-label">E-mail</label>
+                                            <input type="email" class="form-control" id="email" required>
+                                            <div class="invalid-feedback">Por favor, insira um e-mail válido.</div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="subject" class="form-label">Assunto</label>
+                                        <input type="text" class="form-control" id="subject" required>
+                                        <div class="invalid-feedback">Por favor, insira um assunto.</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label">Mensagem</label>
+                                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                                        <div class="invalid-feedback">Por favor, insira sua mensagem.</div>
+                                    </div>
+                                    <div class="d-grid">
+                                        <button class="btn btn-primary btn-lg" type="submit">
+                                            <span class="submit-text">Enviar Mensagem</span>
+                                            <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="h5 fw-bold mb-3">M A EMPREENDIMENTOS</h3>
+                    <p class="text-muted">Transformando ideias em resultados através do marketing direto.</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h3 class="h5 fw-bold mb-3">Links Rápidos</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2 text-primary"></i>
+                            <span>Av. Paulista, 1000 - São Paulo/SP</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-phone me-2 text-primary"></i>
+                            <span>(11) 9999-9999</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope me-2 text-primary"></i>
+                            <span>contato@maempreendimentos.com.br</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h3 class="h5 fw-bold mb-3">Informações Jurídicas</h3>
+                    <p class="small text-muted">
+                        <span class="fw-bold">CNPJ:</span> 54.316.460/0001-52<br>
+                        <span class="fw-bold">Razão Social:</span> M A Empreendimentos Ltda.
+                    </p>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-0 small">&copy; 2023 M A Empreendimentos. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                const navbarToggler = document.querySelector('.navbar-toggler');
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse.classList.contains('show')) {
+                    navbarToggler.click();
+                }
+            }
+        });
+    });
+
+    // Form validation
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const submitText = submitBtn.querySelector('.submit-text');
+            const spinner = submitBtn.querySelector('.spinner-border');
+            
+            // Show loading state
+            submitText.classList.add('d-none');
+            spinner.classList.remove('d-none');
+            submitBtn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(function() {
+                // Reset form
+                contactForm.reset();
+                contactForm.classList.add('was-validated');
+                
+                // Show success message (in a real app, you would handle the actual submission)
+                alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+                
+                // Reset button state
+                submitText.classList.remove('d-none');
+                spinner.classList.add('d-none');
+                submitBtn.disabled = false;
+            }, 1500);
+        });
+    }
+
+    // Add hover effects to cards
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+    });
+
+    // Bootstrap tooltips
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(function(tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+});</script></body>
+</html>
