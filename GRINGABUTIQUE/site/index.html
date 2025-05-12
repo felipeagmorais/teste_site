@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRINGABUTIQUE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>:root {
+  --primary: #FF6B8B;
+  --secondary: #9C27B0;
+  --dark: #212529;
+  --light: #f8f9fa;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --font-special: 'Playfair Display', serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+  background-color: white;
+  z-index: 100;
+}
+
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  transform: scale(1.05);
+  color: var(--primary) !important;
+}
+
+.cart-badge {
+  font-size: 0.6rem;
+  padding: 0.35em 0.5em;
+  animation: pulse 2s infinite;
+}
+
+.header-wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: white;
+  clip-path: polygon(0 70%, 100% 30%, 100% 100%, 0% 100%);
+  z-index: -1;
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: white;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.decorative-circles {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  mix-blend-mode: multiply;
+}
+
+.circle-1 {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 107, 139, 0.6);
+  top: 0;
+  left: 0;
+}
+
+.circle-2 {
+  width: 180px;
+  height: 180px;
+  background-color: rgba(156, 39, 176, 0.6);
+  bottom: 0;
+  right: 0;
+}
+
+.circle-3 {
+  width: 150px;
+  height: 150px;
+  background-color: rgba(107, 139, 255, 0.6);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Typewriter Effect */
+.typewriter {
+  border-right: 3px solid var(--primary);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+/* Categories Section */
+.category-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: white;
+}
+
+.category-card:hover {
+  transform: rotate(2deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+  background-color: var(--light);
+  position: relative;
+}
+
+.newsletter-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  background: 
+    linear-gradient(135deg, var(--primary) 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, var(--primary) 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, var(--primary) 25%, transparent 25%),
+    linear-gradient(45deg, var(--primary) 25%, transparent 25%);
+  background-size: 100px 100px;
+}
+
+.newsletter-form .form-control:focus {
+  box-shadow: none;
+  border-color: var(--primary);
+}
+
+/* Footer Styles */
+footer a {
+  transition: all 0.3s ease;
+}
+
+.hover-effect:hover {
+  color: white !important;
+  padding-left: 5px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.pulse {
+  animation: pulse 1.5s infinite;
+}
+
+.shield-icon {
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary);
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 50% 100%, 0% 60%, 10% 20%);
+}
+
+/* Animations */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--primary); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .hero-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .decorative-circles {
+    height: 250px;
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section .row {
+    flex-direction: column-reverse;
+  }
+  
+  .decorative-circles {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-wave {
+    height: 50px;
+  }
+  
+  .typewriter {
+    white-space: normal;
+    border-right: none;
+    animation: none;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}</style>
+</head>
+<body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GRINGABUTIQUE - Comércio varejista de artigos do vestuário e acessórios. Moda com estilo e qualidade.">
+  <title>GRINGABUTIQUE | Moda e Acessórios</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>/* CSS will be placed here */</style>
+</head>
+<body>
+  <header class="position-relative overflow-hidden">
+    <div class="toast-container position-absolute top-0 end-0 p-3">
+      <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true" data-bs-delay="5000">
+        <div class="toast-body bg-success text-white">
+          <i class="fas fa-truck me-2"></i> Frete grátis para todo Brasil!
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#" style="font-family: 'Montserrat', sans-serif; font-size: clamp(2rem, 5vw, 3rem); background: linear-gradient(135deg, #FF6B8B, #9C27B0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">YOU GRINGA BUTIQUE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto" style="font-family: 'Open Sans', sans-serif; font-weight: 600;">
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#">Produtos</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#">Coleções</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#">Sobre</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#">Contato</a>
+            </li>
+            <li class="nav-item ms-4 position-relative">
+              <a class="nav-link" href="#" aria-label="Carrinho de compras">
+                <i class="fas fa-shopping-bag fs-5"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="header-wave"></div>
+  </header>
+
+  <main>
+    <section class="hero-section py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <h1 class="display-4 fw-normal mb-4" style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; letter-spacing: 1px;">Comércio varejista de artigos do vestuário e acessórios</h1>
+            <h2 class="typewriter mb-4" style="font-family: 'Open Sans', sans-serif; min-height: 3.5rem;"></h2>
+            <div class="d-flex gap-3">
+              <button class="btn btn-lg px-4 py-2 fw-bold" style="background: linear-gradient(135deg, #FF6B8B, #9C27B0); color: white; border: none; box-shadow: 0 4px 15px rgba(156, 39, 176, 0.3);">Novidades</button>
+              <button class="btn btn-outline-dark btn-lg px-4 py-2 fw-bold border-2 position-relative overflow-hidden">
+                <span class="position-relative z-index-1">Coleção</span>
+                <span class="position-absolute top-0 left-0 w-0 h-full bg-dark opacity-10 transition-all duration-300"></span>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-6 position-relative">
+            <div class="decorative-circles">
+              <div class="circle circle-1"></div>
+              <div class="circle circle-2"></div>
+              <div class="circle circle-3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories-section py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5 fw-bold">Nossas Categorias</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card category-card h-100 border-0 shadow-sm">
+              <div class="card-body text-center py-5">
+                <i class="fas fa-tshirt mb-3" style="font-size: 2.5rem; color: #FF6B8B;"></i>
+                <h3 class="h5 text-uppercase fw-bold">CAMISETAS</h3>
+                <span class="badge rounded-pill bg-secondary mt-2">24 produtos</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card category-card h-100 border-0 shadow-sm">
+              <div class="card-body text-center py-5">
+                <i class="fas fa-ring mb-3" style="font-size: 2.5rem; color: #9C27B0;"></i>
+                <h3 class="h5 text-uppercase fw-bold">ACESSÓRIOS</h3>
+                <span class="badge rounded-pill bg-secondary mt-2">18 produtos</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card category-card h-100 border-0 shadow-sm">
+              <div class="card-body text-center py-5">
+                <i class="fas fa-hat-cowboy mb-3" style="font-size: 2.5rem; color: #6B8BFF;"></i>
+                <h3 class="h5 text-uppercase fw-bold">CHAPÉUS</h3>
+                <span class="badge rounded-pill bg-secondary mt-2">12 produtos</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card category-card h-100 border-0 shadow-sm">
+              <div class="card-body text-center py-5">
+                <i class="fas fa-shoe-prints mb-3" style="font-size: 2.5rem; color: #6BFF8B;"></i>
+                <h3 class="h5 text-uppercase fw-bold">CALÇADOS</h3>
+                <span class="badge rounded-pill bg-secondary mt-2">15 produtos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter-section py-5 position-relative overflow-hidden">
+      <div class="container position-relative z-index-1">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="fw-bold mb-4">Assine nossa newsletter</h2>
+            <p class="mb-5">Receba novidades, promoções exclusivas e descontos especiais diretamente no seu e-mail.</p>
+            <form class="newsletter-form mx-auto" novalidate>
+              <div class="input-group mb-3">
+                <input type="email" class="form-control border-0 border-bottom rounded-0 bg-transparent px-0" placeholder="Seu melhor e-mail" aria-label="Seu melhor e-mail" required>
+                <button class="btn btn-dark px-4" type="submit">
+                  <span class="submit-text">Assinar</span>
+                  <i class="fas fa-paper-plane submit-icon d-none"></i>
+                </button>
+              </div>
+              <div class="invalid-feedback text-start mt-2">Por favor, insira um e-mail válido.</div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="newsletter-pattern"></div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white pt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <h3 class="h5 mb-4">Dados Legais</h3>
+          <small class="d-block mb-2">
+            <i class="fas fa-balance-scale me-2"></i> "CNPJ: 57.320.693/0001-17"
+          </small>
+          <small class="d-block mb-2">
+            "RAZAO SOCIAL: YOU GRINGA BOUTIQUE MODAS E ACESSORIOS LTDA"
+          </small>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <h3 class="h5 mb-4">Links Rápidos</h3>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-effect">Política de Privacidade</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-effect">Termos de Serviço</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-effect">Trocas e Devoluções</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-effect">Dúvidas Frequentes</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <h3 class="h5 mb-4">Contato</h3>
+          <ul class="list-unstyled">
+            <li class="mb-3"><i class="fas fa-map-marker-alt me-2"></i> Av. Principal, 1234 - Centro</li>
+            <li class="mb-3"><i class="fas fa-phone me-2"></i> (11) 98765-4321</li>
+            <li class="mb-3"><i class="fas fa-envelope me-2"></i> contato@gringaboutique.com</li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <h3 class="h5 mb-4">Redes Sociais</h3>
+          <div class="d-flex gap-3">
+            <a href="#" class="social-icon rounded-circle d-flex align-items-center justify-content-center" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon rounded-circle d-flex align-items-center justify-content-center" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-icon rounded-circle d-flex align-items-center justify-content-center" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon rounded-circle d-flex align-items-center justify-content-center" aria-label="Pinterest">
+              <i class="fab fa-pinterest-p"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-top border-secondary mt-4 pt-4">
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-3 mb-md-0">
+            <div class="d-flex align-items-center">
+              <small class="me-2">© 2023 GRINGABUTIQUE. Todos os direitos reservados.</small>
+              <i class="fas fa-heart text-danger pulse"></i>
+            </div>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <div class="d-flex align-items-center justify-content-md-end">
+              <a href="#" class="text-white-50 text-decoration-none me-3 hover-effect">Termos de Uso</a>
+              <a href="#" class="text-white-50 text-decoration-none hover-effect">Política de Privacidade</a>
+              <div class="safe-badge ms-3 d-flex align-items-center">
+                <div class="shield-icon me-2"></div>
+                <small>Site seguro</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>/* JavaScript will be placed here */</script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+  // Typewriter effect
+  const typewriterText = "Descubra as últimas tendências da moda\nEm um único lugar, com qualidade e estilo";
+  const typewriterElement = document.querySelector('.typewriter');
+  let i = 0;
+  let currentLine = '';
+  let lineIndex = 0;
+  const lines = typewriterText.split('\n');
+  
+  function typeWriter() {
+    if (lineIndex < lines.length) {
+      currentLine = lines[lineIndex];
+      if (i < currentLine.length) {
+        if (lineIndex > 0) {
+          typewriterElement.innerHTML = lines[0] + '<br>' + currentLine.substring(0, i + 1);
+        } else {
+          typewriterElement.innerHTML = currentLine.substring(0, i + 1);
+        }
+        i++;
+        setTimeout(typeWriter, Math.random() * 100 + 50);
+      } else {
+        lineIndex++;
+        i = 0;
+        if (lineIndex < lines.length) {
+          setTimeout(typeWriter, 1000);
+        }
+      }
+    }
+  }
+  
+  // Start typewriter effect after a short delay
+  setTimeout(typeWriter, 500);
+  
+  // Newsletter form validation
+  const newsletterForm = document.querySelector('.newsletter-form');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const emailInput = this.querySelector('input[type="email"]');
+      
+      if (emailInput.checkValidity()) {
+        // Form is valid - show success state
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const submitText = submitBtn.querySelector('.submit-text');
+        const submitIcon = submitBtn.querySelector('.submit-icon');
+        
+        submitText.classList.add('d-none');
+        submitIcon.classList.remove('d-none');
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-check"></i>';
+        submitBtn.classList.remove('btn-dark');
+        submitBtn.classList.add('btn-success');
+        
+        // Reset after 3 seconds
+        setTimeout(() => {
+          submitBtn.innerHTML = '<span class="submit-text">Assinar</span><i class="fas fa-paper-plane submit-icon d-none"></i>';
+          submitBtn.classList.remove('btn-success');
+          submitBtn.classList.add('btn-dark');
+          submitBtn.disabled = false;
+          submitText.classList.remove('d-none');
+          submitIcon.classList.add('d-none');
+          this.reset();
+        }, 3000);
+      } else {
+        this.classList.add('was-validated');
+      }
+    });
+  }
+  
+  // Cart counter animation
+  const cartBadge = document.querySelector('.cart-badge');
+  if (cartBadge) {
+    // Simulate adding items to cart
+    setTimeout(() => {
+      cartBadge.textContent = '3';
+      cartBadge.style.transform = 'scale(1.5)';
+      setTimeout(() => {
+        cartBadge.style.transform = 'scale(1)';
+      }, 300);
+    }, 2000);
+  }
+  
+  // Initialize Bootstrap tooltips
+  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
+  });
+  
+  // Handle reduced motion preference
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(el => {
+      el.addEventListener('click', function() {
+        const target = document.querySelector(this.getAttribute('data-bs-target'));
+        target.classList.toggle('show');
+      });
+    });
+  }
+});</script></body>
+</html>
