@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOVE CLOTHING</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>:root {
+    --primary-color: #E83A7D;
+    --primary-dark: #C42D66;
+    --secondary-color: #2a2a2a;
+    --light-color: #fff0f5;
+    --dark-color: #1a1a1a;
+    --text-color: #333;
+    --light-text: #f8f9fa;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+header {
+    background: linear-gradient(to bottom, #ffffff, #fff0f5);
+    border-bottom: 1px solid rgba(232, 58, 125, 0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand .logo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    position: relative;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.search-box {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.search-box input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+}
+
+.search-container:hover .search-box {
+    width: 200px;
+    padding: 0 1rem;
+}
+
+.cart-icon {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.cart-icon:hover {
+    color: var(--primary-color);
+}
+
+.cart-badge {
+    background-color: var(--primary-color);
+    font-size: 0.7rem;
+}
+
+.hero-section {
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 80%;
+}
+
+.cta-btn {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(232, 58, 125, 0.3);
+}
+
+.hero-shapes {
+    position: relative;
+    height: 400px;
+}
+
+.diamond-shape {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(135deg, rgba(232,58,125,0.1), rgba(232,58,125,0.3));
+    transform: rotate(45deg);
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+}
+
+.shape-2 {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, rgba(232,58,125,0.05), rgba(232,58,125,0.2));
+    top: 40%;
+    left: 40%;
+}
+
+.shape-3 {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, rgba(232,58,125,0.03), rgba(232,58,125,0.1));
+    top: 60%;
+    left: 60%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    color: var(--primary-color);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.product-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(232,58,125,0.1);
+}
+
+.card-icon {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--primary-color);
+    background: linear-gradient(to bottom, rgba(232,58,125,0.05), rgba(232,58,125,0.1));
+}
+
+.card-body {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card-title {
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.about-content {
+    margin-top: 3rem;
+}
+
+.about-text {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-year {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 30px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.timeline-content {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    margin-top: 1rem;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.footer {
+    background: linear-gradient(to bottom, var(--secondary-color), var(--dark-color));
+    color: var(--light-text);
+    padding: 4rem 0 0;
+    border-top: 3px solid var(--primary-color);
+}
+
+.footer h5 {
+    color: var(--light-text);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.footer h5::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: var(--primary-color);
+    bottom: 0;
+    left: 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: #ccc;
+    transition: all 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+}
+
+.cert-badge {
+    display: inline-block;
+    background-color: rgba(255,255,255,0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.copy-text {
+    cursor: pointer;
+    position: relative;
+}
+
+.copy-text::after {
+    content: 'Copiado!';
+    position: absolute;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.copy-text.copied::after {
+    opacity: 1;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 2rem 0;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.social-icons {
+    margin-bottom: 1.5rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    margin: 0 0.5rem;
+    color: white;
+    transition: all 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.copyright {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: 99;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-5px);
+}
+
+@media (max-width: 992px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+    .hero-text {
+        text-align: center;
+    }
+    .hero-text p {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-shapes {
+        height: 300px;
+        margin-top: 2rem;
+    }
+    .timeline::before {
+        left: 31px;
+    }
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand .logo-text {
+        font-size: 2.5rem;
+    }
+    .stats-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .footer .row > div {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    .filter-buttons .btn-group {
+        flex-wrap: wrap;
+    }
+    .filter-buttons .btn {
+        margin-bottom: 0.5rem;
+    }
+}</style>
+</head>
+<body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LOVE CLOTHING - Moda com amor e qualidade para todos os estilos">
+    <title>LOVE CLOTHING - Moda com Amor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg py-3">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <span class="logo-text">LOVE CLOTHING</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">LOVE CLOTHING</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Produtos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Promoções</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+                        </ul>
+                        <div class="d-flex align-items-center">
+                            <div class="search-container me-3">
+                                <button class="search-btn"><i class="fas fa-search"></i></button>
+                                <div class="search-box">
+                                    <input type="text" placeholder="Buscar...">
+                                    <div class="autocomplete"></div>
+                                </div>
+                            </div>
+                            <div class="cart-icon position-relative">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="cart-badge position-absolute top-0 start-100 translate-middle badge rounded-pill">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Moda com Amor</h1>
+                        <p class="lead">Descubra peças cuidadosamente selecionadas que combinam estilo, conforto e qualidade para valorizar sua essência.</p>
+                        <button class="btn btn-primary cta-btn">Conheça nossa coleção <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                    <div class="hero-shapes">
+                        <div class="diamond-shape"></div>
+                        <div class="diamond-shape shape-2"></div>
+                        <div class="diamond-shape shape-3"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <div class="container">
+                <h2 class="section-title">Nossos Produtos</h2>
+                <div class="filter-buttons mb-5">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-outline-secondary active">Todos</button>
+                        <button type="button" class="btn btn-outline-secondary">Feminino</button>
+                        <button type="button" class="btn btn-outline-secondary">Masculino</button>
+                        <button type="button" class="btn btn-outline-secondary">Infantil</button>
+                        <button type="button" class="btn btn-outline-secondary">Acessórios</button>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                    <div class="col">
+                        <div class="card product-card">
+                            <div class="card-icon"><i class="fas fa-tshirt"></i></div>
+                            <div class="card-body">
+                                <h5 class="card-title">Camisetas</h5>
+                                <p class="card-text">Coleção variada em algodão penteado</p>
+                                <button class="btn btn-sm btn-outline-primary">Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card product-card">
+                            <div class="card-icon"><i class="fas fa-vest"></i></div>
+                            <div class="card-body">
+                                <h5 class="card-title">Calças</h5>
+                                <p class="card-text">Conforto e estilo para todos os momentos</p>
+                                <button class="btn btn-sm btn-outline-primary">Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card product-card">
+                            <div class="card-icon"><i class="fas fa-socks"></i></div>
+                            <div class="card-body">
+                                <h5 class="card-title">Meias</h5>
+                                <p class="card-text">Conforto e durabilidade para seus pés</p>
+                                <button class="btn btn-sm btn-outline-primary">Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card product-card">
+                            <div class="card-icon"><i class="fas fa-hat-cowboy"></i></div>
+                            <div class="card-body">
+                                <h5 class="card-title">Chapéus</h5>
+                                <p class="card-text">Proteção e estilo para seu visual</p>
+                                <button class="btn btn-sm btn-outline-primary">Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container">
+                <h2 class="section-title">Sobre Nós</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Na LOVE CLOTHING, acreditamos que a moda vai além das tendências - é uma forma de expressão pessoal e autoamor.</p>
+                        <p>Desde 2010, nos dedicamos a oferecer peças que combinam qualidade, conforto e estilo a preços acessíveis.</p>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2010</div>
+                            <div class="timeline-content">Fundação da LOVE CLOTHING</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2014</div>
+                            <div class="timeline-content">Primeira loja física em São Paulo</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2018</div>
+                            <div class="timeline-content">Lançamento da plataforma e-commerce</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2023</div>
+                            <div class="timeline-content">Expansão para todo o território nacional</div>
+                        </div>
+                    </div>
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="50000">0</div>
+                            <div class="stat-label">Clientes</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="13">0</div>
+                            <div class="stat-label">Anos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="1000">0</div>
+                            <div class="stat-label">Produtos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <h5>Informações legais</h5>
+                    <p><i class="fas fa-file-alt me-2"></i> CNPJ: 40.140.690/0001-07</p>
+                    <p class="copy-text"><i class="fas fa-building me-2"></i> "LOVE CLOTHING LTDA"</p>
+                    <div class="certifications mt-3">
+                        <span class="cert-badge"><i class="fas fa-award"></i> ABVTEX</span>
+                        <span class="cert-badge"><i class="fas fa-shield-alt"></i> Seguro</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <h5>Links rápidos</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Produtos</a></li>
+                        <li><a href="#">Promoções</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">"Política de troca"</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <h5>Newsletter</h5>
+                    <p>Receba nossas novidades e promoções</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Seu e-mail">
+                        <button class="btn btn-primary" type="button">Assinar</button>
+                    </div>
+                    <div class="newsletter-feedback"></div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <h5>Contatos</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Av. Paulista, 1000 - São Paulo/SP</p>
+                    <p><i class="fas fa-phone me-2"></i> (11) 1234-5678</p>
+                    <p><i class="fas fa-envelope me-2"></i> contato@loveclothing.com.br</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+                <div class="copyright">
+                    &copy; <span class="current-year"></span> "LOVE CLOTHING" - Todos os direitos reservados
+                </div>
+                <button class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    // Current year in footer
+    document.querySelector('.current-year').textContent = new Date().getFullYear();
+
+    // Back to top button
+    const backToTopButton = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
+    });
+    backToTopButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+
+    // Copy text functionality
+    const copyText = document.querySelector('.copy-text');
+    if (copyText) {
+        copyText.addEventListener('click', function() {
+            const textToCopy = this.textContent.replace('"', '').replace('"', '').trim();
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                this.classList.add('copied');
+                setTimeout(() => {
+                    this.classList.remove('copied');
+                }, 2000);
+            });
+        });
+    }
+
+    // Animate stats counter
+    const animateCounters = () => {
+        const counters = document.querySelectorAll('.stat-number');
+        const speed = 200;
+        
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-count');
+            const count = +counter.innerText;
+            const increment = target / speed;
+            
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(animateCounters, 1);
+            } else {
+                counter.innerText = target;
+            }
+        });
+    };
+
+    // Intersection Observer for stats animation
+    const statsSection = document.querySelector('.stats-container');
+    if (statsSection) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {threshold: 0.5});
+        observer.observe(statsSection);
+    }
+
+    // Cart counter
+    let cartCount = 0;
+    const cartBadge = document.querySelector('.cart-badge');
+    document.querySelectorAll('.product-card button').forEach(button => {
+        button.addEventListener('click', function() {
+            cartCount++;
+            cartBadge.textContent = cartCount;
+            cartBadge.classList.add('animate__animated', 'animate__bounce');
+            setTimeout(() => {
+                cartBadge.classList.remove('animate__animated', 'animate__bounce');
+            }, 1000);
+        });
+    });
+
+    // Search autocomplete simulation
+    const searchInput = document.querySelector('.search-box input');
+    const autocomplete = document.querySelector('.autocomplete');
+    if (searchInput && autocomplete) {
+        searchInput.addEventListener('input', function() {
+            if (this.value.length > 0) {
+                autocomplete.style.display = 'block';
+                autocomplete.innerHTML = `
+                    <div class="autocomplete-item">${this.value} em camisetas</div>
+                    <div class="autocomplete-item">${this.value} em calças</div>
+                    <div class="autocomplete-item">${this.value} em promoções</div>
+                `;
+            } else {
+                autocomplete.style.display = 'none';
+            }
+        });
+    }
+
+    // Mobile menu animation
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    if (navbarToggler) {
+        navbarToggler.addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
+    }
+
+    // Parallax effect for hero section
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.pageYOffset;
+        const heroShapes = document.querySelector('.hero-shapes');
+        if (heroShapes) {
+            heroShapes.style.transform = `translateY(${scrollPosition * 0.3}px)`;
+        }
+    });
+});</script></body>
+</html>
