@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KARINA MUNIZ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>:root {
+    --primary-color: #6c63ff;
+    --secondary-color: #4d44db;
+    --dark-color: #2a2a2a;
+    --light-color: #f8f9fa;
+    --gray-color: #6c757d;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.navbar-brand {
+    color: var(--primary-color);
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, rgba(108, 99, 255, 0.1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.hero-graphic {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-box {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-graphic {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons a {
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+
+footer a:hover {
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .hero-section .row, .about-section .row {
+        flex-direction: column-reverse;
+    }
+    
+    .hero-graphic, .about-graphic {
+        margin-bottom: 2rem;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}</style>
+</head>
+<body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KARINA MUNIZ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="sticky-top bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-3" href="#">KARINA MUNIZ</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Portfólio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section py-5 bg-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold mb-4">Transformando ideias em realidade</h1>
+                        <p class="lead mb-4">Soluções criativas e personalizadas para seu negócio</p>
+                        <a href="#" class="btn btn-primary btn-lg px-4">Saiba mais</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-graphic bg-primary rounded-3 p-5 text-white text-center">
+                            <i class="fas fa-lightbulb fa-5x mb-3"></i>
+                            <h3 class="fw-bold">Inovação e Criatividade</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Serviços</h2>
+                    <p class="text-muted">Conheça nossos principais serviços</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle p-3 mb-3 mx-auto">
+                                    <i class="fas fa-paint-brush fa-2x"></i>
+                                </div>
+                                <h5 class="fw-bold">Design Criativo</h5>
+                                <p class="text-muted">Soluções visuais que destacam sua marca no mercado.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle p-3 mb-3 mx-auto">
+                                    <i class="fas fa-code fa-2x"></i>
+                                </div>
+                                <h5 class="fw-bold">Desenvolvimento Web</h5>
+                                <p class="text-muted">Sites e sistemas personalizados para seu negócio.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle p-3 mb-3 mx-auto">
+                                    <i class="fas fa-chart-line fa-2x"></i>
+                                </div>
+                                <h5 class="fw-bold">Marketing Digital</h5>
+                                <p class="text-muted">Estratégias para aumentar sua presença online.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section py-5 bg-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="about-graphic bg-primary rounded-3 p-5 text-white text-center">
+                            <i class="fas fa-user-tie fa-5x mb-3"></i>
+                            <h3 class="fw-bold">Sobre Karina Muniz</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="fw-bold mb-4">Quem sou eu</h2>
+                        <p class="lead mb-4">Profissional com mais de 10 anos de experiência no mercado digital.</p>
+                        <p>Especializada em criar soluções que combinam estética e funcionalidade para entregar os melhores resultados aos meus clientes.</p>
+                        <a href="#" class="btn btn-outline-primary mt-3">Ver portfólio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="text-center mb-5">
+                            <h2 class="fw-bold">Entre em contato</h2>
+                            <p class="text-muted">Preencha o formulário abaixo para iniciarmos nossa conversa</p>
+                        </div>
+                        <form class="needs-validation" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Nome completo</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, insira seu nome.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">E-mail</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, insira um e-mail válido.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="form-label">Assunto</label>
+                                    <input type="text" class="form-control" id="subject" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, insira um assunto.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Mensagem</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                    <div class="invalid-feedback">
+                                        Por favor, escreva sua mensagem.
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button class="btn btn-primary px-4 py-2" type="submit">Enviar mensagem</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="fw-bold mb-3">KARINA MUNIZ</h5>
+                    <p>Soluções criativas e personalizadas para seu negócio.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-whatsapp fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="fw-bold mb-3">Links rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Sobre</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Serviços</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Portfólio</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">Contato</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> KARINA MUNIZ DO COUTO RIBEIRO 30933179839</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i>CNPJ: 46.386.431/0001-39</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> São Paulo, SP</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">© 2023 Karina Muniz. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">"Desenvolvido com paixão e profissionalismo"</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>// Form validation
+(function() {
+    'use strict';
+    window.addEventListener('load', function() {
+        const forms = document.getElementsByClassName('needs-validation');
+        Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    }, false);
+})();
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Navbar background change on scroll
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('navbar-scrolled', 'shadow');
+    } else {
+        navbar.classList.remove('navbar-scrolled', 'shadow');
+    }
+});
+
+// Initialize tooltips
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
+});</script></body>
+</html>
