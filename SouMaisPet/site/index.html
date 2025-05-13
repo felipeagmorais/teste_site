@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sou Mais Pet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>:root {
+    --primary: #4e54c8;
+    --primary-light: #8f94fb;
+    --dark: #212529;
+    --light: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: #3e44a8;
+    border-color: #3e44a8;
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.form-control, .form-select {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(78, 84, 200, 0.25);
+}
+
+@media (max-width: 767.98px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .lead {
+        font-size: 1.1rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }</style>
+</head>
+<body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sou Mais Pet - Pet Shop Completo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="sticky-top bg-white shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold text-primary" href="#">
+                        <i class="fas fa-paw me-2"></i>Sou Mais Pet
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#home">"Home"</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#servicos">"Serviços"</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#produtos">"Produtos"</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#sobre">"Sobre Nós"</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contato">"Contato"</a>
+                            </li>
+                        </ul>
+                        <div class="ms-lg-3 mt-3 mt-lg-0">
+                            <a href="#agendamento" class="btn btn-primary rounded-pill px-4">
+                                <i class="fas fa-calendar-check me-2"></i>Agendar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="py-5 bg-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold mb-4">Seu pet merece o melhor cuidado</h1>
+                        <p class="lead mb-4">Na Sou Mais Pet, oferecemos serviços premium e produtos de qualidade para garantir o bem-estar do seu animal de estimação.</p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#servicos" class="btn btn-primary btn-lg rounded-pill px-4">Nossos Serviços</a>
+                            <a href="#contato" class="btn btn-outline-primary btn-lg rounded-pill px-4">Fale Conosco</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <div class="ratio ratio-16x9 bg-primary rounded-3 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-paw text-white" style="font-size: 5rem;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">"Serviços"</h2>
+                    <p class="lead text-muted">Conheça nossos serviços especializados</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-cut text-primary" style="font-size: 2rem;"></i>
+                                </div>
+                                <h3 class="h5 fw-bold">Banho & Tosa</h3>
+                                <p class="text-muted">Serviço completo com produtos de qualidade e profissionais especializados.</p>
+                                <a href="#" class="btn btn-link text-primary text-decoration-none">Saiba mais <i class="fas fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-stethoscope text-primary" style="font-size: 2rem;"></i>
+                                </div>
+                                <h3 class="h5 fw-bold">Veterinário</h3>
+                                <p class="text-muted">Consultas, exames e vacinas com profissionais qualificados.</p>
+                                <a href="#" class="btn btn-link text-primary text-decoration-none">Saiba mais <i class="fas fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-home text-primary" style="font-size: 2rem;"></i>
+                                </div>
+                                <h3 class="h5 fw-bold">Hospedagem</h3>
+                                <p class="text-muted">Ambiente seguro e confortável para quando você precisar viajar.</p>
+                                <a href="#" class="btn btn-link text-primary text-decoration-none">Saiba mais <i class="fas fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="produtos" class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">"Produtos"</h2>
+                    <p class="lead text-muted">Os melhores produtos para o seu pet</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="bg-primary bg-opacity-10 rounded-3 mb-3 d-flex align-items-center justify-content-center" style="height: 150px;">
+                                    <i class="fas fa-bone text-primary" style="font-size: 3rem;"></i>
+                                </div>
+                                <h3 class="h5 fw-bold">Rações Premium</h3>
+                                <p class="text-muted">Alimentação balanceada para todas as raças e idades.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <span class="fw-bold text-primary">R$ 89,90</span>
+                                    <button class="btn btn-sm btn-outline-primary rounded-pill">Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="bg-primary bg-opacity-10 rounded-3 mb-3 d-flex align-items-center justify-content-center" style="height: 150px;">
+                                    <i class="fas fa-pills text-primary" style="font-size: 3rem;"></i>
+                                </div>
+                                <h3 class="h5 fw-bold">Medicamentos</h3>
+                                <p class="text-muted">Remédios e suplementos para a saúde do seu pet.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <span class="fw-bold text-primary">R$ 29,90</span>
+                                    <button class="btn btn-sm btn-outline-primary rounded-pill">Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="bg-primary bg-opacity-10 rounded-3 mb-3 d-flex align-items-center justify-content-center" style="height: 150px;">
+                                    <i class="fas fa-tshirt text-primary" style="font-size: 3rem;"></i>
+                                </div>
+                                <h3 class="h5 fw-bold">Roupas</h3>
+                                <p class="text-muted">Conforto e estilo para todas as estações.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <span class="fw-bold text-primary">R$ 59,90</span>
+                                    <button class="btn btn-sm btn-outline-primary rounded-pill">Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="bg-primary bg-opacity-10 rounded-3 mb-3 d-flex align-items-center justify-content-center" style="height: 150px;">
+                                    <i class="fas fa-bowling-ball text-primary" style="font-size: 3rem;"></i>
+                                </div>
+                                <h3 class="h5 fw-bold">Brinquedos</h3>
+                                <p class="text-muted">Diversão e entretenimento para seu animalzinho.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <span class="fw-bold text-primary">R$ 39,90</span>
+                                    <button class="btn btn-sm btn-outline-primary rounded-pill">Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="ratio ratio-16x9 bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-store text-primary" style="font-size: 5rem;"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="fw-bold mb-4">"Sobre Nós"</h2>
+                        <p class="lead mb-4">A Sou Mais Pet nasceu do amor pelos animais e da vontade de oferecer o melhor para eles.</p>
+                        <p>Desde 2010, nos dedicamos a proporcionar bem-estar, saúde e felicidade para pets de todas as raças e tamanhos. Nossa equipe é formada por profissionais apaixonados e qualificados, prontos para atender seu animal de estimação com todo carinho e atenção que ele merece.</p>
+                        <div class="d-flex flex-wrap gap-3 mt-4">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-check text-primary"></i>
+                                </div>
+                                <span>Profissionais qualificados</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-check text-primary"></i>
+                                </div>
+                                <span>Produtos de qualidade</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">"Contato"</h2>
+                    <p class="lead text-muted">Entre em contato conosco</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <h3 class="h5 fw-bold mb-4">Informações de Contato</h3>
+                                <ul class="list-unstyled">
+                                    <li class="mb-3">
+                                        <div class="d-flex align-items-center">
+                                            <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                                <i class="fas fa-map-marker-alt text-primary"></i>
+                                            </div>
+                                            <span>Rua dos Animais, 123 - Centro, São Paulo/SP</span>
+                                        </div>
+                                    </li>
+                                    <li class="mb-3">
+                                        <div class="d-flex align-items-center">
+                                            <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                                <i class="fas fa-phone text-primary"></i>
+                                            </div>
+                                            <span>SOU MAIS PET COMERCIO E SERVICOS LTDA</span>
+                                        </div>
+                                    </li>
+                                    <li class="mb-3">
+                                        <div class="d-flex align-items-center">
+                                            <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                                <i class="fas fa-envelope text-primary"></i>
+                                            </div>
+                                            <span>CNPJ: 29.973.008/0001-16</span>
+                                        </div>
+                                    </li>
+                                    <li class="mb-3">
+                                        <div class="d-flex align-items-center">
+                                            <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                                <i class="fas fa-clock text-primary"></i>
+                                            </div>
+                                            <span>Segunda a Sexta: 8h às 18h<br>Sábado: 9h às 13h</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="mt-4">
+                                    <h4 class="h6 fw-bold mb-3">Redes Sociais</h4>
+                                    <div class="d-flex gap-3">
+                                        <a href="#" class="text-primary"><i class="fab fa-facebook-f fa-lg"></i></a>
+                                        <a href="#" class="text-primary"><i class="fab fa-instagram fa-lg"></i></a>
+                                        <a href="#" class="text-primary"><i class="fab fa-whatsapp fa-lg"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h3 class="h5 fw-bold mb-4">Envie uma mensagem</h3>
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="nome" class="form-label">Nome</label>
+                                        <input type="text" class="form-control" id="nome" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">E-mail</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="telefone" class="form-label">Telefone</label>
+                                        <input type="tel" class="form-control" id="telefone">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="mensagem" class="form-label">Mensagem</label>
+                                        <textarea class="form-control" id="mensagem" rows="4" required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary rounded-pill px-4">Enviar Mensagem</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="agendamento" class="py-5 bg-primary text-white">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="fw-bold mb-4">Agende um horário conosco</h2>
+                        <p class="lead mb-5">Preencha o formulário abaixo e entraremos em contato para confirmar seu agendamento.</p>
+                        <form class="row g-3 justify-content-center">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control form-control-lg" placeholder="Seu nome" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="tel" class="form-control form-control-lg" placeholder="Seu telefone" required>
+                            </div>
+                            <div class="col-md-6">
+                                <select class="form-select form-select-lg" required>
+                                    <option value="" disabled selected>Selecione o serviço</option>
+                                    <option>Banho & Tosa</option>
+                                    <option>Consulta Veterinária</option>
+                                    <option>Hospedagem</option>
+                                    <option>Outro</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="date" class="form-control form-control-lg" required>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-light btn-lg rounded-pill px-5">Agendar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="h5 fw-bold mb-4">Sou Mais Pet</h3>
+                    <p>Cuidando do seu pet com amor e dedicação desde 2010.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h4 class="h6 fw-bold mb-4">"Links Rápidos"</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#servicos" class="text-white text-decoration-none">Serviços</a></li>
+                        <li class="mb-2"><a href="#produtos" class="text-white text-decoration-none">Produtos</a></li>
+                        <li class="mb-2"><a href="#sobre" class="text-white text-decoration-none">Sobre Nós</a></li>
+                        <li class="mb-2"><a href="#contato" class="text-white text-decoration-none">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h4 class="h6 fw-bold mb-4">"Serviços"</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Banho & Tosa</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Consulta Veterinária</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Hospedagem</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Vacinação</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Transporte</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h4 class="h6 fw-bold mb-4">"Contato"</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Rua dos Animais, 123</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i>SOU MAIS PET COMERCIO E SERVICOS LTDA</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> CNPJ: 29.973.008/0001-16</li>
+                        <li class="mb-2"><i class="fas fa-clock me-2"></i> Seg-Sex: 8h-18h</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">"© 2023 Sou Mais Pet. Todos os direitos reservados."</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">"Desenvolvido com ❤️ para pets"</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Add animation classes when elements come into view
+    const animateOnScroll = function() {
+        const elements = document.querySelectorAll('.card, .btn, h1, h2, h3, p.lead');
+        
+        elements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            if (elementPosition < windowHeight - 100) {
+                element.classList.add('fade-in');
+            }
+        });
+    };
+
+    // Run once on page load
+    animateOnScroll();
+    
+    // Run on scroll
+    window.addEventListener('scroll', animateOnScroll);
+
+    // Form validation
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            let isValid = true;
+            const requiredFields = this.querySelectorAll('[required]');
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.classList.add('is-invalid');
+                } else {
+                    field.classList.remove('is-invalid');
+                }
+            });
+            
+            if (!isValid) {
+                e.preventDefault();
+                this.querySelector('.is-invalid').focus();
+            }
+        });
+    });
+
+    // Add active class to current nav link
+    const navLinks = document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll', function() {
+        let fromTop = window.scrollY + 100;
+        
+        navLinks.forEach(link => {
+            const section = document.querySelector(link.getAttribute('href'));
+            
+            if (section && 
+                section.offsetTop <= fromTop && 
+                section.offsetTop + section.offsetHeight > fromTop) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    });
+});</script></body>
+</html>
