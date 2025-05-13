@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Bond</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>:root {
+    --primary-color: #0056b3;
+    --secondary-color: #6c757d;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn {
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #004494;
+    border-color: #004494;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+}
+
+.hero-section {
+    padding: 5rem 0;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.app-card {
+    transition: all 0.3s ease;
+}
+
+.app-card:hover {
+    background-color: var(--light-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-color);
+}
+
+@media (max-width: 767.98px) {
+    .hero-section {
+        padding: 3rem 0;
+        text-align: center;
+    }
+    
+    .hero-graphic {
+        margin-top: 2rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hero-section {
+        padding: 4rem 0;
+    }
+}</style>
+</head>
+<body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Bond - Soluções em Adesivos Industriais</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="sticky-top bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <span class="fw-bold text-primary">Three Bond</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">"Home"</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">"Produtos"</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">"Aplicações"</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">"Tecnologia"</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">"Sustentabilidade"</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">"Contato"</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section bg-light py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold mb-4">Soluções em Adesivos Industriais</h1>
+                        <p class="lead mb-4">Tecnologia avançada em selantes e adesivos para as mais diversas aplicações industriais.</p>
+                        <a href="#" class="btn btn-primary btn-lg px-4">Conheça nossos produtos</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-graphic bg-primary p-5 rounded-3 text-white text-center">
+                            <i class="fas fa-industry fa-5x mb-4"></i>
+                            <h3>Inovação em Adesivos</h3>
+                            <p>Desde 1956</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">"Nossos Produtos"</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-car fa-3x text-primary mb-3"></i>
+                                <h3 class="h5">Automotivo</h3>
+                                <p>Selantes e adesivos para montagem de veículos e componentes automotivos.</p>
+                                <a href="#" class="btn btn-outline-primary">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-microchip fa-3x text-primary mb-3"></i>
+                                <h3 class="h5">Eletrônicos</h3>
+                                <p>Adesivos especializados para montagem e proteção de componentes eletrônicos.</p>
+                                <a href="#" class="btn btn-outline-primary">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-cogs fa-3x text-primary mb-3"></i>
+                                <h3 class="h5">Industrial</h3>
+                                <p>Soluções para manutenção, reparo e montagem em diversos setores industriais.</p>
+                                <a href="#" class="btn btn-outline-primary">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-light py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2 class="mb-4">"Tecnologia Three Bond"</h2>
+                        <p class="mb-4">Desenvolvemos soluções inovadoras em adesivos e selantes que atendem aos mais altos padrões de qualidade e desempenho.</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Pesquisa e desenvolvimento contínuos</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Materiais de alta performance</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Soluções personalizadas</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Atendimento às normas internacionais</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary mt-3">Nossa Tecnologia</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="tech-graphic bg-white p-4 rounded-3 shadow-sm">
+                            <div class="d-flex justify-content-around mb-4">
+                                <div class="text-center">
+                                    <div class="bg-primary text-white rounded-circle p-3 mx-auto mb-2" style="width: 80px; height: 80px;">
+                                        <i class="fas fa-flask fa-2x"></i>
+                                    </div>
+                                    <p class="mb-0">Laboratórios</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="bg-primary text-white rounded-circle p-3 mx-auto mb-2" style="width: 80px; height: 80px;">
+                                        <i class="fas fa-award fa-2x"></i>
+                                    </div>
+                                    <p class="mb-0">Certificações</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-around">
+                                <div class="text-center">
+                                    <div class="bg-primary text-white rounded-circle p-3 mx-auto mb-2" style="width: 80px; height: 80px;">
+                                        <i class="fas fa-globe fa-2x"></i>
+                                    </div>
+                                    <p class="mb-0">Presença Global</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="bg-primary text-white rounded-circle p-3 mx-auto mb-2" style="width: 80px; height: 80px;">
+                                        <i class="fas fa-leaf fa-2x"></i>
+                                    </div>
+                                    <p class="mb-0">Sustentabilidade</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">"Aplicações"</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="app-card p-4 border rounded text-center h-100">
+                            <i class="fas fa-car-battery fa-3x text-primary mb-3"></i>
+                            <h3 class="h5">Baterias</h3>
+                            <p>Selantes para baterias automotivas e industriais.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="app-card p-4 border rounded text-center h-100">
+                            <i class="fas fa-tint fa-3x text-primary mb-3"></i>
+                            <h3 class="h5">Vedação</h3>
+                            <p>Soluções para vedação de juntas e componentes.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="app-card p-4 border rounded text-center h-100">
+                            <i class="fas fa-plug fa-3x text-primary mb-3"></i>
+                            <h3 class="h5">Encapsulamento</h3>
+                            <p>Proteção de componentes eletrônicos sensíveis.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="app-card p-4 border rounded text-center h-100">
+                            <i class="fas fa-screwdriver-wrench fa-3x text-primary mb-3"></i>
+                            <h3 class="h5">Manutenção</h3>
+                            <p>Adesivos para reparo e manutenção industrial.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="h5 mb-3">"Three Bond"</h3>
+                    <p>Tecnologia em adesivos e selantes industriais para diversas aplicações.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="text-white me-2"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-youtube fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h4 class="h6 mb-3">"Produtos"</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">Automotivo</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Eletrônicos</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Industrial</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Especialidades</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h4 class="h6 mb-3">"Aplicações"</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">Baterias</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Vedação</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Encapsulamento</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Manutenção</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h4 class="h6 mb-3">"Contato"</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Av. Industrial, 1000 - São Paulo/SP</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> THREE BOND DO BRASIL INDUSTRIA E COMERCIO LTDA
+</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> CNPJ: 44.029.726/0001-22</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="small mb-0">"© 2023 Three Bond. Todos os direitos reservados."</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="list-inline small mb-0">
+                        <li class="list-inline-item"><a href="#" class="text-white-50">"Política de Privacidade"</a></li>
+                        <li class="list-inline-item mx-2">|</li>
+                        <li class="list-inline-item"><a href="#" class="text-white-50">"Termos de Uso"</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('shadow');
+            navbar.style.padding = '0.5rem 0';
+        } else {
+            navbar.classList.remove('shadow');
+            navbar.style.padding = '1rem 0';
+        }
+    });
+
+    // Tooltip initialization
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(function(tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+
+    // Form validation example
+    const forms = document.querySelectorAll('.needs-validation');
+    Array.prototype.slice.call(forms).forEach(function(form) {
+        form.addEventListener('submit', function(event) {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        }, false);
+    });
+});</script></body>
+</html>
