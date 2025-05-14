@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferreira Comercio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>:root {
+    --bs-primary: #0d6efd;
+    --bs-primary-rgb: 13, 110, 253;
+    --bs-secondary: #6c757d;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--bs-dark);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+}
+
+.hero {
+    background: linear-gradient(135deg, rgba(13, 110, 253, 0.1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.btn {
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 0.5rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.bg-light {
+    background-color: var(--bs-light) !important;
+}
+
+.text-primary {
+    color: var(--bs-primary) !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.rounded-3 {
+    border-radius: 0.75rem !important;
+}
+
+.fa-2x {
+    font-size: 1.5em;
+}
+
+.fa-5x {
+    font-size: 4em;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        text-align: center;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .d-flex.gap-3 {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+    
+    .btn-lg {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+}</style>
+</head>
+<body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferreira Comércio - Soluções em Comércio Exterior</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-primary" href="#">
+                    <i class="fas fa-globe-americas me-2"></i>Ferreira Comércio
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">"Início"</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicos">"Serviços"</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre">"Sobre Nós"</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">"Contato"</a>
+                        </li>
+                    </ul>
+                    <div class="ms-lg-3 mt-3 mt-lg-0">
+                        <a href="#contato" class="btn btn-primary rounded-pill px-4">"Orçamento"</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero bg-light py-5">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold mb-4">Soluções completas em comércio exterior</h1>
+                        <p class="lead mb-4">Facilitamos seu comércio internacional com expertise e eficiência.</p>
+                        <div class="d-flex gap-3">
+                            <a href="#servicos" class="btn btn-primary btn-lg rounded-pill px-4">"Nossos Serviços"</a>
+                            <a href="#contato" class="btn btn-outline-primary btn-lg rounded-pill px-4">"Fale Conosco"</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <div class="p-5 bg-primary rounded-3 text-white text-center">
+                            <i class="fas fa-ship fa-5x mb-4"></i>
+                            <h3 class="mb-3">Comércio sem fronteiras</h3>
+                            <p class="mb-0">Conectamos seu negócio ao mundo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">"Nossos Serviços"</h2>
+                    <p class="text-muted">Soluções personalizadas para suas necessidades de comércio exterior</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-3 mb-3 mx-auto" style="width: 70px; height: 70px;">
+                                    <i class="fas fa-file-contract fa-2x"></i>
+                                </div>
+                                <h5 class="card-title">"Despacho Aduaneiro"</h5>
+                                <p class="card-text text-muted">Agilidade e segurança na liberação de suas mercadorias.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-3 mb-3 mx-auto" style="width: 70px; height: 70px;">
+                                    <i class="fas fa-boxes fa-2x"></i>
+                                </div>
+                                <h5 class="card-title">"Logística Internacional"</h5>
+                                <p class="card-text text-muted">Transporte multimodal com rastreamento em tempo real.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-3 mb-3 mx-auto" style="width: 70px; height: 70px;">
+                                    <i class="fas fa-handshake fa-2x"></i>
+                                </div>
+                                <h5 class="card-title">"Consultoria Comercial"</h5>
+                                <p class="card-text text-muted">Estratégias para expansão internacional do seu negócio.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="py-5 bg-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h2 class="fw-bold mb-4">"Sobre Nós"</h2>
+                        <p class="lead">Mais de 15 anos conectando empresas brasileiras ao mercado internacional.</p>
+                        <p>A Ferreira Comércio nasceu da necessidade de oferecer soluções personalizadas e eficientes em comércio exterior, com transparência e excelência no atendimento.</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Equipe especializada e multidisciplinar</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Atendimento personalizado</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Tecnologia de ponta</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Parcerias globais</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="bg-white p-4 rounded shadow-sm">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="bg-primary bg-opacity-10 text-primary rounded p-2 me-3">
+                                    <i class="fas fa-bullseye fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h4 class="mb-0">"Missão"</h4>
+                                    <p class="mb-0 text-muted">Facilitar o comércio internacional com excelência e inovação.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="bg-primary bg-opacity-10 text-primary rounded p-2 me-3">
+                                    <i class="fas fa-eye fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h4 class="mb-0">"Visão"</h4>
+                                    <p class="mb-0 text-muted">Ser referência em soluções de comércio exterior até 2025.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="bg-primary bg-opacity-10 text-primary rounded p-2 me-3">
+                                    <i class="fas fa-gem fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h4 class="mb-0">"Valores"</h4>
+                                    <p class="mb-0 text-muted">Ética, transparência, inovação e excelência.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <h2 class="fw-bold mb-4">"Entre em Contato"</h2>
+                        <p class="mb-4">Estamos prontos para ajudar seu negócio a alcançar novos mercados.</p>
+                        <div class="mb-4">
+                            <div class="d-flex mb-3">
+                                <div class="bg-primary bg-opacity-10 text-primary rounded p-2 me-3">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">"Endereço"</h5>
+                                    <p class="mb-0 text-muted">Av. das Nações, 1234 - Sala 501, Centro - São Paulo/SP</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <div class="bg-primary bg-opacity-10 text-primary rounded p-2 me-3">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">"Telefone"</h5>
+                                    <p class="mb-0 text-muted">(11) 1234-5678</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="bg-primary bg-opacity-10 text-primary rounded p-2 me-3">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">"Email"</h5>
+                                    <p class="mb-0 text-muted">contato@ferreiracomercio.com.br</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="text-primary"><i class="fab fa-facebook-f fa-lg"></i></a>
+                            <a href="#" class="text-primary"><i class="fab fa-instagram fa-lg"></i></a>
+                            <a href="#" class="text-primary"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                            <a href="#" class="text-primary"><i class="fab fa-whatsapp fa-lg"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h3 class="card-title mb-4">"Solicite um Orçamento"</h3>
+                                <form>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" placeholder="Nome Completo" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="email" class="form-control" placeholder="Email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="tel" class="form-control" placeholder="Telefone">
+                                    </div>
+                                    <div class="mb-3">
+                                        <select class="form-select" required>
+                                            <option value="" selected disabled>Serviço de Interesse</option>
+                                            <option value="despacho">Despacho Aduaneiro</option>
+                                            <option value="logistica">Logística Internacional</option>
+                                            <option value="consultoria">Consultoria Comercial</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <textarea class="form-control" rows="4" placeholder="Mensagem"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">"Enviar Mensagem"</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase mb-4">"Ferreira Comércio"</h5>
+                    <p>Soluções completas em comércio exterior com excelência e inovação.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">"Links Rápidos"</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">"Início"</a></li>
+                        <li class="mb-2"><a href="#servicos" class="text-white text-decoration-none">"Serviços"</a></li>
+                        <li class="mb-2"><a href="#sobre" class="text-white text-decoration-none">"Sobre Nós"</a></li>
+                        <li><a href="#contato" class="text-white text-decoration-none">"Contato"</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">"Serviços"</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">"Despacho Aduaneiro"</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">"Logística Internacional"</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">"Consultoria Comercial"</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">"Classificação Fiscal"</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase mb-4">"Contato"</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> "Av. das Nações, 1234"</li>
+                        <li class="mb-2"><i class="fas fa-phone-alt me-2"></i> "(11) 1234-5678"</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> FERREIRA COMERCIO E SERVICOS PET LTDA</li>
+                        <li><i class="fas fa-clock me-2"></i> "CNPJ: 26.493.972/0001-59"</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">© 2023 "Ferreira Comércio". Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white text-decoration-none me-3">"Política de Privacidade"</a>
+                    <a href="#" class="text-white text-decoration-none">"Termos de Uso"</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('shadow');
+            navbar.classList.add('bg-white');
+            navbar.classList.remove('bg-transparent');
+        } else {
+            navbar.classList.remove('shadow');
+            navbar.classList.add('bg-white');
+        }
+    });
+
+    // Form validation
+    const form = document.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            const requiredFields = form.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.classList.add('is-invalid');
+                } else {
+                    field.classList.remove('is-invalid');
+                }
+            });
+            
+            if (!isValid) {
+                e.preventDefault();
+                const firstInvalid = form.querySelector('.is-invalid');
+                if (firstInvalid) {
+                    firstInvalid.focus();
+                }
+            }
+        });
+    }
+
+    // Tooltip initialization
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(function(tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+});</script></body>
+</html>
