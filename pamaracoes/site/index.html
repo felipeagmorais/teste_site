@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pama racoes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pama Rações - Alimentos e Acessórios para Pets</title>
+    <meta name="description" content="Pama Rações - A melhor loja de rações e acessórios para seu pet. Encontre alimentos de qualidade, brinquedos e produtos para cães e gatos.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --accent-color: #f39c12;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark-color);
+            overflow-x: hidden;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: white;
+            font-size: 1.8rem;
+        }
+        
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent-color) !important;
+        }
+        
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .dropdown-item {
+            color: var(--dark-color);
+            padding: 0.5rem 1.5rem;
+        }
+        
+        .dropdown-item:hover {
+            background-color: var(--light-color);
+            color: var(--secondary-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+            border: none;
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .product-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .product-title {
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-price {
+            font-weight: 700;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+        
+        .badge-discount {
+            background-color: var(--accent-color);
+            color: white;
+            font-weight: 600;
+            padding: 0.3rem 0.6rem;
+            border-radius: 5px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        
+        .feature-box {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        
+        .newsletter-section {
+            background-color: var(--light-color);
+            padding: 4rem 0;
+        }
+        
+        .newsletter-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-control {
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            padding: 0 1.5rem;
+        }
+        
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            margin-top: 2rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">PAMA RAÇÕES</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">"Home"</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="produtosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                "Produtos"
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="produtosDropdown">
+                                <li><a class="dropdown-item" href="#">"Rações para Cães"</a></li>
+                                <li><a class="dropdown-item" href="#">"Rações para Gatos"</a></li>
+                                <li><a class="dropdown-item" href="#">"Petiscos e Ossos"</a></li>
+                                <li><a class="dropdown-item" href="#">"Acessórios"</a></li>
+                                <li><a class="dropdown-item" href="#">"Higiene e Beleza"</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">"Serviços"</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">"Sobre Nós"</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">"Contato"</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex ms-3">
+                        <a href="#" class="btn btn-outline-light me-2"><i class="fas fa-search"></i></a>
+                        <a href="#" class="btn btn-outline-light me-2"><i class="fas fa-user"></i></a>
+                        <a href="#" class="btn btn-outline-light"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="hero-title">Tudo que seu pet precisa em um só lugar</h1>
+                    <p class="hero-subtitle">As melhores rações e acessórios para cães e gatos com os melhores preços do mercado</p>
+                    <a href="#" class="btn btn-primary">Conheça nossos produtos</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-light rounded p-4 text-dark">
+                        <h3 class="mb-4">Promoções da Semana</h3>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-dog me-3 text-primary fs-4"></i>
+                            <div>
+                                <h5 class="mb-0">Ração Premium Cães Adultos</h5>
+                                <p class="mb-0"><span class="text-decoration-line-through me-2">R$ 189,90</span> <span class="fw-bold text-danger">R$ 159,90</span></p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-cat me-3 text-primary fs-4"></i>
+                            <div>
+                                <h5 class="mb-0">Ração Premium Gatos Filhotes</h5>
+                                <p class="mb-0"><span class="text-decoration-line-through me-2">R$ 149,90</span> <span class="fw-bold text-danger">R$ 129,90</span></p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-bone me-3 text-primary fs-4"></i>
+                            <div>
+                                <h5 class="mb-0">Petiscos Diversos</h5>
+                                <p class="mb-0"><span class="text-decoration-line-through me-2">R$ 29,90</span> <span class="fw-bold text-danger">R$ 19,90</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destaques Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Nossos Destaques</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3 class="feature-title">Frete Grátis</h3>
+                        <p>Para compras acima de R$ 199,90 em todo o Brasil</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Pagamento Seguro</h3>
+                        <p>Processamos seu pagamento com total segurança</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="feature-title">Atendimento</h3>
+                        <p>Suporte especializado para tirar todas suas dúvidas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Produtos em Destaque</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <div class="bg-secondary" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-dog fa-4x text-white"></i>
+                            </div>
+                            <span class="badge-discount">-15%</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="product-title">Ração Premium Cães Adultos</h5>
+                            <p class="text-muted small">15kg - Sabor Frango</p>
+                            <p class="product-price">R$ 159,90</p>
+                            <a href="#" class="btn btn-sm btn-primary w-100">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <div class="bg-secondary" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-cat fa-4x text-white"></i>
+                            </div>
+                            <span class="badge-discount">-10%</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="product-title">Ração Premium Gatos Castrados</h5>
+                            <p class="text-muted small">10kg - Sabor Salmão</p>
+                            <p class="product-price">R$ 179,90</p>
+                            <a href="#" class="btn btn-sm btn-primary w-100">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <div class="bg-secondary" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-bone fa-4x text-white"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="product-title">Petisco Dental para Cães</h5>
+                            <p class="text-muted small">Pacote com 10 unidades</p>
+                            <p class="product-price">R$ 29,90</p>
+                            <a href="#" class="btn btn-sm btn-primary w-100">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <div class="bg-secondary" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-paw fa-4x text-white"></i>
+                            </div>
+                            <span class="badge-discount">-20%</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="product-title">Coleira Antipulgas</h5>
+                            <p class="text-muted small">Para cães e gatos</p>
+                            <p class="product-price">R$ 39,90</p>
+                            <a href="#" class="btn btn-sm btn-primary w-100">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <a href="#" class="btn btn-outline-primary">Ver Todos os Produtos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-4">Receba nossas promoções por e-mail</h2>
+                    <p class="mb-5">Cadastre-se e receba ofertas exclusivas diretamente no seu e-mail</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Digite seu e-mail" aria-label="Digite seu e-mail" aria-describedby="button-addon2">
+                            <button class="btn btn-primary" type="button" id="button-addon2">Cadastrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h3 class="footer-title">PAMA RAÇÕES</h3>
+                    <p>Oferecendo os melhores produtos para seu pet desde 2010. Qualidade e confiança para quem você ama.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h3 class="footer-title">"Institucional"</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">"Sobre Nós"</a></li>
+                        <li><a href="#">"Nossas Lojas"</a></li>
+                        <li><a href="#">"Trabalhe Conosco"</a></li>
+                        <li><a href="#">"Política de Privacidade"</a></li>
+                        <li><a href="#">"Termos de Uso"</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h3 class="footer-title">"Atendimento"</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">"Central de Ajuda"</a></li>
+                        <li><a href="#">"Meus Pedidos"</a></li>
+                        <li><a href="#">"Trocas e Devoluções"</a></li>
+                        <li><a href="#">"Dúvidas Frequentes"</a></li>
+                        <li><a href="#">"Fale Conosco"</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-title">"Contato"</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> "Av. das Rações, 123 - Centro"</li>
+                        <li><i class="fas fa-phone me-2"></i> "(11) 1234-5678"</li>
+                        <li><i class="fas fa-envelope me-2"></i> PAMA RACOES LTDA</li>
+                        <li><i class="fas fa-clock me-2"></i>CNPJ: 31.509.586/0001-48</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center copyright">
+                    <p>"© 2023 Pama Rações - Todos os direitos reservados. CNPJ: 12.345.678/0001-99"</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Ativar tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+        
+        // Adicionar classe quando scroll
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                document.querySelector('.navbar').classList.add('navbar-scrolled');
+            } else {
+                document.querySelector('.navbar').classList.remove('navbar-scrolled');
+            }
+        });
+        
+        // Validação do formulário de newsletter
+        document.querySelector('.newsletter-form button').addEventListener('click', function() {
+            const emailInput = document.querySelector('.newsletter-form input');
+            if (emailInput.value === '' || !emailInput.value.includes('@')) {
+                emailInput.classList.add('is-invalid');
+            } else {
+                emailInput.classList.remove('is-invalid');
+                alert('Obrigado por se cadastrar! Você receberá nossas promoções em breve.');
+                emailInput.value = '';
+            }
+        });
+    </script>
+</body>
+</html></style>
+</head>
+<body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pama Rações - Alimentos e Acessórios para Pets</title>
+    <meta name="description" content="Pama Rações - A melhor loja de rações e acessórios para seu pet. Encontre alimentos de qualidade, brinquedos e produtos para cães e gatos.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --accent-color: #f39c12;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark-color);
+            overflow-x: hidden;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: white;
+            font-size: 1.8rem;
+        }
+        
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent-color) !important;
+        }
+        
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .dropdown-item {
+            color: var(--dark-color);
+            padding: 0.5rem 1.5rem;
+        }
+        
+        .dropdown-item:hover {
+            background-color: var(--light-color);
+            color: var(--secondary-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+            border: none;
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .product-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .product-title {
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-price {
+            font-weight: 700;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+        
+        .badge-discount {
+            background-color: var(--accent-color);
+            color: white;
+            font-weight: 600;
+            padding: 0.3rem 0.6rem;
+            border-radius: 5px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        
+        .feature-box {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        
+        .newsletter-section {
+            background-color: var(--light-color);
+            padding: 4rem 0;
+        }
+        
+        .newsletter-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-control {
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            padding: 0 1.5rem;
+        }
+        
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            margin-top: 2rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">PAMA RAÇÕES</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">"Home"</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="produtosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                "Produtos"
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="produtosDropdown">
+                                <li><a class="dropdown-item" href="#">"Rações para Cães"</a></li>
+                                <li><a class="dropdown-item" href="#">"Rações para Gatos"</a></li>
+                                <li><a class="dropdown-item" href="#">"Petiscos e Ossos"</a></li>
+                                <li><a class="dropdown-item" href="#">"Acessórios"</a></li>
+                                <li><a class="dropdown-item" href="#">"Higiene e Beleza"</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">"Serviços"</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">"Sobre Nós"</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">"Contato"</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex ms-3">
+                        <a href="#" class="btn btn-outline-light me-2"><i class="fas fa-search"></i></a>
+                        <a href="#" class="btn btn-outline-light me-2"><i class="fas fa-user"></i></a>
+                        <a href="#" class="btn btn-outline-light"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="hero-title">Tudo que seu pet precisa em um só lugar</h1>
+                    <p class="hero-subtitle">As melhores rações e acessórios para cães e gatos com os melhores preços do mercado</p>
+                    <a href="#" class="btn btn-primary">Conheça nossos produtos</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-light rounded p-4 text-dark">
+                        <h3 class="mb-4">Promoções da Semana</h3>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-dog me-3 text-primary fs-4"></i>
+                            <div>
+                                <h5 class="mb-0">Ração Premium Cães Adultos</h5>
+                                <p class="mb-0"><span class="text-decoration-line-through me-2">R$ 189,90</span> <span class="fw-bold text-danger">R$ 159,90</span></p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-cat me-3 text-primary fs-4"></i>
+                            <div>
+                                <h5 class="mb-0">Ração Premium Gatos Filhotes</h5>
+                                <p class="mb-0"><span class="text-decoration-line-through me-2">R$ 149,90</span> <span class="fw-bold text-danger">R$ 129,90</span></p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-bone me-3 text-primary fs-4"></i>
+                            <div>
+                                <h5 class="mb-0">Petiscos Diversos</h5>
+                                <p class="mb-0"><span class="text-decoration-line-through me-2">R$ 29,90</span> <span class="fw-bold text-danger">R$ 19,90</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destaques Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Nossos Destaques</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3 class="feature-title">Frete Grátis</h3>
+                        <p>Para compras acima de R$ 199,90 em todo o Brasil</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Pagamento Seguro</h3>
+                        <p>Processamos seu pagamento com total segurança</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="feature-title">Atendimento</h3>
+                        <p>Suporte especializado para tirar todas suas dúvidas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Produtos em Destaque</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <div class="bg-secondary" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-dog fa-4x text-white"></i>
+                            </div>
+                            <span class="badge-discount">-15%</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="product-title">Ração Premium Cães Adultos</h5>
+                            <p class="text-muted small">15kg - Sabor Frango</p>
+                            <p class="product-price">R$ 159,90</p>
+                            <a href="#" class="btn btn-sm btn-primary w-100">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <div class="bg-secondary" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-cat fa-4x text-white"></i>
+                            </div>
+                            <span class="badge-discount">-10%</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="product-title">Ração Premium Gatos Castrados</h5>
+                            <p class="text-muted small">10kg - Sabor Salmão</p>
+                            <p class="product-price">R$ 179,90</p>
+                            <a href="#" class="btn btn-sm btn-primary w-100">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <div class="bg-secondary" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-bone fa-4x text-white"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="product-title">Petisco Dental para Cães</h5>
+                            <p class="text-muted small">Pacote com 10 unidades</p>
+                            <p class="product-price">R$ 29,90</p>
+                            <a href="#" class="btn btn-sm btn-primary w-100">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <div class="bg-secondary" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-paw fa-4x text-white"></i>
+                            </div>
+                            <span class="badge-discount">-20%</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="product-title">Coleira Antipulgas</h5>
+                            <p class="text-muted small">Para cães e gatos</p>
+                            <p class="product-price">R$ 39,90</p>
+                            <a href="#" class="btn btn-sm btn-primary w-100">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <a href="#" class="btn btn-outline-primary">Ver Todos os Produtos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-4">Receba nossas promoções por e-mail</h2>
+                    <p class="mb-5">Cadastre-se e receba ofertas exclusivas diretamente no seu e-mail</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Digite seu e-mail" aria-label="Digite seu e-mail" aria-describedby="button-addon2">
+                            <button class="btn btn-primary" type="button" id="button-addon2">Cadastrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h3 class="footer-title">PAMA RAÇÕES</h3>
+                    <p>Oferecendo os melhores produtos para seu pet desde 2010. Qualidade e confiança para quem você ama.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h3 class="footer-title">"Institucional"</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">"Sobre Nós"</a></li>
+                        <li><a href="#">"Nossas Lojas"</a></li>
+                        <li><a href="#">"Trabalhe Conosco"</a></li>
+                        <li><a href="#">"Política de Privacidade"</a></li>
+                        <li><a href="#">"Termos de Uso"</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h3 class="footer-title">"Atendimento"</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">"Central de Ajuda"</a></li>
+                        <li><a href="#">"Meus Pedidos"</a></li>
+                        <li><a href="#">"Trocas e Devoluções"</a></li>
+                        <li><a href="#">"Dúvidas Frequentes"</a></li>
+                        <li><a href="#">"Fale Conosco"</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-title">"Contato"</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> "Av. das Rações, 123 - Centro"</li>
+                        <li><i class="fas fa-phone me-2"></i> "(11) 1234-5678"</li>
+                        <li><i class="fas fa-envelope me-2"></i> PAMA RACOES LTDA</li>
+                        <li><i class="fas fa-clock me-2"></i>CNPJ: 31.509.586/0001-48</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center copyright">
+                    <p>"© 2023 Pama Rações - Todos os direitos reservados. CNPJ: 12.345.678/0001-99"</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Ativar tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+        
+        // Adicionar classe quando scroll
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                document.querySelector('.navbar').classList.add('navbar-scrolled');
+            } else {
+                document.querySelector('.navbar').classList.remove('navbar-scrolled');
+            }
+        });
+        
+        // Validação do formulário de newsletter
+        document.querySelector('.newsletter-form button').addEventListener('click', function() {
+            const emailInput = document.querySelector('.newsletter-form input');
+            if (emailInput.value === '' || !emailInput.value.includes('@')) {
+                emailInput.classList.add('is-invalid');
+            } else {
+                emailInput.classList.remove('is-invalid');
+                alert('Obrigado por se cadastrar! Você receberá nossas promoções em breve.');
+                emailInput.value = '';
+            }
+        });
+    </script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pama Rações - Alimentos e Acessórios para Pets</title>
+    <meta name="description" content="Pama Rações - A melhor loja de rações e acessórios para seu pet. Encontre alimentos de qualidade, brinquedos e produtos para cães e gatos.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --accent-color: #f39c12;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark-color);
+            overflow-x: hidden;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: white;
+            font-size: 1.8rem;
+        }
+        
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent-color) !important;
+        }
+        
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .dropdown-item {
+            color: var(--dark-color);
+            padding: 0.5rem 1.5rem;
+        }
+        
+        .dropdown-item:hover {
+            background-color: var(--light-color);
+            color: var(--secondary-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+            border: none;
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .product-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .product-title {
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-price {
+            font-weight: 700;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+        
+        .badge-discount {
+            background-color: var(--accent-color);
+            color: white;
+            font-weight: 600;
+            padding: 0.3rem 0.6rem;
+            border-radius: 5px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        
+        .feature-box {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        
+        .newsletter-section {
+            background-color: var(--light-color);
+            padding: 4rem 0;
+        }
+        
+        .newsletter-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-control {
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            padding: 0 1.5rem;
+        }
+        
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            margin-top: 2rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">PAMA RAÇÕES</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">"Home"</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="produtosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                "Produtos"
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="produtosDropdown">
+                                <li><a class="dropdown-item" href="#">"Rações para Cães"</a></li>
+                                <li><a class="dropdown-item" href="#">"Rações para Gatos"</a></li>
+                                <li><a class="dropdown-item" href="#">"Petiscos e Ossos"</a></li>
+                                <li><a class="dropdown-item" href="#">"Acessórios"</a></li>
+                                <li><a class="dropdown-item" href="#">"Higiene e Beleza"</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">"Serviços"</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">"Sobre Nós"</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">"Contato"</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex ms-3">
+                        <a href="#" class="btn btn-outline-light me-2"><i class="fas fa-search"></i></a>
+                        <a href="#" class="btn btn-outline-light me-2"><i class="fas fa-user"></i></a>
+                        <a href="#" class="btn btn-outline-light"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="hero-title">Tudo que seu pet precisa em um só lugar</h1>
+                    <p class="hero-subtitle">As melhores rações e acessórios para cães e gatos com os melhores preços do mercado</p>
+                    <a href="#" class="btn btn-primary">Conheça nossos produtos</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-light rounded p-4 text-dark">
+                        <h3 class="mb-4">Promoções da Semana</h3>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-dog me-3 text-primary fs-4"></i>
+                            <div>
+                                <h5 class="mb-0">Ração Premium Cães Adultos</h5>
+                                <p class="mb-0"><span class="text-decoration-line-through me-2">R$ 189,90</span> <span class="fw-bold text-danger">R$ 159,90</span></p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-cat me-3 text-primary fs-4"></i>
+                            <div>
+                                <h5 class="mb-0">Ração Premium Gatos Filhotes</h5>
+                                <p class="mb-0"><span class="text-decoration-line-through me-2">R$ 149,90</span> <span class="fw-bold text-danger">R$ 129,90</span></p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-bone me-3 text-primary fs-4"></i>
+                            <div>
+                                <h5 class="mb-0">Petiscos Diversos</h5>
+                                <p class="mb-0"><span class="text-decoration-line-through me-2">R$ 29,90</span> <span class="fw-bold text-danger">R$ 19,90</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destaques Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Nossos Destaques</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3 class="feature-title">Frete Grátis</h3>
+                        <p>Para compras acima de R$ 199,90 em todo o Brasil</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Pagamento Seguro</h3>
+                        <p>Processamos seu pagamento com total segurança</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="feature-title">Atendimento</h3>
+                        <p>Suporte especializado para tirar todas suas dúvidas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Produtos em Destaque</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <div class="bg-secondary" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-dog fa-4x text-white"></i>
+                            </div>
+                            <span class="badge-discount">-15%</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="product-title">Ração Premium Cães Adultos</h5>
+                            <p class="text-muted small">15kg - Sabor Frango</p>
+                            <p class="product-price">R$ 159,90</p>
+                            <a href="#" class="btn btn-sm btn-primary w-100">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <div class="bg-secondary" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-cat fa-4x text-white"></i>
+                            </div>
+                            <span class="badge-discount">-10%</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="product-title">Ração Premium Gatos Castrados</h5>
+                            <p class="text-muted small">10kg - Sabor Salmão</p>
+                            <p class="product-price">R$ 179,90</p>
+                            <a href="#" class="btn btn-sm btn-primary w-100">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <div class="bg-secondary" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-bone fa-4x text-white"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="product-title">Petisco Dental para Cães</h5>
+                            <p class="text-muted small">Pacote com 10 unidades</p>
+                            <p class="product-price">R$ 29,90</p>
+                            <a href="#" class="btn btn-sm btn-primary w-100">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <div class="bg-secondary" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-paw fa-4x text-white"></i>
+                            </div>
+                            <span class="badge-discount">-20%</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="product-title">Coleira Antipulgas</h5>
+                            <p class="text-muted small">Para cães e gatos</p>
+                            <p class="product-price">R$ 39,90</p>
+                            <a href="#" class="btn btn-sm btn-primary w-100">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <a href="#" class="btn btn-outline-primary">Ver Todos os Produtos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-4">Receba nossas promoções por e-mail</h2>
+                    <p class="mb-5">Cadastre-se e receba ofertas exclusivas diretamente no seu e-mail</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Digite seu e-mail" aria-label="Digite seu e-mail" aria-describedby="button-addon2">
+                            <button class="btn btn-primary" type="button" id="button-addon2">Cadastrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h3 class="footer-title">PAMA RAÇÕES</h3>
+                    <p>Oferecendo os melhores produtos para seu pet desde 2010. Qualidade e confiança para quem você ama.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h3 class="footer-title">"Institucional"</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">"Sobre Nós"</a></li>
+                        <li><a href="#">"Nossas Lojas"</a></li>
+                        <li><a href="#">"Trabalhe Conosco"</a></li>
+                        <li><a href="#">"Política de Privacidade"</a></li>
+                        <li><a href="#">"Termos de Uso"</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h3 class="footer-title">"Atendimento"</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">"Central de Ajuda"</a></li>
+                        <li><a href="#">"Meus Pedidos"</a></li>
+                        <li><a href="#">"Trocas e Devoluções"</a></li>
+                        <li><a href="#">"Dúvidas Frequentes"</a></li>
+                        <li><a href="#">"Fale Conosco"</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-title">"Contato"</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> "Av. das Rações, 123 - Centro"</li>
+                        <li><i class="fas fa-phone me-2"></i> "(11) 1234-5678"</li>
+                        <li><i class="fas fa-envelope me-2"></i> "contato@pamarracoes.com.br"</li>
+                        <li><i class="fas fa-clock me-2"></i> "Seg-Sex: 9h-18h | Sáb: 9h-13h"</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center copyright">
+                    <p>"© 2023 Pama Rações - Todos os direitos reservados. CNPJ: 12.345.678/0001-99"</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Ativar tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+        
+        // Adicionar classe quando scroll
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                document.querySelector('.navbar').classList.add('navbar-scrolled');
+            } else {
+                document.querySelector('.navbar').classList.remove('navbar-scrolled');
+            }
+        });
+        
+        // Validação do formulário de newsletter
+        document.querySelector('.newsletter-form button').addEventListener('click', function() {
+            const emailInput = document.querySelector('.newsletter-form input');
+            if (emailInput.value === '' || !emailInput.value.includes('@')) {
+                emailInput.classList.add('is-invalid');
+            } else {
+                emailInput.classList.remove('is-invalid');
+                alert('Obrigado por se cadastrar! Você receberá nossas promoções em breve.');
+                emailInput.value = '';
+            }
+        });
+    </script>
+</body>
+</html></script></body>
+</html>
