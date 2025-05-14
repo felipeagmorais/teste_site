@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAOPET</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>:root {
+    --primary-color: #4ECDC4;
+    --secondary-color: #FF6B6B;
+    --dark-color: #292F36;
+    --light-color: #F7FFF7;
+    --gray-color: #6C757D;
+    --gradient: linear-gradient(to bottom, #FF6B6B, #4ECDC4);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* Header Styles */
+header {
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.95);
+}
+
+.navbar-brand .logo-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.nav-link {
+    font-weight: 600;
+    color: var(--dark-color);
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.btn-catalog {
+    background: var(--gradient);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-weight: 600;
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 100px 0;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.hero-shapes {
+    width: 100%;
+    height: 300px;
+    background: var(--gradient);
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0 75%);
+}
+
+/* Products Section */
+.products-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    font-size: 2.5rem;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--gradient);
+    margin: 15px auto;
+}
+
+.product-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.product-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+}
+
+.rating {
+    color: #FFD700;
+}
+
+.price {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+/* About Section */
+.about-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: var(--gradient);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-content {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.timeline-icon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    right: -25px;
+    top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.timeline-item:nth-child(even) .timeline-icon {
+    left: -25px;
+}
+
+.value-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+}
+
+.value-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.client-info {
+    margin-top: 20px;
+}
+
+/* Footer Styles */
+.footer {
+    background: var(--dark-color);
+    color: white;
+    padding: 60px 0 0;
+    position: relative;
+}
+
+.wave-divider {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23f8f9fa' fill-opacity='1' d='M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+    background-size: cover;
+}
+
+.footer-column h4 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-column h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--gradient);
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #ddd;
+    transition: all 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: var(--gradient);
+    transform: translateY(-5px);
+}
+
+.security-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 15px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    margin-top: 15px;
+    float: right;
+}
+
+.copyright {
+    margin-top: 30px;
+}
+
+.newsletter-form .form-control {
+    border-radius: 25px 0 0 25px;
+    border: none;
+}
+
+.newsletter-form .btn {
+    border-radius: 0 25px 25px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .timeline::before {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    
+    .timeline-icon {
+        left: 6px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .footer-column {
+        margin-bottom: 30px;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    .security-badge {
+        float: none;
+        margin: 15px auto 0;
+        display: table;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand .logo-text {
+        font-size: 1.8rem;
+    }
+    
+    .hero-shapes {
+        height: 200px;
+        margin-top: 30px;
+    }
+}</style>
+</head>
+<body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vestuário premium e acessórios de alta qualidade para seu pet">
+    <title>CAOPET - Vestuário Premium para Pets</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <span class="logo-text">PET CAO</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#produtos">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn-primary btn-catalog">Catálogo Digital</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1>Vestuário Premium para Seu Pet</h1>
+                        <p class="lead">Conforto, estilo e qualidade para o seu melhor amigo</p>
+                        <button class="btn btn-primary btn-lg">Ver Coleção</button>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-shapes"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="produtos" class="products-section">
+            <div class="container">
+                <h2 class="section-title">Nossos Produtos</h2>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="filter-accordion">
+                            <div class="accordion" id="filterAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Categorias
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#filterAccordion">
+                                        <div class="accordion-body">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="category1">
+                                                <label class="form-check-label" for="category1">
+                                                    <i class="fas fa-shirt me-2"></i>Roupas
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="category2">
+                                                <label class="form-check-label" for="category2">
+                                                    <i class="fas fa-socks me-2"></i>Acessórios
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="card product-card">
+                                    <span class="badge bg-success">Novo</span>
+                                    <div class="card-body">
+                                        <div class="product-icon">
+                                            <i class="fas fa-shirt"></i>
+                                        </div>
+                                        <h5 class="card-title">Casaco Premium</h5>
+                                        <div class="rating mb-2">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                        <p class="card-text">Casaco térmico para dias frios</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="price">R$ 89,90</span>
+                                            <button class="btn btn-sm btn-outline-primary">+ Carrinho</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card product-card">
+                                    <span class="badge bg-danger">Mais Vendido</span>
+                                    <div class="card-body">
+                                        <div class="product-icon">
+                                            <i class="fas fa-socks"></i>
+                                        </div>
+                                        <h5 class="card-title">Meias Antiderrapantes</h5>
+                                        <div class="rating mb-2">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <p class="card-text">Conforto e segurança para seu pet</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="price">R$ 49,90</span>
+                                            <button class="btn btn-sm btn-outline-primary">+ Carrinho</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="about-section">
+            <div class="container">
+                <h2 class="section-title">Sobre Nós</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>2015 - Fundação</h3>
+                            <p>Começamos nossa jornada com uma pequena loja física</p>
+                        </div>
+                        <div class="timeline-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>2018 - Expansão Online</h3>
+                            <p>Lançamos nossa plataforma e-commerce</p>
+                        </div>
+                        <div class="timeline-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="values-section">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="value-card">
+                                <div class="value-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <h4>Amor pelos Pets</h4>
+                                <p>Todos nossos produtos são desenvolvidos com carinho</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="value-card">
+                                <div class="value-icon">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <h4>Sustentabilidade</h4>
+                                <p>Materiais ecológicos e processos sustentáveis</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="value-card">
+                                <div class="value-icon">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h4>Qualidade Garantida</h4>
+                                <p>Produtos testados e aprovados por especialistas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials-section">
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="testimonial-card">
+                                    <p>"Produtos de excelente qualidade, meu cachorro adorou!"</p>
+                                    <div class="client-info">
+                                        <h5>Ana Silva</h5>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wave-divider"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-column">
+                        <h4>Informações Jurídicas</h4>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-id-card me-2"></i> CNPJ: 51.735.872/0001-39</li>
+                            <li><i class="fas fa-building me-2"></i> Razão Social: PET CAO INDUSTRIA LTDA</li>
+                            <li><i class="fas fa-check-circle me-2"></i> Certificada e Regularizada</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-column">
+                        <h4>Links Rápidos</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><i class="fas fa-arrow-right me-2"></i> Política de Privacidade</a></li>
+                            <li><a href="#"><i class="fas fa-arrow-right me-2"></i> Termos de Uso</a></li>
+                            <li><a href="#"><i class="fas fa-arrow-right me-2"></i> Trocas e Devoluções</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-column">
+                        <h4>Contato</h4>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-envelope me-2"></i> contato@caopet.com.br</li>
+                            <li><i class="fas fa-phone me-2"></i> (11) 98765-4321</li>
+                        </ul>
+                        <form class="newsletter-form">
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="Seu e-mail" required>
+                                <button class="btn btn-primary" type="submit">Assinar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="copyright">&copy; 2023 CAOPET. Todos os direitos reservados.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                        <div class="security-badge">
+                            <span>Site Seguro</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu animation
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    
+    navbarToggler.addEventListener('click', function() {
+        this.querySelector('i').classList.toggle('fa-times');
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (navbarCollapse.classList.contains('show')) {
+                    navbarToggler.click();
+                }
+            }
+        });
+    });
+    
+    // Form validation
+    const newsletterForm = document.querySelector('.newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const emailInput = this.querySelector('input[type="email"]');
+            
+            if (emailInput.value && emailInput.checkValidity()) {
+                // Simulate form submission
+                const submitBtn = this.querySelector('button[type="submit"]');
+                submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando...';
+                submitBtn.disabled = true;
+                
+                setTimeout(() => {
+                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Enviado!';
+                    emailInput.value = '';
+                    
+                    setTimeout(() => {
+                        submitBtn.innerHTML = 'Assinar';
+                        submitBtn.disabled = false;
+                    }, 2000);
+                }, 1500);
+            }
+        });
+    }
+    
+    // Product filter accordion
+    const filterAccordion = document.querySelector('#filterAccordion');
+    if (filterAccordion) {
+        filterAccordion.addEventListener('show.bs.collapse', function(e) {
+            const accordionItem = e.target.closest('.accordion-item');
+            const accordionButton = accordionItem.querySelector('.accordion-button');
+            accordionButton.classList.add('active');
+        });
+        
+        filterAccordion.addEventListener('hide.bs.collapse', function(e) {
+            const accordionItem = e.target.closest('.accordion-item');
+            const accordionButton = accordionItem.querySelector('.accordion-button');
+            accordionButton.classList.remove('active');
+        });
+    }
+    
+    // Initialize Bootstrap carousel
+    const testimonialCarousel = new bootstrap.Carousel('#testimonialCarousel', {
+        interval: 5000,
+        pause: 'hover',
+        wrap: true
+    });
+    
+    // Add focus styles for accessibility
+    document.addEventListener('keyup', function(e) {
+        if (e.key === 'Tab') {
+            document.querySelectorAll('a, button, input, [tabindex]').forEach(el => {
+                if (el === document.activeElement) {
+                    el.classList.add('focus-visible');
+                } else {
+                    el.classList.remove('focus-visible');
+                }
+            });
+        }
+    });
+});</script></body>
+</html>
