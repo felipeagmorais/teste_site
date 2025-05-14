@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARAUJOFELIPE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    position: relative;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: #f1c40f !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f1c40f;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #c0392b !important;
+}
+
+.animate__animated {
+    opacity: 0;
+}
+
+.animate__fadeIn {
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand span {
+        font-size: 1.8rem !important;
+    }
+    
+    section {
+        padding: 3rem 0 !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section .card {
+        padding: 2rem !important;
+    }
+    
+    .footer .col-md-4 {
+        margin-bottom: 2rem;
+    }
+}</style>
+</head>
+<body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comércio varejista de artigos do vestuário e acessórios - Felipe Araujo Bezerra">
+    <title>ARAUJOFELIPE - Comércio Varejista</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(135deg, #2c3e50, #3498db);">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <i class="fas fa-user-tie me-2"></i>
+                    <span class="fw-bold" style="font-family: 'Montserrat', sans-serif; font-size: 2.5rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.2);">FELIPE ARAUJO BEZERRA</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="#inicio" style="transition: all 0.3s ease;">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="#servicos" style="transition: all 0.3s ease;">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="#diferenciais" style="transition: all 0.3s ease;">Diferenciais</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="#contato" style="transition: all 0.3s ease;">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="py-5" style="background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(52, 152, 219, 0.9)); min-height: 80vh; display: flex; align-items: center;">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card p-5" style="background-color: rgba(255,255,255,0.9); border-radius: 15px;">
+                            <div class="card-body text-center">
+                                <h1 class="card-title mb-4" style="font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 1.8rem; color: #2c3e50;">
+                                    Comércio Varejista de Artigos do Vestuário e Acessórios
+                                </h1>
+                                <p class="card-text mb-4 fs-5">
+                                    <i class="fas fa-tshirt me-2" style="color: #e74c3c;"></i>Moda Casual 
+                                    <i class="fas fa-rings-wedding mx-2" style="color: #9b59b6;"></i>Acessórios Elegantes
+                                </p>
+                                <a href="#contato" class="btn btn-lg px-4 py-3" style="background-color: #e74c3c; color: white; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Fale Conosco</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="py-5 bg-light">
+            <div class="container py-5">
+                <h2 class="text-center mb-5" style="font-family: 'Montserrat', sans-serif; color: #2c3e50;">Nossos Serviços</h2>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm" style="transition: all 0.3s ease;">
+                            <div class="card-body text-center p-4">
+                                <div class="mx-auto mb-4" style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(45deg, #3498db, #9b59b6); display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-tshirt fa-2x text-white"></i>
+                                </div>
+                                <h3 class="card-title h5 mb-3">Vestuário</h3>
+                                <p class="card-text">Peças de alta qualidade para todos os estilos e ocasiões.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm" style="transition: all 0.3s ease;">
+                            <div class="card-body text-center p-4">
+                                <div class="mx-auto mb-4" style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(45deg, #e74c3c, #f39c12); display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-rings-wedding fa-2x text-white"></i>
+                                </div>
+                                <h3 class="card-title h5 mb-3">Acessórios</h3>
+                                <p class="card-text">Complementos que elevam qualquer visual com elegância.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm" style="transition: all 0.3s ease;">
+                            <div class="card-body text-center p-4">
+                                <div class="mx-auto mb-4" style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(45deg, #2ecc71, #27ae60); display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-headset fa-2x text-white"></i>
+                                </div>
+                                <h3 class="card-title h5 mb-3">Atendimento</h3>
+                                <p class="card-text">Consultoria especializada para ajudar na escolha perfeita.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="diferenciais" class="py-5">
+            <div class="container py-5">
+                <h2 class="text-center mb-5" style="font-family: 'Montserrat', sans-serif; color: #2c3e50;">Nossos Diferenciais</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <ul class="list-unstyled">
+                            <li class="mb-4 animate__animated animate__fadeIn">
+                                <i class="fas fa-check-circle me-3" style="color: #27ae60; font-size: 1.5rem;"></i>
+                                <span class="fs-5">Qualidade premium em todos os nossos produtos</span>
+                            </li>
+                            <li class="mb-4 animate__animated animate__fadeIn">
+                                <i class="fas fa-check-circle me-3" style="color: #27ae60; font-size: 1.5rem;"></i>
+                                <span class="fs-5">Preços competitivos e condições especiais</span>
+                            </li>
+                            <li class="mb-4 animate__animated animate__fadeIn">
+                                <i class="fas fa-check-circle me-3" style="color: #27ae60; font-size: 1.5rem;"></i>
+                                <span class="fs-5">Atendimento personalizado e consultoria de estilo</span>
+                            </li>
+                            <li class="mb-4 animate__animated animate__fadeIn">
+                                <i class="fas fa-check-circle me-3" style="color: #27ae60; font-size: 1.5rem;"></i>
+                                <span class="fs-5">Entrega rápida e opções de retirada</span>
+                            </li>
+                            <li class="animate__animated animate__fadeIn">
+                                <i class="fas fa-check-circle me-3" style="color: #27ae60; font-size: 1.5rem;"></i>
+                                <span class="fs-5">Garantia de satisfação em todas as compras</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato" class="bg-dark text-white pt-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h3 class="h5 mb-4"><i class="fas fa-building me-2"></i> Informações Legais</h3>
+                    <p class="mb-2"><code>CNPJ: 55.363.186/0001-35</code></p>
+                    <p>"RAZÃO SOCIAL: 55.363.186 FELIPE ARAUJO BEZERRA"</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h3 class="h5 mb-4">Contato</h3>
+                    <p class="mb-3">
+                        <a href="https://wa.me/5511999999999" class="text-white text-decoration-none" style="transition: color 0.3s ease;">
+                            <i class="fab fa-whatsapp me-2"></i> (11) 99999-9999
+                        </a>
+                    </p>
+                    <p>
+                        <a href="mailto:contato@araujofelipe.com.br" class="text-white text-decoration-none" style="transition: color 0.3s ease;">
+                            <i class="fas fa-envelope me-2"></i> contato@araujofelipe.com.br
+                        </a>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="h5 mb-4">Redes Sociais</h3>
+                    <div class="d-flex">
+                        <a href="#" class="text-white me-3" style="width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white" style="width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="py-3" style="border-top: 1px solid rgba(255,255,255,0.1);">
+            <div class="container text-center">
+                <p class="mb-0 small">&copy; 2023 ARAUJOFELIPE. Todos os direitos reservados.</p>
+                <p class="mb-0 small"><a href="#" class="text-white-50 text-decoration-none">Política de Privacidade</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    // Animação para os diferenciais
+    const diferenciais = document.querySelectorAll('#diferenciais li');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('animate__fadeIn');
+                }, index * 200);
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    diferenciais.forEach(item => {
+        observer.observe(item);
+    });
+    
+    // Smooth scrolling para links de navegação
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // Fechar menu mobile após clicar
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse.classList.contains('show')) {
+                    navbarCollapse.classList.remove('show');
+                }
+            }
+        });
+    });
+    
+    // Adicionar classe ativa ao item de navegação atual
+    const sections = document.querySelectorAll('section');
+    const navItems = document.querySelectorAll('.nav-link');
+    
+    window.addEventListener('scroll', function() {
+        let current = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            
+            if (pageYOffset >= (sectionTop - 100)) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        navItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('href') === `#${current}`) {
+                item.classList.add('active');
+            }
+        });
+    });
+});</script></body>
+</html>
