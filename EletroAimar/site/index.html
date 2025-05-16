@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eletro Aimar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>:root {
+    --bs-primary: #0d6efd;
+    --bs-primary-rgb: 13, 110, 253;
+    --bs-secondary: #6c757d;
+    --bs-secondary-rgb: 108, 117, 125;
+    --bs-dark: #212529;
+    --bs-dark-rgb: 33, 37, 41;
+    --bs-light: #f8f9fa;
+    --bs-light-rgb: 248, 249, 250;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+.hero-section {
+    background-color: rgba(var(--bs-primary-rgb), 0.05);
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.375rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+.btn-outline-primary {
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--bs-primary);
+    color: white;
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 767.98px) {
+    .hero-section .row {
+        flex-direction: column-reverse;
+    }
+    
+    .hero-section .col-lg-6 {
+        margin-bottom: 2rem;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .display-4 {
+        font-size: 3rem;
+    }
+}</style>
+</head>
+<body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eletro Aimar - Soluções em Materiais Elétricos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="bg-primary text-white sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold" href="#">
+                        <i class="fas fa-bolt me-2"></i>Eletro Aimar
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">"Início"</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#produtos">"Produtos"</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#servicos">"Serviços"</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#sobre">"Sobre Nós"</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contato">"Contato"</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section bg-light py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold mb-4">Soluções completas em materiais elétricos</h1>
+                        <p class="lead mb-4">Oferecemos os melhores produtos e serviços elétricos com qualidade e garantia.</p>
+                        <a href="#produtos" class="btn btn-primary btn-lg px-4 me-2">Nossos Produtos</a>
+                        <a href="#contato" class="btn btn-outline-primary btn-lg px-4">Fale Conosco</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="bg-primary p-4 rounded text-white">
+                            <h3 class="mb-3"><i class="fas fa-star me-2"></i>Destaques</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle me-2"></i>Atendimento personalizado</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2"></i>Produtos de alta qualidade</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2"></i>Preços competitivos</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2"></i>Entrega rápida</li>
+                                <li><i class="fas fa-check-circle me-2"></i>Assistência técnica especializada</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="produtos" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Nossos Produtos</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-circle d-inline-block mb-3">
+                                    <i class="fas fa-lightbulb text-primary fa-3x"></i>
+                                </div>
+                                <h4 class="card-title">Iluminação</h4>
+                                <p class="card-text">Lâmpadas, luminárias, refletores e acessórios para todos os tipos de ambientes.</p>
+                                <a href="#" class="btn btn-outline-primary">Ver Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-circle d-inline-block mb-3">
+                                    <i class="fas fa-plug text-primary fa-3x"></i>
+                                </div>
+                                <h4 class="card-title">Materiais Elétricos</h4>
+                                <p class="card-text">Fios, cabos, disjuntores, tomadas e interruptores das melhores marcas.</p>
+                                <a href="#" class="btn btn-outline-primary">Ver Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-circle d-inline-block mb-3">
+                                    <i class="fas fa-solar-panel text-primary fa-3x"></i>
+                                </div>
+                                <h4 class="card-title">Energia Solar</h4>
+                                <p class="card-text">Soluções completas em energia solar fotovoltaica para residências e empresas.</p>
+                                <a href="#" class="btn btn-outline-primary">Ver Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="bg-light py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Nossos Serviços</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0">
+                            <div class="card-body">
+                                <h4 class="card-title"><i class="fas fa-tools text-primary me-2"></i>Instalações</h4>
+                                <p class="card-text">Instalações elétricas residenciais, comerciais e industriais com segurança e qualidade.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0">
+                            <div class="card-body">
+                                <h4 class="card-title"><i class="fas fa-bolt text-primary me-2"></i>Manutenção</h4>
+                                <p class="card-text">Manutenção preventiva e corretiva em sistemas elétricos de todos os portes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0">
+                            <div class="card-body">
+                                <h4 class="card-title"><i class="fas fa-solar-panel text-primary me-2"></i>Projetos</h4>
+                                <p class="card-text">Elaboração de projetos elétricos e de energia solar com engenheiros especializados.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0">
+                            <div class="card-body">
+                                <h4 class="card-title"><i class="fas fa-home text-primary me-2"></i>Automação</h4>
+                                <p class="card-text">Soluções em automação residencial e predial para maior conforto e economia.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h2 class="mb-4">Sobre a Eletro Aimar</h2>
+                        <p class="lead">Há mais de 15 anos no mercado, a Eletro Aimar se destaca pela qualidade de seus produtos e serviços.</p>
+                        <p>Nossa missão é fornecer soluções completas em materiais elétricos, com atendimento personalizado e preços competitivos. Contamos com uma equipe de profissionais qualificados e comprometidos com a satisfação dos nossos clientes.</p>
+                        <div class="d-flex align-items-center mt-4">
+                            <div class="me-4">
+                                <h3 class="text-primary mb-0">15+</h3>
+                                <p class="mb-0">Anos no mercado</p>
+                            </div>
+                            <div class="me-4">
+                                <h3 class="text-primary mb-0">5000+</h3>
+                                <p class="mb-0">Clientes atendidos</p>
+                            </div>
+                            <div>
+                                <h3 class="text-primary mb-0">100%</h3>
+                                <p class="mb-0">Satisfação garantida</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="bg-primary p-4 rounded text-white">
+                            <h3 class="mb-3">Nossos Valores</h3>
+                            <div class="d-flex mb-3">
+                                <div class="me-3">
+                                    <i class="fas fa-medal fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h5">Qualidade</h4>
+                                    <p class="mb-0">Trabalhamos apenas com produtos das melhores marcas e fornecedores.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <div class="me-3">
+                                    <i class="fas fa-handshake fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h5">Transparência</h4>
+                                    <p class="mb-0">Relacionamento honesto e direto com nossos clientes.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <i class="fas fa-headset fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h5">Atendimento</h4>
+                                    <p class="mb-0">Equipe especializada pronta para atender suas necessidades.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="bg-light py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Entre em Contato</h2>
+                <div class="row">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <h3 class="mb-4">Informações de Contato</h3>
+                                <div class="d-flex mb-3">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-map-marker-alt fa-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h6 mb-0">Endereço</h4>
+                                        <p class="mb-0">Rua Exemplo, 123 - Centro, Cidade - Estado</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-phone-alt fa-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h6 mb-0">Telefone</h4>
+                                        <p class="mb-0">(00) 1234-5678</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-envelope fa-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h6 mb-0">Email</h4>
+                                        <p class="mb-0">contato@eletroaimar.com.br</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="me-3 text-primary">
+                                        <i class="fas fa-clock fa-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h6 mb-0">Horário de Funcionamento</h4>
+                                        <p class="mb-0">Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 12h</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <h3 class="mb-4">Envie uma Mensagem</h3>
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="nome" class="form-label">Nome</label>
+                                        <input type="text" class="form-control" id="nome" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="telefone" class="form-label">Telefone</label>
+                                        <input type="tel" class="form-control" id="telefone">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="mensagem" class="form-label">Mensagem</label>
+                                        <textarea class="form-control" id="mensagem" rows="4" required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="h4 mb-3"><i class="fas fa-bolt me-2"></i>Eletro Aimar</h3>
+                    <p>Soluções completas em materiais elétricos com qualidade e garantia.</p>
+                    <div class="d-flex">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-whatsapp fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h4 class="h5 mb-3">Links</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">"Início"</a></li>
+                        <li class="mb-2"><a href="#produtos" class="text-white text-decoration-none">"Produtos"</a></li>
+                        <li class="mb-2"><a href="#servicos" class="text-white text-decoration-none">"Serviços"</a></li>
+                        <li class="mb-2"><a href="#sobre" class="text-white text-decoration-none">"Sobre Nós"</a></li>
+                        <li><a href="#contato" class="text-white text-decoration-none">"Contato"</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h4 class="h5 mb-3">Contato</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>Rua Exemplo, 123 - Centro</li>
+                        <li class="mb-2"><i class="fas fa-phone-alt me-2"></i>(00) 1234-5678</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i>contato@eletroaimar.com.br</li>
+                        <li><i class="fas fa-clock me-2"></i>Seg-Sex: 8h às 18h</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h4 class="h5 mb-3">ELETRO AIMAR VENTILADORES E EXAUSTORES LTDA
+</h4>
+                    <p>CNPJ: 45.127.886/0001-77
+</p>
+                    <form class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Seu email" aria-label="Seu email">
+                            <button class="btn btn-primary" type="button">Enviar</button>
+                        </div>
+                    </form>
+                    <p class="small mb-0">"© 2023 Eletro Aimar. Todos os direitos reservados."</p>
+                    <p class="small mb-0">"Desenvolvido com paixão por soluções elétricas."</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Form validation
+    const contactForm = document.querySelector('#contato form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nameInput = document.getElementById('nome');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('mensagem');
+            let isValid = true;
+            
+            if (!nameInput.value.trim()) {
+                nameInput.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                nameInput.classList.remove('is-invalid');
+            }
+            
+            if (!emailInput.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value)) {
+                emailInput.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                emailInput.classList.remove('is-invalid');
+            }
+            
+            if (!messageInput.value.trim()) {
+                messageInput.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                messageInput.classList.remove('is-invalid');
+            }
+            
+            if (isValid) {
+                // Simulate form submission
+                const submitButton = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitButton.textContent;
+                
+                submitButton.disabled = true;
+                submitButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando...';
+                
+                setTimeout(() => {
+                    submitButton.textContent = 'Mensagem Enviada!';
+                    submitButton.classList.remove('btn-primary');
+                    submitButton.classList.add('btn-success');
+                    
+                    setTimeout(() => {
+                        submitButton.textContent = originalText;
+                        submitButton.disabled = false;
+                        submitButton.classList.remove('btn-success');
+                        submitButton.classList.add('btn-primary');
+                        contactForm.reset();
+                    }, 3000);
+                }, 1500);
+            }
+        });
+    }
+    
+    // Scroll to top button
+    const scrollToTopBtn = document.createElement('button');
+    scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    scrollToTopBtn.className = 'btn btn-primary btn-lg rounded-circle position-fixed bottom-0 end-0 m-3 d-none';
+    scrollToTopBtn.style.width = '50px';
+    scrollToTopBtn.style.height = '50px';
+    scrollToTopBtn.style.zIndex = '99';
+    document.body.appendChild(scrollToTopBtn);
+    
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.remove('d-none');
+        } else {
+            scrollToTopBtn.classList.add('d-none');
+        }
+    });
+    
+    // Animate elements on scroll
+    const animateOnScroll = function() {
+        const elements = document.querySelectorAll('.card, .hero-section .col-lg-6');
+        
+        elements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+            
+            if (elementPosition < screenPosition) {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }
+        });
+    };
+    
+    // Set initial state
+    document.querySelectorAll('.card, .hero-section .col-lg-6').forEach(element => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(20px)';
+        element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    });
+    
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll(); // Run once on page load
+});</script></body>
+</html>
