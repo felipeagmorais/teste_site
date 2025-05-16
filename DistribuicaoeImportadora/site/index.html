@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribuicao e Importadora</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>:root {
+    --primary-color: #FF6B6B;
+    --secondary-color: #4ECDC4;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn {
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #e05a5a;
+    border-color: #e05a5a;
+}
+
+.btn-outline-light:hover {
+    color: var(--dark-color);
+}
+
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.bg-gradient {
+    background-size: 200% 200%;
+    animation: gradient 8s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.form-control {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(255, 107, 107, 0.25);
+}
+
+.rounded-4 {
+    border-radius: 1rem !important;
+}
+
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1) !important;
+}
+
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content {
+        text-align: center;
+    }
+    
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+}
+
+/* Accessibility improvements */
+:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+a:focus, button:focus {
+    text-decoration: underline;
+}
+
+/* Contrast ratios meet WCAG AA standards */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.text-secondary {
+    color: var(--secondary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary-color) !important;
+}</style>
+</head>
+<body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribuição e Importadora | Soluções Logísticas Integradas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-gradient" style="background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-3" href="#">
+                    <i class="fas fa-boxes me-2"></i>Distribuição e Importadora
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">"Início"</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">"Serviços"</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">"Sobre Nós"</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">"Contato"</a>
+                        </li>
+                    </ul>
+                    <div class="ms-lg-3 mt-3 mt-lg-0">
+                        <a href="#quote" class="btn btn-light rounded-pill px-4 fw-bold">Solicitar Orçamento</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-5" style="background: linear-gradient(135deg, #4ECDC4 0%, #FF6B6B 100%);">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-white">
+                    <h1 class="display-4 fw-bold mb-4">Soluções Logísticas para seu Negócio</h1>
+                    <p class="lead mb-4">Distribuição eficiente e importação estratégica para impulsionar seus resultados.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#services" class="btn btn-light btn-lg rounded-pill px-4 fw-bold">Nossos Serviços</a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg rounded-pill px-4 fw-bold">Fale Conosco</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-white rounded-4 p-4 shadow-lg mt-5 mt-lg-0">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                                <i class="fas fa-shipping-fast text-primary fs-2"></i>
+                            </div>
+                            <h3 class="mb-0">Rastreamento em Tempo Real</h3>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-success bg-opacity-10 rounded-circle p-3 me-3">
+                                <i class="fas fa-globe-americas text-success fs-2"></i>
+                            </div>
+                            <h3 class="mb-0">Cobertura Nacional</h3>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="bg-warning bg-opacity-10 rounded-circle p-3 me-3">
+                                <i class="fas fa-lock text-warning fs-2"></i>
+                            </div>
+                            <h3 class="mb-0">Segurança Garantida</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">"Serviços"</h2>
+                <p class="lead text-muted">Oferecemos soluções completas para sua cadeia logística</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <div class="bg-primary bg-opacity-10 rounded-circle p-3 mb-4" style="width: 60px; height: 60px;">
+                                <i class="fas fa-warehouse text-primary fs-3"></i>
+                            </div>
+                            <h4 class="mb-3">Armazenagem</h4>
+                            <p class="text-muted">Soluções de armazenamento estratégico com tecnologia de ponta.</p>
+                            <a href="#" class="text-primary fw-bold text-decoration-none">Saiba mais <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <div class="bg-success bg-opacity-10 rounded-circle p-3 mb-4" style="width: 60px; height: 60px;">
+                                <i class="fas fa-truck text-success fs-3"></i>
+                            </div>
+                            <h4 class="mb-3">Distribuição</h4>
+                            <p class="text-muted">Rede de distribuição eficiente para todo o território nacional.</p>
+                            <a href="#" class="text-success fw-bold text-decoration-none">Saiba mais <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <div class="bg-warning bg-opacity-10 rounded-circle p-3 mb-4" style="width: 60px; height: 60px;">
+                                <i class="fas fa-ship text-warning fs-3"></i>
+                            </div>
+                            <h4 class="mb-3">Importação</h4>
+                            <p class="text-muted">Processo completo de importação com desembaraço aduaneiro.</p>
+                            <a href="#" class="text-warning fw-bold text-decoration-none">Saiba mais <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <div class="bg-info bg-opacity-10 rounded-circle p-3 mb-4" style="width: 60px; height: 60px;">
+                                <i class="fas fa-boxes text-info fs-3"></i>
+                            </div>
+                            <h4 class="mb-3">Cross-Docking</h4>
+                            <p class="text-muted">Redução de custos com estratégias de cross-docking eficientes.</p>
+                            <a href="#" class="text-info fw-bold text-decoration-none">Saiba mais <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="position-relative">
+                        <div class="bg-primary rounded-4 p-5 shadow" style="height: 300px;"></div>
+                        <div class="position-absolute top-0 start-50 translate-middle-x" style="width: 100%; max-width: 400px; margin-top: 50px;">
+                            <div class="bg-white rounded-4 p-4 shadow-lg">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-primary bg-opacity-10 rounded-circle p-2 me-3">
+                                        <i class="fas fa-check text-primary"></i>
+                                    </div>
+                                    <p class="mb-0 fw-bold">+15 anos de experiência no mercado</p>
+                                </div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-primary bg-opacity-10 rounded-circle p-2 me-3">
+                                        <i class="fas fa-check text-primary"></i>
+                                    </div>
+                                    <p class="mb-0 fw-bold">Equipe especializada e certificada</p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="bg-primary bg-opacity-10 rounded-circle p-2 me-3">
+                                        <i class="fas fa-check text-primary"></i>
+                                    </div>
+                                    <p class="mb-0 fw-bold">Tecnologia de ponta em todas as operações</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold mb-4">"Sobre Nós"</h2>
+                    <p class="lead mb-4">Somos uma empresa especializada em soluções logísticas integradas, com foco em distribuição e importação de produtos.</p>
+                    <p>Fundada em 2008, nossa empresa cresceu para se tornar referência no setor, atendendo clientes de diversos segmentos com eficiência e qualidade.</p>
+                    <p>Nossa missão é simplificar a cadeia de suprimentos de nossos clientes, oferecendo soluções personalizadas que agregam valor e reduzem custos.</p>
+                    <a href="#contact" class="btn btn-primary btn-lg rounded-pill px-4 mt-3">Conheça nossa equipe</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-5 bg-dark text-white">
+        <div class="container py-5">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-4 mb-md-0">
+                    <div class="display-4 fw-bold">15+</div>
+                    <p class="mb-0">Anos no mercado</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4 mb-md-0">
+                    <div class="display-4 fw-bold">500+</div>
+                    <p class="mb-0">Clientes atendidos</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="display-4 fw-bold">10M+</div>
+                    <p class="mb-0">Produtos movimentados</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="display-4 fw-bold">100%</div>
+                    <p class="mb-0">Satisfação garantida</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <h2 class="display-5 fw-bold mb-4">"Contato"</h2>
+                    <p class="lead mb-4">Entre em contato conosco para saber mais sobre nossos serviços.</p>
+                    
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                            <i class="fas fa-map-marker-alt text-primary"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Endereço</h5>
+                            <p class="mb-0">Av. Paulista, 1000 - São Paulo/SP</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                            <i class="fas fa-phone-alt text-primary"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Telefone</h5>
+                            <p class="mb-0">(11) 1234-5678</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex align-items-start">
+                        <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                            <i class="fas fa-envelope text-primary"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Email</h5>
+                            <p class="mb-0">contato@distribuicaoimportadora.com.br</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="card border-0 shadow rounded-4">
+                        <div class="card-body p-5">
+                            <h3 class="mb-4">Solicite um Orçamento</h3>
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="name" class="form-label">Nome completo</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">Assunto</label>
+                                    <input type="text" class="form-control" id="subject" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Mensagem</label>
+                                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg rounded-pill px-4">Enviar Mensagem</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="h4 mb-4"><i class="fas fa-boxes me-2"></i>Distribuição e Importadora</h3>
+                    <p>Soluções logísticas completas para sua empresa crescer com eficiência e segurança.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="text-white"><i class="fab fa-facebook-f fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h4 class="h5 mb-4">"Serviços"</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Armazenagem</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Distribuição</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Importação</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Cross-Docking</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h4 class="h5 mb-4">"Links Úteis"</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Blog</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Trabalhe Conosco</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Área do Cliente</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h4 class="h5 mb-4">BM9 DISTRIBUICAO E IMPORTACAO DE PRODUTOS LTDA
+</h4>
+                    <p>CNPJ: 10.597.140/0001-42</p>
+                    <form class="mt-4">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Seu email" aria-label="Seu email">
+                            <button class="btn btn-primary" type="button">Assinar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">© 2023 Distribuição e Importadora. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">"Política de Privacidade"</a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">"Termos de Uso"</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Form validation
+    const contactForm = document.querySelector('#contact form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let isValid = true;
+            const inputs = this.querySelectorAll('input, textarea');
+            
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    input.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    input.classList.remove('is-invalid');
+                }
+            });
+            
+            if (isValid) {
+                // Simulate form submission
+                this.innerHTML = `
+                    <div class="alert alert-success">
+                        <i class="fas fa-check-circle me-2"></i>
+                        Obrigado! Sua mensagem foi enviada com sucesso. Entraremos em contato em breve.
+                    </div>
+                `;
+            }
+        });
+    }
+    
+    // Scroll animation
+    const animateOnScroll = function() {
+        const elements = document.querySelectorAll('.card, .btn, .navbar');
+        
+        elements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+            
+            if (elementPosition < screenPosition) {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }
+        });
+    };
+    
+    // Set initial state for animation
+    document.querySelectorAll('.card, .btn').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    });
+    
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll(); // Trigger on load
+    
+    // Mobile menu close on click
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth < 992) {
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                    toggle: false
+                });
+                bsCollapse.hide();
+            }
+        });
+    });
+});</script></body>
+</html>
