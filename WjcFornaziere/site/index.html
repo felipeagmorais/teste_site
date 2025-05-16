@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wjc Fornaziere</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>:root {
+    --bs-primary: #0d6efd;
+    --bs-primary-rgb: 13, 110, 253;
+    --bs-success: #198754;
+    --bs-success-rgb: 25, 135, 84;
+    --bs-warning: #ffc107;
+    --bs-warning-rgb: 255, 193, 7;
+    --bs-dark: #212529;
+    --bs-dark-rgb: 33, 37, 41;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, rgba(var(--bs-primary-rgb), 0.9) 0%, rgba(var(--bs-primary-rgb), 0.7) 100%);
+}
+
+.hero-section {
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar-brand {
+    letter-spacing: 1px;
+}
+
+.btn {
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-success:hover,
+.btn-outline-warning:hover {
+    color: #fff;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.form-control {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
+@media (max-width: 768px) {
+    .hero-section .col-lg-6:last-child {
+        margin-top: 2rem;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Acessibilidade: Contraste */
+a, .btn, .text-primary {
+    color: #0a58ca;
+}
+
+.text-success {
+    color: #146c43;
+}
+
+.text-warning {
+    color: #cc9a06;
+}</style>
+</head>
+<body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wjc Fornaziere</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="bg-primary text-white sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold fs-3" href="#">Wjc Fornaziere</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">"Home"</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">"Produtos"</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">"Sobre"</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">"Contato"</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section bg-gradient-primary text-white py-5">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold mb-4">Bem-vindo à Wjc Fornaziere</h1>
+                        <p class="lead mb-4">Soluções exclusivas e personalizadas para você</p>
+                        <a href="#" class="btn btn-light btn-lg px-4">"Conheça nossos produtos"</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="p-5 bg-white rounded-3 text-dark shadow">
+                            <h3 class="mb-4">Destaque da semana</h3>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-star text-warning me-2 fs-4"></i>
+                                <p class="mb-0">Produto premium com 30% de desconto</p>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-truck text-primary me-2 fs-4"></i>
+                                <p class="mb-0">Frete grátis para todo Brasil</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-shield-alt text-success me-2 fs-4"></i>
+                                <p class="mb-0">Garantia de satisfação</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5 fw-bold">"Nossos Produtos"</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="bg-primary bg-opacity-10 rounded-circle p-4 mb-3 d-inline-block">
+                                    <i class="fas fa-tshirt fs-1 text-primary"></i>
+                                </div>
+                                <h3 class="h4">"Linha Premium"</h3>
+                                <p class="text-muted">Produtos de alta qualidade com acabamento impecável</p>
+                                <a href="#" class="btn btn-outline-primary">"Ver detalhes"</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="bg-success bg-opacity-10 rounded-circle p-4 mb-3 d-inline-block">
+                                    <i class="fas fa-socks fs-1 text-success"></i>
+                                </div>
+                                <h3 class="h4">"Coleção Especial"</h3>
+                                <p class="text-muted">Edições limitadas com design exclusivo</p>
+                                <a href="#" class="btn btn-outline-success">"Ver detalhes"</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="bg-warning bg-opacity-10 rounded-circle p-4 mb-3 d-inline-block">
+                                    <i class="fas fa-vest fs-1 text-warning"></i>
+                                </div>
+                                <h3 class="h4">"Novidades"</h3>
+                                <p class="text-muted">Lançamentos que acabaram de chegar</p>
+                                <a href="#" class="btn btn-outline-warning">"Ver detalhes"</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-light py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h2 class="fw-bold mb-4">"Sobre Nós"</h2>
+                        <p class="lead">A Wjc Fornaziere é referência em qualidade e estilo desde 2010.</p>
+                        <p>Nossa missão é oferecer produtos que combinam conforto, durabilidade e design inovador, sempre com atendimento personalizado.</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Materiais de primeira linha</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Produção sustentável</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Atendimento diferenciado</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary mt-3">"Saiba mais"</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="p-4 bg-white rounded-3 shadow">
+                            <h3 class="mb-4">"Nossos diferenciais"</h3>
+                            <div class="d-flex mb-3">
+                                <div class="me-3 text-primary">
+                                    <i class="fas fa-award fs-2"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h5">Qualidade certificada</h4>
+                                    <p class="mb-0 text-muted">Todos os produtos passam por rigoroso controle de qualidade</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <div class="me-3 text-success">
+                                    <i class="fas fa-leaf fs-2"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h5">Sustentabilidade</h4>
+                                    <p class="mb-0 text-muted">Processos produtivos com baixo impacto ambiental</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="me-3 text-warning">
+                                    <i class="fas fa-heart fs-2"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h5">Satisfação garantida</h4>
+                                    <p class="mb-0 text-muted">Política de trocas e devoluções sem burocracia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5 fw-bold">"Fale Conosco"</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <form class="row g-3 needs-validation" novalidate>
+                            <div class="col-md-6">
+                                <label for="nome" class="form-label">Nome completo</label>
+                                <input type="text" class="form-control" id="nome" required>
+                                <div class="invalid-feedback">
+                                    Por favor, insira seu nome.
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input type="email" class="form-control" id="email" required>
+                                <div class="invalid-feedback">
+                                    Por favor, insira um e-mail válido.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="assunto" class="form-label">Assunto</label>
+                                <input type="text" class="form-control" id="assunto" required>
+                                <div class="invalid-feedback">
+                                    Por favor, insira o assunto.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="mensagem" class="form-label">Mensagem</label>
+                                <textarea class="form-control" id="mensagem" rows="4" required></textarea>
+                                <div class="invalid-feedback">
+                                    Por favor, escreva sua mensagem.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary" type="submit">"Enviar mensagem"</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="h5 mb-3">Wjc Fornaziere</h3>
+                    <p>"Soluções em moda e estilo para você se destacar."</p>
+                    <div class="mt-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h4 class="h6 mb-3">"Links Rápidos"</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">"Home"</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">"Produtos"</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">"Sobre"</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">"Contato"</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h4 class="h6 mb-3">"Informações"</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> "Av. Principal, 1234 - Centro"</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> "(61) 99999-9999"</li>
+                        <li><i class="fas fa-envelope me-2"></i> "contato@wjcfornaziere.com.br"</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h4 class="h6 mb-3">"Horário de Funcionamento"</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">"Segunda a Sexta: 09h às 18h"</li>
+                        <li class="mb-2">W J C FORNAZIERE LTDA
+</li>
+                        <li>CNPJ: 26.263.912/0001-40
+</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 small">"© 2023 Wjc Fornaziere. Todos os direitos reservados."</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none small">"Política de Privacidade"</a></li>
+                        <li class="list-inline-item"><span class="mx-2">•</span></li>
+                        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none small">"Termos de Uso"</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>// Form validation
+(function () {
+    'use strict'
+    
+    const forms = document.querySelectorAll('.needs-validation')
+    
+    Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            }
+            
+            form.classList.add('was-validated')
+        }, false)
+    })
+})()
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault()
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        })
+    })
+})
+
+// Navbar background change on scroll
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar')
+    if (window.scrollY > 50) {
+        navbar.classList.add('bg-dark')
+        navbar.classList.remove('bg-primary')
+    } else {
+        navbar.classList.add('bg-primary')
+        navbar.classList.remove('bg-dark')
+    }
+})
+
+// Tooltip initialization
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+
+// Animation on scroll
+function animateOnScroll() {
+    const elements = document.querySelectorAll('.card, .btn, .hero-section')
+    
+    elements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top
+        const screenPosition = window.innerHeight / 1.3
+        
+        if (elementPosition < screenPosition) {
+            element.style.opacity = '1'
+            element.style.transform = 'translateY(0)'
+        }
+    })
+}
+
+// Set initial state for animation
+document.querySelectorAll('.card, .btn, .hero-section').forEach(el => {
+    el.style.opacity = '0'
+    el.style.transform = 'translateY(20px)'
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease'
+})
+
+window.addEventListener('load', animateOnScroll)
+window.addEventListener('scroll', animateOnScroll)</script></body>
+</html>
